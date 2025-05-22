@@ -1,4 +1,6 @@
 # Django 
+whatsapp_profile/
+
 __pycache__/
 *.py[cod]
 *.sqlite3
