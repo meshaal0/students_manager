@@ -1,0 +1,15 @@
+# Django 
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# ملفات الإعدادات السرية
+.env
+
+# مجلدات static/media الكبيرة
+media/
+staticfiles/
+
+# ملفات نظام التشغيل
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2467 @@
+2025-05-15 17:13:46,915 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-15 17:14:18,641 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-15 17:14:30,868 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-15 17:15:37,013 INFO ====== WebDriver manager ======
+2025-05-15 17:15:38,862 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:15:40,025 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:15:40,779 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-15 17:15:46,577 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-15 17:15:55,629 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-15 17:16:30,349 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0063FC83+61635]
+	GetHandleVerifier [0x0063FCC4+61700]
+	(No symbol) [0x004605D3]
+	(No symbol) [0x004A899E]
+	(No symbol) [0x004A8D3B]
+	(No symbol) [0x004F0E12]
+	(No symbol) [0x004CD2E4]
+	(No symbol) [0x004EE61B]
+	(No symbol) [0x004CD096]
+	(No symbol) [0x0049C840]
+	(No symbol) [0x0049D6A4]
+	GetHandleVerifier [0x008C45A3+2701795]
+	GetHandleVerifier [0x008BFD26+2683238]
+	GetHandleVerifier [0x008DAA6E+2793134]
+	GetHandleVerifier [0x00656945+155013]
+	GetHandleVerifier [0x0065D02D+181357]
+	GetHandleVerifier [0x006474D8+92440]
+	GetHandleVerifier [0x00647680+92864]
+	GetHandleVerifier [0x00632070+5296]
+	BaseThreadInitThunk [0x751AFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773982AE+286]
+	RtlGetAppContainerNamedObjectPath [0x7739827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-15 17:17:04,885 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0063FC83+61635]
+	GetHandleVerifier [0x0063FCC4+61700]
+	(No symbol) [0x004605D3]
+	(No symbol) [0x004A899E]
+	(No symbol) [0x004A8D3B]
+	(No symbol) [0x004F0E12]
+	(No symbol) [0x004CD2E4]
+	(No symbol) [0x004EE61B]
+	(No symbol) [0x004CD096]
+	(No symbol) [0x0049C840]
+	(No symbol) [0x0049D6A4]
+	GetHandleVerifier [0x008C45A3+2701795]
+	GetHandleVerifier [0x008BFD26+2683238]
+	GetHandleVerifier [0x008DAA6E+2793134]
+	GetHandleVerifier [0x00656945+155013]
+	GetHandleVerifier [0x0065D02D+181357]
+	GetHandleVerifier [0x006474D8+92440]
+	GetHandleVerifier [0x00647680+92864]
+	GetHandleVerifier [0x00632070+5296]
+	BaseThreadInitThunk [0x751AFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773982AE+286]
+	RtlGetAppContainerNamedObjectPath [0x7739827E+238]
+
+2025-05-15 17:17:37,407 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0063FC83+61635]
+	GetHandleVerifier [0x0063FCC4+61700]
+	(No symbol) [0x004605D3]
+	(No symbol) [0x004A899E]
+	(No symbol) [0x004A8D3B]
+	(No symbol) [0x004F0E12]
+	(No symbol) [0x004CD2E4]
+	(No symbol) [0x004EE61B]
+	(No symbol) [0x004CD096]
+	(No symbol) [0x0049C840]
+	(No symbol) [0x0049D6A4]
+	GetHandleVerifier [0x008C45A3+2701795]
+	GetHandleVerifier [0x008BFD26+2683238]
+	GetHandleVerifier [0x008DAA6E+2793134]
+	GetHandleVerifier [0x00656945+155013]
+	GetHandleVerifier [0x0065D02D+181357]
+	GetHandleVerifier [0x006474D8+92440]
+	GetHandleVerifier [0x00647680+92864]
+	GetHandleVerifier [0x00632070+5296]
+	BaseThreadInitThunk [0x751AFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773982AE+286]
+	RtlGetAppContainerNamedObjectPath [0x7739827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-15 17:18:08,840 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0063FC83+61635]
+	GetHandleVerifier [0x0063FCC4+61700]
+	(No symbol) [0x004605D3]
+	(No symbol) [0x004A899E]
+	(No symbol) [0x004A8D3B]
+	(No symbol) [0x004F0E12]
+	(No symbol) [0x004CD2E4]
+	(No symbol) [0x004EE61B]
+	(No symbol) [0x004CD096]
+	(No symbol) [0x0049C840]
+	(No symbol) [0x0049D6A4]
+	GetHandleVerifier [0x008C45A3+2701795]
+	GetHandleVerifier [0x008BFD26+2683238]
+	GetHandleVerifier [0x008DAA6E+2793134]
+	GetHandleVerifier [0x00656945+155013]
+	GetHandleVerifier [0x0065D02D+181357]
+	GetHandleVerifier [0x006474D8+92440]
+	GetHandleVerifier [0x00647680+92864]
+	GetHandleVerifier [0x00632070+5296]
+	BaseThreadInitThunk [0x751AFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773982AE+286]
+	RtlGetAppContainerNamedObjectPath [0x7739827E+238]
+
+2025-05-15 17:18:12,712 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:19:11,639 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:19:35,279 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:19:41,568 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:20:25,924 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:20:48,308 INFO ====== WebDriver manager ======
+2025-05-15 17:20:50,259 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:20:50,627 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:20:50,947 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-15 17:20:53,867 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x0063FC83+61635]
+	GetHandleVerifier [0x0063FCC4+61700]
+	(No symbol) [0x004605D3]
+	(No symbol) [0x00495659]
+	(No symbol) [0x0048F6C9]
+	(No symbol) [0x004D8DF3]
+	(No symbol) [0x004D880A]
+	(No symbol) [0x004CD096]
+	(No symbol) [0x0049C840]
+	(No symbol) [0x0049D6A4]
+	GetHandleVerifier [0x008C45A3+2701795]
+	GetHandleVerifier [0x008BFD26+2683238]
+	GetHandleVerifier [0x008DAA6E+2793134]
+	GetHandleVerifier [0x00656945+155013]
+	GetHandleVerifier [0x0065D02D+181357]
+	GetHandleVerifier [0x006474D8+92440]
+	GetHandleVerifier [0x00647680+92864]
+	GetHandleVerifier [0x00632070+5296]
+	BaseThreadInitThunk [0x751AFCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x773982AE+286]
+	RtlGetAppContainerNamedObjectPath [0x7739827E+238]
+
+2025-05-15 17:20:53,867 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-15 17:21:17,321 INFO ====== WebDriver manager ======
+2025-05-15 17:21:19,528 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:21:20,212 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:21:20,767 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-15 17:21:28,901 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-15 17:21:33,634 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-15 17:21:44,080 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 17:21:44
+2025-05-15 17:22:01,997 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201113793676 \u0641\u064a 17:22:01
+2025-05-15 17:22:13,900 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201113793676 \u0641\u064a 17:22:13
+2025-05-15 17:22:25,448 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 17:22:25
+2025-05-15 17:28:54,871 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:29:13,777 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:36:11,150 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:36:30,445 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-15 17:37:16,176 INFO ====== WebDriver manager ======
+2025-05-15 17:37:17,916 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:37:18,246 INFO Get LATEST chromedriver version for google-chrome
+2025-05-15 17:37:18,622 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-15 17:37:23,102 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-15 17:37:28,484 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-15 17:37:36,358 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 17:37:36
+2025-05-15 17:38:07,680 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 17:38:07
+2025-05-15 17:38:35,176 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 17:38:35
+2025-05-15 17:40:56,013 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201113793676 \u0641\u064a 17:40:56
+2025-05-15 17:41:06,524 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201113793676 \u0641\u064a 17:41:06
+2025-05-15 17:41:16,996 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 17:41:16
+2025-05-15 17:41:27,529 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 17:41:27
+2025-05-16 10:30:16,337 WARNING Not Found: /favicon.ico
+2025-05-16 10:30:18,535 INFO ====== WebDriver manager ======
+2025-05-16 10:30:20,307 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:30:20,812 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:30:21,213 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:30:22,154 INFO WebDriver version 136.0.7103.94 selected
+2025-05-16 10:30:22,159 INFO Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-16 10:30:22,159 INFO About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-16 10:30:22,715 INFO Driver downloading response is 200
+2025-05-16 10:31:02,205 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:31:04,553 INFO Driver has been saved in cache [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94]
+2025-05-16 10:31:21,806 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-16 10:31:37,873 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 10:32:10,593 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x0046899E]
+	(No symbol) [0x00468D3B]
+	(No symbol) [0x004B0E12]
+	(No symbol) [0x0048D2E4]
+	(No symbol) [0x004AE61B]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-16 10:32:41,059 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x0040FE20]
+	(No symbol) [0x0042DD1F]
+	(No symbol) [0x00493E8C]
+	(No symbol) [0x004ADF19]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+
+2025-05-16 10:32:55,972 INFO ====== WebDriver manager ======
+2025-05-16 10:32:57,739 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:32:58,120 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:32:58,553 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-16 10:33:02,749 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-16 10:33:09,903 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 10:33:41,257 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x0046899E]
+	(No symbol) [0x00468D3B]
+	(No symbol) [0x004B0E12]
+	(No symbol) [0x0048D2E4]
+	(No symbol) [0x004AE61B]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-16 10:34:12,505 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x0046899E]
+	(No symbol) [0x00468D3B]
+	(No symbol) [0x004B0E12]
+	(No symbol) [0x0048D2E4]
+	(No symbol) [0x004AE61B]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+
+2025-05-16 10:34:59,351 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-16 10:35:27,365 INFO ====== WebDriver manager ======
+2025-05-16 10:35:30,072 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:35:30,478 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:35:30,834 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-16 10:35:34,537 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-16 10:35:41,798 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 10:36:13,131 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x0046899E]
+	(No symbol) [0x00468D3B]
+	(No symbol) [0x004B0E12]
+	(No symbol) [0x0048D2E4]
+	(No symbol) [0x004AE61B]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-16 10:36:44,215 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x0046899E]
+	(No symbol) [0x00468D3B]
+	(No symbol) [0x004B0E12]
+	(No symbol) [0x0048D2E4]
+	(No symbol) [0x004AE61B]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+
+2025-05-16 10:41:40,285 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x0040FE20]
+	(No symbol) [0x0042DD1F]
+	(No symbol) [0x00493E8C]
+	(No symbol) [0x004ADF19]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-16 10:41:40,288 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x0042044E]
+	(No symbol) [0x0045BB08]
+	(No symbol) [0x0048D156]
+	(No symbol) [0x00488C22]
+	(No symbol) [0x004881B6]
+	(No symbol) [0x003F36C5]
+	(No symbol) [0x003F3C1E]
+	(No symbol) [0x003F40AD]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	(No symbol) [0x003F3390]
+	(No symbol) [0x003F2B9D]
+	GetHandleVerifier [0x009787FC+3701820]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+
+2025-05-16 10:43:00,767 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x0042044E]
+	(No symbol) [0x0045BB08]
+	(No symbol) [0x0048D156]
+	(No symbol) [0x00488C22]
+	(No symbol) [0x004881B6]
+	(No symbol) [0x003F36C5]
+	(No symbol) [0x003F3C1E]
+	(No symbol) [0x003F40AD]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	(No symbol) [0x003F3390]
+	(No symbol) [0x003F2B9D]
+	GetHandleVerifier [0x009787FC+3701820]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-16 10:43:00,770 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x0042044E]
+	(No symbol) [0x0045BB08]
+	(No symbol) [0x0048D156]
+	(No symbol) [0x00488C22]
+	(No symbol) [0x004881B6]
+	(No symbol) [0x003F36C5]
+	(No symbol) [0x003F3C1E]
+	(No symbol) [0x003F40AD]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	(No symbol) [0x003F3390]
+	(No symbol) [0x003F2B9D]
+	GetHandleVerifier [0x009787FC+3701820]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+
+2025-05-16 10:43:49,510 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-16 10:43:55,676 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-16 10:44:03,826 WARNING Not Found: /favicon.ico
+2025-05-16 10:44:33,052 INFO ====== WebDriver manager ======
+2025-05-16 10:44:34,742 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:44:35,078 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:44:35,338 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-16 10:44:40,768 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-16 10:44:47,477 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 10:44:55,611 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 10:44:55
+2025-05-16 10:48:24,479 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-16 10:49:16,374 INFO ====== WebDriver manager ======
+2025-05-16 10:49:17,984 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:49:18,753 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:49:19,582 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-16 10:49:22,393 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x005FFC83+61635]
+	GetHandleVerifier [0x005FFCC4+61700]
+	(No symbol) [0x004205D3]
+	(No symbol) [0x00455659]
+	(No symbol) [0x0044F6C9]
+	(No symbol) [0x00498DF3]
+	(No symbol) [0x0049880A]
+	(No symbol) [0x0048D096]
+	(No symbol) [0x0045C840]
+	(No symbol) [0x0045D6A4]
+	GetHandleVerifier [0x008845A3+2701795]
+	GetHandleVerifier [0x0087FD26+2683238]
+	GetHandleVerifier [0x0089AA6E+2793134]
+	GetHandleVerifier [0x00616945+155013]
+	GetHandleVerifier [0x0061D02D+181357]
+	GetHandleVerifier [0x006074D8+92440]
+	GetHandleVerifier [0x00607680+92864]
+	GetHandleVerifier [0x005F2070+5296]
+	BaseThreadInitThunk [0x7759FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x776E82AE+286]
+	RtlGetAppContainerNamedObjectPath [0x776E827E+238]
+
+2025-05-16 10:49:22,393 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 10:50:45,134 INFO ====== WebDriver manager ======
+2025-05-16 10:50:46,933 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:50:47,392 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:50:47,732 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-16 10:50:51,405 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-16 10:50:57,576 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 10:51:05,057 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 10:51:05
+2025-05-16 10:54:14,175 INFO ====== WebDriver manager ======
+2025-05-16 10:54:15,802 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:54:16,061 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 10:54:16,439 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-16 10:54:20,145 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-16 10:54:27,361 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 10:54:34,481 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 10:54:34
+2025-05-16 11:05:49,276 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-16 12:16:15,349 WARNING Not Found: /favicon.ico
+2025-05-16 12:16:19,042 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 33, in generate_student_card
+    font_name = ImageFont.truetype(FONT_PATH, 32)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 880, in truetype
+    return freetype(font)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 877, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 285, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2025-05-16 12:19:13,145 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 12:19:20,928 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 12:19:24,785 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 12:19:31,462 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 12:19:37,795 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:48:59,276 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:49:30,452 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 34, in generate_student_card
+    font_name = ImageFont.truetype(FONT_PATH, 32)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 880, in truetype
+    return freetype(font)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 877, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 285, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2025-05-16 15:49:30,751 WARNING Not Found: /favicon.ico
+2025-05-16 15:49:31,414 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 34, in generate_student_card
+    font_name = ImageFont.truetype(FONT_PATH, 32)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 880, in truetype
+    return freetype(font)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 877, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 285, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2025-05-16 15:49:32,270 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 34, in generate_student_card
+    font_name = ImageFont.truetype(FONT_PATH, 32)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 880, in truetype
+    return freetype(font)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 877, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 285, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2025-05-16 15:50:33,811 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 34, in generate_student_card
+    font_name = ImageFont.truetype(FONT_PATH, 32)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 880, in truetype
+    return freetype(font)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 877, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 285, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2025-05-16 15:51:53,364 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:52:01,877 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:52:06,706 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:52:50,497 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 34, in generate_student_card
+    font_name = ImageFont.truetype(FONT_PATH, 32)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 880, in truetype
+    return freetype(font)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 877, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 285, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2025-05-16 15:53:05,604 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:53:10,044 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 56, in generate_student_card
+    font_org = ImageFont.truetype(FONT_PATH, 20)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 880, in truetype
+    return freetype(font)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 877, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\PIL\ImageFont.py", line 285, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2025-05-16 15:54:41,988 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:54:47,142 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = draw.textsize(org_name, font=font_org)
+               ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 15:54:48,113 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = draw.textsize(org_name, font=font_org)
+               ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 15:54:48,884 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = draw.textsize(org_name, font=font_org)
+               ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 15:54:49,698 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = draw.textsize(org_name, font=font_org)
+               ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 15:54:58,179 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = draw.textsize(org_name, font=font_org)
+               ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 15:55:19,951 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:55:26,007 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = font_org.getsize(org_name)
+               ^^^^^^^^^^^^^^^^
+AttributeError: 'FreeTypeFont' object has no attribute 'getsize'
+2025-05-16 15:55:27,316 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = font_org.getsize(org_name)
+               ^^^^^^^^^^^^^^^^
+AttributeError: 'FreeTypeFont' object has no attribute 'getsize'
+2025-05-16 15:55:28,274 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 61, in generate_student_card
+    w_org, _ = font_org.getsize(org_name)
+               ^^^^^^^^^^^^^^^^
+AttributeError: 'FreeTypeFont' object has no attribute 'getsize'
+2025-05-16 15:56:23,265 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 15:56:50,523 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:46:57,906 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:47:09,697 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:47:14,115 WARNING Not Found: /favicon.ico
+2025-05-16 17:47:16,000 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 57, in generate_student_card
+    org_w, org_h = draw.textsize(org_name, font=font_org)
+                   ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 17:47:17,933 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 57, in generate_student_card
+    org_w, org_h = draw.textsize(org_name, font=font_org)
+                   ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 17:47:19,051 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 57, in generate_student_card
+    org_w, org_h = draw.textsize(org_name, font=font_org)
+                   ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 17:47:19,902 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 57, in generate_student_card
+    org_w, org_h = draw.textsize(org_name, font=font_org)
+                   ^^^^^^^^^^^^^
+AttributeError: 'ImageDraw' object has no attribute 'textsize'
+2025-05-16 17:49:27,460 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:49:33,873 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:49:42,276 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 57, in generate_student_card
+    org_w, org_h = font_org.getsize(org_name)
+                   ^^^^^^^^^^^^^^^^
+AttributeError: 'FreeTypeFont' object has no attribute 'getsize'
+2025-05-16 17:49:43,226 ERROR Internal Server Error: /card/7/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 29, in print_student_card
+    img_io = generate_student_card(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py", line 57, in generate_student_card
+    org_w, org_h = font_org.getsize(org_name)
+                   ^^^^^^^^^^^^^^^^
+AttributeError: 'FreeTypeFont' object has no attribute 'getsize'
+2025-05-16 17:54:28,544 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:54:33,469 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:54:38,812 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\student_card.py changed, reloading.
+2025-05-16 17:55:04,506 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-16 18:01:05,512 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-16 18:07:23,496 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-16 18:11:04,326 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-16 18:11:21,905 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-16 18:13:46,679 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-16 18:14:08,090 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-16 18:19:10,381 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-16 18:19:32,867 ERROR Internal Server Error: /card/7/
+2025-05-16 18:19:46,530 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-16 21:50:53,262 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-16 21:50:58,749 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-16 21:51:05,288 WARNING Not Found: /favicon.ico
+2025-05-16 21:51:20,812 ERROR Internal Server Error: /card/7/
+2025-05-16 21:51:40,822 ERROR Internal Server Error: /card/7/
+2025-05-16 21:55:55,541 INFO ====== WebDriver manager ======
+2025-05-16 21:55:57,195 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 21:55:59,783 INFO Get LATEST chromedriver version for google-chrome
+2025-05-16 21:56:00,195 INFO Driver [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94\chromedriver-win32/chromedriver.exe] found in cache
+2025-05-16 21:56:34,145 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-16 21:57:11,634 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-16 21:57:21,720 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 21:57:21
+2025-05-17 12:37:33,740 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 12:37:38,599 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 12:37:44,254 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 12:37:51,355 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 12:38:07,645 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 12:38:14,057 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 12:38:48,190 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 12:38:52,336 WARNING Not Found: /favicon.ico
+2025-05-17 12:45:44,640 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:45:53,573 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 48, in generate_student_card_pdf
+    logo.thumbnail((60, 60), Image.ANTIALIAS)
+                             ^^^^^^^^^^^^^^^
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+2025-05-17 12:45:55,544 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 48, in generate_student_card_pdf
+    logo.thumbnail((60, 60), Image.ANTIALIAS)
+                             ^^^^^^^^^^^^^^^
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+2025-05-17 12:45:57,247 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 48, in generate_student_card_pdf
+    logo.thumbnail((60, 60), Image.ANTIALIAS)
+                             ^^^^^^^^^^^^^^^
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+2025-05-17 12:45:58,296 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 48, in generate_student_card_pdf
+    logo.thumbnail((60, 60), Image.ANTIALIAS)
+                             ^^^^^^^^^^^^^^^
+AttributeError: module 'PIL.Image' has no attribute 'ANTIALIAS'
+2025-05-17 12:46:46,446 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:47:12,209 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:47:47,773 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:47:52,503 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:47:58,658 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:48:03,321 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:48:17,469 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:48:36,654 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:49:20,019 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:49:26,358 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:52:26,279 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:56:37,911 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 12:57:35,010 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 108, in generate_student_card_pdf
+    doc.build(story)
+    ~~~~~~~~~^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1322, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1083, in build
+    self.handle_flowable(flowables)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 962, in handle_flowable
+    raise LayoutError(ident)
+reportlab.platypus.doctemplate.LayoutError: Flowable <Background at 0x22c8c131400 frame=normal>...(297.6377952755906 x 419.52755905511816) too large on page 2 in frame 'normal'(285.6377952755906 x 407.52755905511816*) of template 'Later'
+2025-05-17 12:57:36,591 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 108, in generate_student_card_pdf
+    doc.build(story)
+    ~~~~~~~~~^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1322, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1083, in build
+    self.handle_flowable(flowables)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 962, in handle_flowable
+    raise LayoutError(ident)
+reportlab.platypus.doctemplate.LayoutError: Flowable <Background at 0x22c8c418550 frame=normal>...(297.6377952755906 x 419.52755905511816) too large on page 2 in frame 'normal'(285.6377952755906 x 407.52755905511816*) of template 'Later'
+2025-05-17 12:57:38,135 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 108, in generate_student_card_pdf
+    doc.build(story)
+    ~~~~~~~~~^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1322, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 1083, in build
+    self.handle_flowable(flowables)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\reportlab\platypus\doctemplate.py", line 962, in handle_flowable
+    raise LayoutError(ident)
+reportlab.platypus.doctemplate.LayoutError: Flowable <Background at 0x22c8c418550 frame=normal>...(297.6377952755906 x 419.52755905511816) too large on page 2 in frame 'normal'(285.6377952755906 x 407.52755905511816*) of template 'Later'
+2025-05-17 13:00:36,104 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 13:00:54,966 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 13:00:59,964 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 52, in generate_student_card_pdf
+    ImageReader(tmp),
+    ^^^^^^^^^^^
+NameError: name 'ImageReader' is not defined. Did you mean: 'ImageWriter'?
+2025-05-17 13:01:01,816 ERROR Internal Server Error: /card/9/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py", line 21, in print_student_card
+    pdf_io = generate_student_card_pdf(student)
+  File "C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py", line 52, in generate_student_card_pdf
+    ImageReader(tmp),
+    ^^^^^^^^^^^
+NameError: name 'ImageReader' is not defined. Did you mean: 'ImageWriter'?
+2025-05-17 13:02:04,433 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 13:03:43,884 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 13:06:05,554 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 13:06:35,328 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\pdf\card_pdf.py changed, reloading.
+2025-05-17 15:37:08,323 WARNING Not Found: /favicon.ico
+2025-05-17 15:38:21,715 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-17 15:55:55,258 WARNING Not Found: /favicon.ico
+2025-05-17 15:55:55,278 WARNING Not Found: /favicon.ico
+2025-05-17 15:55:55,283 WARNING Not Found: /favicon.ico
+2025-05-17 15:55:55,288 WARNING Not Found: /favicon.ico
+2025-05-17 15:55:55,294 WARNING Not Found: /favicon.ico
+2025-05-17 15:55:55,538 WARNING Not Found: /favicon.ico
+2025-05-17 15:57:24,650 INFO ====== WebDriver manager ======
+2025-05-17 15:57:26,332 INFO Get LATEST chromedriver version for google-chrome
+2025-05-17 15:57:28,147 INFO Get LATEST chromedriver version for google-chrome
+2025-05-17 15:57:28,838 INFO Get LATEST chromedriver version for google-chrome
+2025-05-17 15:57:30,567 INFO WebDriver version 136.0.7103.94 selected
+2025-05-17 15:57:30,571 INFO Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-17 15:57:30,571 INFO About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-17 15:57:31,752 INFO Driver downloading response is 200
+2025-05-17 15:59:12,236 INFO Get LATEST chromedriver version for google-chrome
+2025-05-17 15:59:13,869 INFO Driver has been saved in cache [C:\Users\Abdo\.wdm\drivers\chromedriver\win64\136.0.7103.94]
+2025-05-17 15:59:45,251 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-17 15:59:48,975 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-17 16:00:20,260 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00F0FC83+61635]
+	GetHandleVerifier [0x00F0FCC4+61700]
+	(No symbol) [0x00D305D3]
+	(No symbol) [0x00D7899E]
+	(No symbol) [0x00D78D3B]
+	(No symbol) [0x00DC0E12]
+	(No symbol) [0x00D9D2E4]
+	(No symbol) [0x00DBE61B]
+	(No symbol) [0x00D9D096]
+	(No symbol) [0x00D6C840]
+	(No symbol) [0x00D6D6A4]
+	GetHandleVerifier [0x011945A3+2701795]
+	GetHandleVerifier [0x0118FD26+2683238]
+	GetHandleVerifier [0x011AAA6E+2793134]
+	GetHandleVerifier [0x00F26945+155013]
+	GetHandleVerifier [0x00F2D02D+181357]
+	GetHandleVerifier [0x00F174D8+92440]
+	GetHandleVerifier [0x00F17680+92864]
+	GetHandleVerifier [0x00F02070+5296]
+	BaseThreadInitThunk [0x7773FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779782AE+286]
+	RtlGetAppContainerNamedObjectPath [0x7797827E+238]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-17 16:00:51,578 ERROR \u274c \u0625\u0639\u0627\u062f\u0629 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0641\u0634\u0644\u062a \u0625\u0644\u0649 +201142344943: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00F0FC83+61635]
+	GetHandleVerifier [0x00F0FCC4+61700]
+	(No symbol) [0x00D305D3]
+	(No symbol) [0x00D7899E]
+	(No symbol) [0x00D78D3B]
+	(No symbol) [0x00DC0E12]
+	(No symbol) [0x00D9D2E4]
+	(No symbol) [0x00DBE61B]
+	(No symbol) [0x00D9D096]
+	(No symbol) [0x00D6C840]
+	(No symbol) [0x00D6D6A4]
+	GetHandleVerifier [0x011945A3+2701795]
+	GetHandleVerifier [0x0118FD26+2683238]
+	GetHandleVerifier [0x011AAA6E+2793134]
+	GetHandleVerifier [0x00F26945+155013]
+	GetHandleVerifier [0x00F2D02D+181357]
+	GetHandleVerifier [0x00F174D8+92440]
+	GetHandleVerifier [0x00F17680+92864]
+	GetHandleVerifier [0x00F02070+5296]
+	BaseThreadInitThunk [0x7773FCC9+25]
+	RtlGetAppContainerNamedObjectPath [0x779782AE+286]
+	RtlGetAppContainerNamedObjectPath [0x7797827E+238]
+
+2025-05-17 16:01:18,177 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201113793676 \u0641\u064a 16:01:18
+2025-05-17 16:01:30,498 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201113793676 \u0641\u064a 16:01:30
+2025-05-17 16:01:43,057 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:01:43
+2025-05-17 16:01:54,221 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:01:54
+2025-05-17 16:02:05,749 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:02:05
+2025-05-17 16:02:17,430 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:02:17
+2025-05-17 16:02:28,673 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:02:28
+2025-05-17 16:02:39,923 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:02:39
+2025-05-17 16:02:50,873 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:02:50
+2025-05-17 16:05:58,698 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 16:05:58
+2025-05-17 16:40:10,530 WARNING Not Found: /favicon.ico
+2025-05-17 16:56:23,736 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-17 17:36:19,706 WARNING Not Found: /
+2025-05-20 17:17:49,448 WARNING Not Found: /favicon.ico
+2025-05-20 18:07:08,048 WARNING Not Found: /favicon.ico
+2025-05-20 18:15:21,353 WARNING Not Found: /favicon.ico
+2025-05-20 18:15:54,739 INFO ====== WebDriver manager ======
+2025-05-20 18:15:57,967 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 18:15:58,395 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 18:15:58,777 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 18:15:59,679 INFO WebDriver version 136.0.7103.94 selected
+2025-05-20 18:15:59,686 INFO Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 18:15:59,687 INFO About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 18:16:00,139 INFO Driver downloading response is 200
+2025-05-20 18:16:06,431 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:16:15,180 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:16:55,165 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:17:00,296 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:17:04,679 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:17:11,429 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:17:28,059 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:17:38,318 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:28:44,766 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:28:51,827 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:28:56,963 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:29:38,408 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:29:51,399 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:29:57,208 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:30:07,499 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 18:30:15,567 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-20 19:21:27,300 INFO ====== WebDriver manager ======
+2025-05-20 19:21:28,899 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 19:24:30,565 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: HTTPSConnectionPool(host='googlechromelabs.github.io', port=443): Read timed out. (read timeout=None)
+2025-05-20 19:24:30,565 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-20 19:24:31,566 INFO ====== WebDriver manager ======
+2025-05-20 19:24:32,761 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 19:24:33,329 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 19:24:34,709 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 19:24:35,772 INFO WebDriver version 136.0.7103.94 selected
+2025-05-20 19:24:35,777 INFO Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 19:24:35,777 INFO About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/136.0.7103.94/win32/chromedriver-win32.zip
+2025-05-20 19:29:47,790 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 19:29:53,551 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 19:30:00,849 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 19:30:33,820 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 19:30:39,361 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 19:30:48,765 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 19:31:18,522 INFO ====== WebDriver manager ======
+2025-05-20 19:31:20,716 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 19:31:21,221 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 19:31:55,594 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: HTTPSConnectionPool(host='googlechromelabs.github.io', port=443): Read timed out. (read timeout=None)
+2025-05-20 19:31:55,595 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-20 19:39:40,649 INFO ====== WebDriver manager ======
+2025-05-20 19:39:42,178 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 19:40:44,554 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Could not reach host. Are you offline?
+2025-05-20 19:40:44,555 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-20 20:20:10,371 WARNING Not Found: /favicon.ico
+2025-05-20 20:20:24,365 INFO ====== WebDriver manager ======
+2025-05-20 20:20:25,866 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 20:20:26,222 INFO Get LATEST chromedriver version for google-chrome
+2025-05-20 20:21:32,677 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Could not reach host. Are you offline?
+2025-05-20 20:21:32,678 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-20 20:21:44,037 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 20:22:26,772 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 20:22:54,479 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Unable to detect Chrome version. Please ensure Chrome is installed and accessible.
+2025-05-20 20:22:54,480 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-20 20:23:27,803 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 20:24:40,369 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-20 20:43:18,838 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-20 20:43:23,502 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7A509CF25+75717]
+	GetHandleVerifier [0x00007FF7A509CF80+75808]
+	(No symbol) [0x00007FF7A4E68F9A]
+	(No symbol) [0x00007FF7A4E41B41]
+	(No symbol) [0x00007FF7A4EEEC2E]
+	(No symbol) [0x00007FF7A4F0ECC2]
+	(No symbol) [0x00007FF7A4EE7153]
+	(No symbol) [0x00007FF7A4EB0421]
+	(No symbol) [0x00007FF7A4EB11B3]
+	GetHandleVerifier [0x00007FF7A539D6FD+3223453]
+	GetHandleVerifier [0x00007FF7A5397CA2+3200322]
+	GetHandleVerifier [0x00007FF7A53B5AD3+3322739]
+	GetHandleVerifier [0x00007FF7A50B69FA+180890]
+	GetHandleVerifier [0x00007FF7A50BE0FF+211359]
+	GetHandleVerifier [0x00007FF7A50A5274+109332]
+	GetHandleVerifier [0x00007FF7A50A5422+109762]
+	GetHandleVerifier [0x00007FF7A508BA39+4825]
+	BaseThreadInitThunk [0x00007FFFC69F7374+20]
+	RtlUserThreadStart [0x00007FFFC6B3CC91+33]
+
+2025-05-20 20:43:26,502 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-20 20:44:31,389 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-20 20:44:36,221 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-20 20:44:50,170 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 20:44:50
+2025-05-21 10:42:57,567 WARNING Not Found: /favicon.ico
+2025-05-21 10:43:52,261 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-21 10:43:52,266 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=136.0.7103.114)
+Stacktrace:
+	GetHandleVerifier [0x00007FF74442CF25+75717]
+	GetHandleVerifier [0x00007FF74442CF80+75808]
+	(No symbol) [0x00007FF7441F8F9A]
+	(No symbol) [0x00007FF7441D1B41]
+	(No symbol) [0x00007FF74427EC2E]
+	(No symbol) [0x00007FF74429ECC2]
+	(No symbol) [0x00007FF744277153]
+	(No symbol) [0x00007FF744240421]
+	(No symbol) [0x00007FF7442411B3]
+	GetHandleVerifier [0x00007FF74472D6FD+3223453]
+	GetHandleVerifier [0x00007FF744727CA2+3200322]
+	GetHandleVerifier [0x00007FF744745AD3+3322739]
+	GetHandleVerifier [0x00007FF7444469FA+180890]
+	GetHandleVerifier [0x00007FF74444E0FF+211359]
+	GetHandleVerifier [0x00007FF744435274+109332]
+	GetHandleVerifier [0x00007FF744435422+109762]
+	GetHandleVerifier [0x00007FF74441BA39+4825]
+	BaseThreadInitThunk [0x00007FFFC69F7374+20]
+	RtlUserThreadStart [0x00007FFFC6B3CC91+33]
+
+2025-05-21 10:43:55,285 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-21 11:29:54,359 WARNING Not Found: /favicon.ico
+2025-05-21 12:00:04,371 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:00:59,712 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:08:32,395 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:08:34,335 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:08:35,533 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:09:45,301 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:09:46,437 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:10:07,822 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\urls.py changed, reloading.
+2025-05-21 12:10:11,320 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:10:12,369 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:11:09,558 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:11:14,277 ERROR Internal Server Error: /admin/students/attendance/add/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1075, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 925, in _resolve_lookup
+    current = current()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 81, in super
+    return mark_safe(self.render(self.context))
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 321, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\templatetags\baton_tags.py", line 69, in baton_config
+    "app_list": reverse('baton-app-list-json'),
+                ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'baton-app-list-json' not found. 'baton-app-list-json' is not a valid view function or pattern name.
+2025-05-21 12:11:46,284 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\urls.py changed, reloading.
+2025-05-21 12:11:50,291 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:12:01,151 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:12:10,279 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:12:19,004 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:12:41,003 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:12:46,708 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:12:48,774 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:12:55,433 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:13:02,821 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:13:12,083 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:14:41,371 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:15:03,824 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:15:11,527 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:15:13,550 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:15:15,060 ERROR Internal Server Error: /admin/baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:15:26,784 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\settings.py changed, reloading.
+2025-05-21 12:16:12,782 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\urls.py changed, reloading.
+2025-05-21 12:16:17,787 WARNING Not Found: /admin/baton/gravatar/
+2025-05-21 12:16:17,798 WARNING Not Found: /admin/baton/app-list-json/
+2025-05-21 12:16:19,482 WARNING Not Found: /admin/baton/gravatar/
+2025-05-21 12:16:19,494 WARNING Not Found: /admin/baton/app-list-json/
+2025-05-21 12:16:20,870 WARNING Not Found: /admin/baton/gravatar/
+2025-05-21 12:16:20,881 WARNING Not Found: /admin/baton/app-list-json/
+2025-05-21 12:16:21,196 WARNING Not Found: /favicon.ico
+2025-05-21 12:16:29,549 WARNING Not Found: /admin/baton/app-list-json/
+2025-05-21 12:16:29,555 WARNING Not Found: /admin/baton/gravatar/
+2025-05-21 12:16:35,464 WARNING Not Found: /admin/baton/gravatar/
+2025-05-21 12:16:35,479 WARNING Not Found: /admin/baton/app-list-json/
+2025-05-21 12:16:46,614 WARNING Not Found: /admin/baton/gravatar/
+2025-05-21 12:16:46,634 WARNING Not Found: /admin/baton/app-list-json/
+2025-05-21 12:16:46,932 WARNING Not Found: /favicon.ico
+2025-05-21 12:17:15,424 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\student_manager\urls.py changed, reloading.
+2025-05-21 12:17:20,172 ERROR Internal Server Error: /baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:17:22,797 ERROR Internal Server Error: /baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:17:22,970 WARNING Not Found: /favicon.ico
+2025-05-21 12:17:25,778 ERROR Internal Server Error: /baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:17:30,674 ERROR Internal Server Error: /baton/app-list-json/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\auth\decorators.py", line 59, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 27, in dispatch
+    return super(GetAppListJsonView, self).dispatch(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 44, in get
+    self.add_voice(voices, item)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\baton\views.py", line 55, in add_voice
+    if item.get('type') == 'title':
+       ^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-05-21 12:23:35,853 WARNING Not Found: /favicon.ico
+2025-05-21 12:25:51,963 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 12:39:48,629 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 12:40:11,539 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 12:40:16,814 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 12:40:21,309 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 12:40:39,337 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 12:41:06,921 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-21 12:41:12,520 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\models.py changed, reloading.
+2025-05-21 13:01:13,533 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:03:05,521 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:03:39,541 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:11,752 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:16,840 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:23,610 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:27,875 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:33,480 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:41,807 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:49,571 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:04:55,267 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:05:06,825 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:05:10,413 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:05:15,938 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:05:21,750 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:05:28,705 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:05:44,309 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-21 13:05:50,096 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\views.py changed, reloading.
+2025-05-22 12:34:36,261 INFO C:\Users\Abdo\Desktop\students-manager\student_manager\students\admin.py changed, reloading.
+2025-05-22 12:36:03,519 WARNING Not Found: /favicon.ico

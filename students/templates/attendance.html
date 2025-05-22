@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الحضور بالباركود</title>
+  <!-- الخطوط -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- ايقونات -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2A5C82;
+      --secondary: #5BA4E6;
+      --success: #28A745;
+      --danger: #DC3545;
+      --light: #F8F9FA;
+      --dark: #1E1E1E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      min-height: 100vh;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    h1 {
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 2.2rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+
+    .scan-section {
+      position: relative;
+      margin: 2rem 0;
+    }
+
+    .barcode-input {
+      width: 100%;
+      padding: 1.2rem 2rem;
+      font-size: 1.4rem;
+      border: 3px solid var(--primary);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      text-align: center;
+      letter-spacing: 3px;
+    }
+
+    .barcode-input:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 15px rgba(43, 92, 130, 0.2);
+    }
+
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .submit-btn:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(43, 92, 130, 0.3);
+    }
+
+    .submit-btn i {
+      font-size: 1.2rem;
+    }
+
+    .pending-section {
+      background: #fff9e6;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      border-left: 5px solid #ffc107;
+      animation: slideIn 0.5s ease;
+    }
+
+    .messages {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 1000;
+      max-width: 400px;
+    }
+
+    .alert {
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      animation: slideIn 0.5s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .alert.success {
+      background: #d4edda;
+      color: #155724;
+      border-left: 5px solid #28a745;
+    }
+
+    .alert.error {
+      background: #f8d7da;
+      color: #721c24;
+      border-left: 5px solid #dc3545;
+    }
+
+    .alert i {
+      font-size: 1.5rem;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid var(--primary);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading-overlay">
+    <div class="spinner">
+    </div>
+  </div>
+
+  <div class="container">
+      <a  href="http://127.0.0.1:8000/admin/">لوحة التحكم</a>
+
+    <h1>
+      <i class="fas fa-qrcode"></i>
+      مسح الباركود لتسجيل الحضور
+    </h1>
+
+    <form method="post" class="scan-section">
+      {% csrf_token %}
+      <input type="hidden" name="action" id="action-field" value="scan">
+      
+      <input
+        type="text"
+        name="barcode"
+        id="barcode-input"
+        class="barcode-input"
+        autofocus
+        autocomplete="off"
+        maxlength="5"
+        placeholder="أدخل رقم الباركود"
+      />
+      
+      <button type="submit" class="submit-btn">
+        <i class="fas fa-check-circle"></i>
+        تأكيد الحضور
+      </button>
+    </form>
+
+    {% if pending_student %}
+  <div class="pending-section">
+    <h3>🔔 لم تدفع رسوم شهر {{ now|date:"F Y" }}: {{ pending_student.name }}</h3>
+    <p>تبقى له {{ pending_student.free_tries }} فرص مجانية قبل الدفع.</p>
+    <div style="display:flex; gap:1rem; margin-top:1rem;">
+      <!-- دخول مجاني -->
+      {% if pending_student.free_tries > 0 %}
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="free">
+        <input type="hidden" name="barcode" value="{{ barcode }}">
+        <button type="submit" class="submit-btn" style="background: var(--danger)">
+          <i class="fas fa-door-open"></i> دخول مجاني ({{ pending_student.free_tries }})
+        </button>
+      </form>
+      {% endif %}
+
+      <!-- الدفع -->
+      <form method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="pay">
+        <input type="hidden" name="barcode" value="{{ barcode }}">
+        <button type="submit" class="submit-btn" style="background: #ffc107">
+          <i class="fas fa-coins"></i> الدفع الآن
+        </button>
+      </form>
+    </div>
+  </div>
+{% endif %}
+
+    <div class="messages">
+      {% for message in messages %}
+        <div class="alert {{ message.tags }}">
+          {% if message.tags == 'success' %}
+            <i class="fas fa-check-circle"></i>
+          {% else %}
+            <i class="fas fa-exclamation-triangle"></i>
+          {% endif %}
+          {{ message }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <form method="post" action="{% url 'mark_absentees' %}" onsubmit="return confirm('هل أنت متأكد أنك تريد تسجيل غياب غير الحاضرين اليوم؟')">
+      {% csrf_token %}
+      <button type="submit" class="submit-btn" style="background: #dc3545; margin-top:1rem;">
+      <i class="fas fa-user-slash"></i>
+      تسجيل غياب غير الحاضرين اليوم
+      </button>
+    </form>
+  </div>
+
+
+  <script>
+    const barcodeInput = document.getElementById('barcode-input');
+const form = document.querySelector('form');
+const loadingOverlay = document.querySelector('.loading-overlay');
+
+// أرسل عند بلوغ طول الكود المطلوب
+barcodeInput.addEventListener('input', () => {
+  if (barcodeInput.value.length === 5) {
+    loadingOverlay.style.display = 'flex';
+    form.submit();
+  }
+});
+
+// أرسل عند الضغط على Enter (بما يفيد أغلب الماسحات التي تضيف suffix)
+barcodeInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();  // يمنع إعادة تحميل الصفحة مرتين
+    loadingOverlay.style.display = 'flex';
+    form.submit();
+  }
+});
+
+// حافظ على الفوكس
+window.addEventListener('load', () => {
+  barcodeInput.focus();
+  setInterval(() => {
+    if (document.activeElement !== barcodeInput) {
+      barcodeInput.focus();
+    }
+  }, 500);
+});
+form.addEventListener('submit', () => {
+      loadingOverlay.style.display = 'flex';
+    });
+
+    // إخفاء المؤشر عند التحميل
+    window.addEventListener('load', () => {
+      loadingOverlay.style.display = 'none';
+    });
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+  <!-- <script>
+    const barcodeInput = document.getElementById('barcode-input');
+    const form = document.querySelector('form');
+    const loadingOverlay = document.querySelector('.loading-overlay');
+    let lastScanTime = 0;
+
+    // تحسينات لقارئ الباركود
+    barcodeInput.addEventListener('keydown', (e) => {
+      // تجاهل مفتاح Enter إذا كان من لوحة المفاتيح
+      if (e.key === 'Enter' && Date.now() - lastScanTime > 100) {
+        e.preventDefault();
+      }
+    });
+
+    barcodeInput.addEventListener('keypress', (e) => {
+      // إرسال تلقائي عند استلام المدخلات بسرعة (ماسح الباركود)
+      const currentTime = Date.now();
+      const timeDiff = currentTime - lastScanTime;
+      
+      if (timeDiff < 30) { // زمن أقل من 30ms يعتبر مسحًا آليًا
+        e.preventDefault();
+        handleBarcodeSubmit();
+      }
+      
+      lastScanTime = currentTime;
+    });
+
+    async function handleBarcodeSubmit() {
+      if (barcodeInput.value.length >= 5) {
+        loadingOverlay.style.display = 'flex';
+        
+        // إرسال النموذج بعد تأخير بسيط للتأكد من اكتمال القراءة
+        await new Promise(resolve => setTimeout(resolve, 50));
+        form.submit();
+        
+        // إعادة تعيين الحقل بعد الإرسال
+        setTimeout(() => {
+          barcodeInput.value = '';
+          barcodeInput.focus();
+        }, 100);
+      }
+    }
+
+    // إعدادات إضافية لقارئ الباركود
+    window.addEventListener('load', () => {
+      // تجاهل أي تركيز على عناصر أخرى
+      document.body.addEventListener('focusin', (e) => {
+        if (e.target !== barcodeInput) {
+          barcodeInput.focus();
+        }
+      });
+
+      // منع النسخ/اللصق في حقل الباركود
+      barcodeInput.addEventListener('paste', (e) => {
+        e.preventDefault();
+      });
+
+      // التركيز التلقائي المستمر
+      setInterval(() => {
+        if (document.activeElement !== barcodeInput) {
+          barcodeInput.focus();
+        }
+      }, 500);
+    });
+
+    // إرسال تلقائي عند إدخال 5 أرقام
+    barcodeInput.addEventListener('input', (e) => {
+      if (e.target.value.length === 5) {
+        loadingOverlay.style.display = 'flex';
+        form.submit();
+      }
+    });
+
+    // إخفاء الرسائل بعد 5 ثواني
+    setTimeout(() => {
+      document.querySelectorAll('.alert').forEach(alert => {
+        alert.style.display = 'none';
+      });
+    }, 5000);
+
+    // إعادة الفوكس للحقل بعد التحميل
+    window.onload = () => {
+      barcodeInput.focus();
+      barcodeInput.addEventListener('focus', () => {
+        barcodeInput.parentElement.style.transform = 'scale(1.02)';
+      });
+      barcodeInput.addEventListener('blur', () => {
+        barcodeInput.parentElement.style.transform = 'scale(1)';
+      });
+    }
+
+    // إظهار مؤشر التحميل عند الإرسال
+    form.addEventListener('submit', () => {
+      loadingOverlay.style.display = 'flex';
+    });
+
+    // إخفاء المؤشر عند التحميل
+    window.addEventListener('load', () => {
+      loadingOverlay.style.display = 'none';
+    });
+  </script> -->

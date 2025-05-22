@@ -1,0 +1,25 @@
+[1408:9700:0520/201204.948:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[10580:2804:0520/201205.504:WARNING:ui\gl\direct_composition_support.cc:1195] QueryInterface to IDCompositionDevice4 failed: No such interface supported (0x80004002)
+[2748:6128:0520/201207.341:WARNING:net\spdy\spdy_session.cc:2997] Received HEADERS for invalid stream 1
+[1408:9700:0520/201207.843:INFO:CONSOLE:157] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yc/r/9FLxYgwpEra.js (157)
+[10580:824:0520/201211.458:WARNING:ui\gl\angle_platform_impl.cc:54] HLSLCompiler.cpp:250 (rx::HLSLCompiler::compileToBinary): 
+C:\fakepath(130,3-70): warning X3557: loop only executes for 1 iteration(s), forcing loop to unroll
+
+[1408:9720:0520/201233.555:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:10152:0520/201233.555:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:10152:0520/201233.561:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:10744:0520/201234.934:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:9700:0520/201238.496:INFO:CONSOLE:157] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/ya/r/Afqz5Qa_iz0.js (157)
+[1408:9720:0520/201249.947:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[2748:6128:0520/201250.385:ERROR:net\socket\ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -101
+[2748:6128:0520/201251.517:ERROR:net\socket\ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -101
+[1408:9720:0520/201304.950:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:9632:0520/201315.007:WARNING:net\dns\dns_config_service_win.cc:605] Failed to read DnsConfig.
+[2748:8468:0520/201315.022:WARNING:net\dns\dns_config_service_win.cc:605] Failed to read DnsConfig.
+[1408:9700:0520/201315.847:ERROR:components\device_event_log\device_event_log_impl.cc:202] [20:13:15.847] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+[1408:9720:0520/201319.966:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:10744:0520/201320.020:WARNING:net\dns\dns_config_service_win.cc:605] Failed to read DnsConfig.
+[2748:8468:0520/201320.041:WARNING:net\dns\dns_config_service_win.cc:605] Failed to read DnsConfig.
+[1408:9720:0520/201334.972:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:9720:0520/201349.982:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
+[1408:10744:0520/201404.989:ERROR:components\system_cpu\cpu_probe_win.cc:112] PdhAddEnglishCounter failed for '\Processor(_Total)\% Processor Time': Error (0x13D) while retrieving error. (0xC0000BB8)
