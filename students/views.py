@@ -11,8 +11,14 @@ from django.conf import settings
 from django.contrib import messages
 from django.utils import timezone
 import threading
-from datetime import date
-from datetime import timedelta
+from datetime import date, datetime # Added datetime
+from .utils import (
+    get_daily_attendance_summary, get_students_with_overdue_payments, # Kept existing ones
+    get_attendance_trends, get_revenue_trends,
+    get_monthly_attendance_rate, get_student_payment_history
+)
+from .models import Students # To populate student selection
+
 
 INITIAL_FREE_TRIES = 3
 
@@ -348,3 +354,144 @@ def mark_absentees_view(request):
 
 #     # إذا GET، ببساطة أعد توجيه لصفحة الحضور
 #     return redirect('barcode_attendance')
+
+
+def daily_dashboard_view(request):
+    """
+    Displays a daily dashboard with attendance summary and students with overdue payments.
+
+    Retrieves data for the current day using utility functions:
+    - `get_daily_attendance_summary`: For counts of present, absent, and unmarked students,
+      and lists of these students.
+    - `get_students_with_overdue_payments`: For a list of students who haven't paid
+      for the current month.
+
+    Args:
+        request: HttpRequest object.
+
+    Returns:
+        HttpResponse object rendering the `students/daily_dashboard.html` template
+        with the following context:
+        - 'dashboard_date' (date): The current date for which the dashboard is displayed.
+        - 'attendance_summary' (dict): Data from `get_daily_attendance_summary`.
+        - 'overdue_payment_students' (QuerySet[Students]): Students with overdue payments.
+        - 'page_title' (str): The title for the page ("لوحة المتابعة اليومية").
+    """
+    today = timezone.localdate()
+    # Fetch daily attendance summary (present, absent, unmarked students)
+    attendance_summary = get_daily_attendance_summary(today)
+    # Fetch students who have not paid for the current month
+    overdue_payment_students = get_students_with_overdue_payments()
+
+    context = {
+        'dashboard_date': today,
+        'attendance_summary': attendance_summary,
+        'overdue_payment_students': overdue_payment_students,
+        'page_title': 'لوحة المتابعة اليومية' # Daily Dashboard
+    }
+    return render(request, 'students/daily_dashboard.html', context)
+
+
+def historical_insights_view(request):
+    """
+    Provides a view for historical data analysis based on user-selected criteria.
+
+    Supports various report types selected via GET parameters:
+    - 'attendance_trends': Shows daily, weekly, and monthly attendance counts.
+    - 'revenue_trends': Shows monthly and yearly estimated revenue.
+    - 'student_attendance_rate': Calculates monthly attendance rate for a selected student.
+    - 'student_payment_history': Lists payment history for a selected student.
+
+    Accepts GET parameters for filtering:
+    - 'report_type': The type of report to generate.
+    - 'student_id': ID of the student for student-specific reports.
+    - 'start_date', 'end_date': Date range for trend reports.
+    - 'year', 'month': For student attendance rate report.
+
+    Args:
+        request: HttpRequest object.
+
+    Returns:
+        HttpResponse object rendering the `students/historical_insights.html` template
+        with a context containing:
+        - 'page_title' (str): Title of the page.
+        - 'students' (QuerySet[Students]): All students for selection.
+        - 'current_year' (int): Current year for form defaults.
+        - 'start_date_val', 'end_date_val': Current values for date inputs.
+        - 'selected_student_id', 'selected_year', 'selected_month', 'selected_report_type':
+          Current selections for form fields.
+        - Data specific to the report type (e.g., 'attendance_trends', 'revenue_trends_monthly',
+          'monthly_attendance_rate', 'payment_history').
+        - Error messages ('date_error', 'student_error', 'form_error') if applicable.
+    """
+    context = {
+        'page_title': 'التحليلات التاريخية',  # Historical Insights
+        'students': Students.objects.all().order_by('name'),  # For student selection dropdown
+        'current_year': timezone.localdate().year
+    }
+    
+    report_type = request.GET.get('report_type')
+    student_id = request.GET.get('student_id')
+    start_date_str = request.GET.get('start_date')
+    end_date_str = request.GET.get('end_date')
+    year_str = request.GET.get('year')
+    month_str = request.GET.get('month')
+
+    # Default date range for trends (e.g., last 30 days if not specified)
+    default_end_date = timezone.localdate()
+    default_start_date = default_end_date - timezone.timedelta(days=30) # Default to 30 days prior
+
+    # Populate context with current form values or defaults
+    context['start_date_val'] = start_date_str if start_date_str else default_start_date.isoformat()
+    context['end_date_val'] = end_date_str if end_date_str else default_end_date.isoformat()
+    context['selected_student_id'] = int(student_id) if student_id else None
+    context['selected_year'] = int(year_str) if year_str else default_end_date.year
+    context['selected_month'] = int(month_str) if month_str else default_end_date.month
+    context['selected_report_type'] = report_type
+
+    # Attempt to parse date strings from GET parameters; use defaults if parsing fails or not provided.
+    try:
+        start_date_obj = datetime.strptime(start_date_str, '%Y-%m-%d').date() if start_date_str else default_start_date
+        end_date_obj = datetime.strptime(end_date_str, '%Y-%m-%d').date() if end_date_str else default_end_date
+    except ValueError:
+        # If date parsing fails, revert to defaults and set an error message.
+        start_date_obj = default_start_date
+        end_date_obj = default_end_date
+        context['date_error'] = "صيغة التاريخ غير صحيحة. فضلا استخدم YYYY-MM-DD."
+
+    # --- Generate report data based on report_type ---
+    if report_type == 'attendance_trends':
+        # Fetch daily, weekly, and monthly attendance trends for the selected date range.
+        context['attendance_trends'] = get_attendance_trends(start_date_obj, end_date_obj, period='day')
+        context['attendance_trends_weekly'] = get_attendance_trends(start_date_obj, end_date_obj, period='week')
+        context['attendance_trends_monthly'] = get_attendance_trends(start_date_obj, end_date_obj, period='month')
+    
+    elif report_type == 'revenue_trends':
+        # Fetch monthly and yearly revenue trends for the selected date range.
+        context['revenue_trends_monthly'] = get_revenue_trends(start_date_obj, end_date_obj, period='month')
+        context['revenue_trends_yearly'] = get_revenue_trends(start_date_obj, end_date_obj, period='year')
+
+    elif report_type and student_id: # Student-specific reports
+        try:
+            selected_student = Students.objects.get(id=student_id)
+            context['selected_student'] = selected_student # Add selected student to context
+            
+            if report_type == 'student_attendance_rate':
+                # Determine year and month for the report, defaulting to current year/month.
+                year = int(year_str) if year_str else timezone.localdate().year
+                month = int(month_str) if month_str else timezone.localdate().month
+                context['monthly_attendance_rate'] = get_monthly_attendance_rate(selected_student, year, month)
+                context['rate_year'] = year
+                context['rate_month'] = month
+            
+            elif report_type == 'student_payment_history':
+                context['payment_history'] = get_student_payment_history(selected_student)
+                
+        except Students.DoesNotExist:
+            context['student_error'] = "الطالب المحدد غير موجود."
+        except ValueError: # Handles errors from int(year_str) or int(month_str)
+            context['form_error'] = "سنة أو شهر غير صالح."
+            # Optionally, clear potentially misleading partial data if year/month were bad
+            if 'monthly_attendance_rate' in context: del context['monthly_attendance_rate']
+
+    return render(request, 'students/historical_insights.html', context)

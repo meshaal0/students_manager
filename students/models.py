@@ -65,6 +65,13 @@ class Attendance(models.Model):
     class Meta:
         verbose_name = "حضور"
         verbose_name_plural = 'الحضور'
+        verbose_name_plural = 'الحاضرون' # Changed for better clarity
+        constraints = [
+            models.UniqueConstraint(
+                fields=['student', 'attendance_date'],
+                name='unique_student_attendance_per_day'
+            )
+        ]
 
 
 def first_day_of_current_month():

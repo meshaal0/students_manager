@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default:"لوحة المتابعة" }}</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 10px;}
+        .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .summary-item { background-color: #e9ecef; padding: 15px; border-radius: 5px; text-align: center; }
+        .summary-item h3 { margin-top: 0; color: #007bff; }
+        .student-list { list-style-type: none; padding: 0; }
+        .student-list li { background-color: #f9f9f9; border: 1px solid #ddd; margin-bottom: 5px; padding: 8px; border-radius: 4px; }
+        .section { margin-bottom: 30px; }
+        .empty-state { color: #777; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ page_title }} - {{ dashboard_date|date:"Y-m-d" }}</h1>
+
+        <div class="section">
+            <h2>ملخص الحضور اليومي</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h3>حاضر</h3>
+                    <p>{{ attendance_summary.present_count }}</p>
+                </div>
+                <div class="summary-item">
+                    <h3>متغيب (بعذر)</h3>
+                    <p>{{ attendance_summary.absent_count }}</p>
+                </div>
+                <div class="summary-item">
+                    <h3>لم يسجل حضور</h3>
+                    <p>{{ attendance_summary.unmarked_students_count }}</p>
+                </div>
+            </div>
+
+            <h3>الطلاب الحاضرون:</h3>
+            {% if attendance_summary.present_students %}
+                <ul class="student-list">
+                    {% for student in attendance_summary.present_students %}
+                        <li>{{ student.name }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="empty-state">لا يوجد طلاب حاضرون.</p>
+            {% endif %}
+
+            <h3>الطلاب المتغيبون (بعذر):</h3>
+            {% if attendance_summary.absent_students %}
+                <ul class="student-list">
+                    {% for student in attendance_summary.absent_students %}
+                        <li>{{ student.name }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="empty-state">لا يوجد طلاب متغيبون بعذر.</p>
+            {% endif %}
+            
+            <h3>الطلاب الذين لم يسجلوا حضورهم:</h3>
+            {% if attendance_summary.unmarked_students %}
+                <ul class="student-list">
+                    {% for student in attendance_summary.unmarked_students %}
+                        <li>{{ student.name }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="empty-state">جميع الطلاب تم تسجيل حضورهم أو غيابهم.</p>
+            {% endif %}
+        </div>
+
+        <div class="section">
+            <h2>الطلاب المستحقة عليهم دفعات هذا الشهر</h2>
+            {% if overdue_payment_students %}
+                <ul class="student-list">
+                    {% for student in overdue_payment_students %}
+                        <li>{{ student.name }} - ({{ student.father_phone }})</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="empty-state">لا يوجد طلاب عليهم دفعات مستحقة لهذا الشهر.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
