@@ -6,5 +6,6 @@ urlpatterns = [
     path('download-barcodes/', views.download_barcodes_pdf, name='download_barcodes'),
     path('attendance/', views.barcode_attendance_view, name='barcode_attendance'),
     path('mark-absentees/', views.mark_absentees_view, name='mark_absentees'),
+    path('dashboard/', views.performance_dashboard_view, name='performance_dashboard'),
 
 ]

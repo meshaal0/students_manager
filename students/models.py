@@ -65,6 +65,12 @@ class Attendance(models.Model):
     class Meta:
         verbose_name = "حضور"
         verbose_name_plural = 'الحضور'
+        indexes = [
+            models.Index(fields=['student', 'attendance_date']),
+            models.Index(fields=['attendance_date']),
+            models.Index(fields=['student', 'is_absent', 'attendance_date']),
+            # models.Index(fields=['is_present']), # Removed: is_present field does not exist. is_absent is used.
+        ]
 
 
 def first_day_of_current_month():
@@ -97,6 +103,10 @@ class Payment(models.Model):
         ordering = ['-month']
         verbose_name = 'دفعة'
         verbose_name_plural = 'الدفعات'
+        indexes = [
+            models.Index(fields=['student', 'month']), # Already covered by UniqueConstraint but explicit index can be fine
+            models.Index(fields=['month']),
+        ]
 
     def __str__(self):
         # مثال: "أحمد – 2025-05"

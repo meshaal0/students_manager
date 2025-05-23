@@ -13,6 +13,10 @@ from django.utils import timezone
 import threading
 from datetime import date
 from datetime import timedelta
+from django.db.models import Count, F, ExpressionWrapper, fields # Added for performance dashboard
+from django.utils import timezone as django_timezone # Renamed to avoid conflict with today = timezone.localdate()
+from .utils.risk_assessment_utils import get_student_risk_assessment # Added for risk assessment
+from .utils.whatsapp_queue import send_low_recent_attendance_warning, send_high_risk_alert # Moved from here
 
 INITIAL_FREE_TRIES = 3
 
@@ -161,12 +165,6 @@ def _send_whatsapp_attendance(student, today):
         f"📚 نتمنى له يوماً موفقاً!\n\n"
         f"مع تحيات،\n*م. عبدالله عمر* 😎"
     )
-    threading.Thread(
-        target=queue_whatsapp_message,
-        args=(student.father_phone, text),
-        daemon=True
-    ).start()
-
 def _send_whatsapp_combined(student, dp_msg, at_msg):
     text = (
         f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
@@ -258,20 +256,23 @@ def mark_absentees_view(request):
     ).values_list('student_id', flat=True)
     # الطلاب الغائبون اليوم
     absentees = all_students.exclude(id__in=attended_ids)
+    
+    LOW_ATTENDANCE_THRESHOLD_PERCENT = 50.0
+    LOW_ATTENDANCE_PERIOD_DAYS = 10 # Check over last 10 school days
 
     for student in absentees:
-        # إذا لم نسجل للطالب شيئاً اليوم
+        # إذا لم نسجل للطالب شيئاً اليوم (حضور أو غياب)
         if Attendance.objects.filter(student=student, attendance_date=today).exists():
             continue
 
-        # ضع علامة غياب
-        Attendance.objects.create(
+        # 1. ضع علامة غياب
+        current_absence_record = Attendance.objects.create(
             student=student,
             attendance_date=today,
             is_absent=True
         )
 
-        # حساب الأيام المتتابعة للغياب
+        # 2. حساب الأيام المتتابعة للغياب (الموجودة سابقاً)
         consecutive_days = 1
         yesterday = today - timedelta(days=1)
         # تحقق من الغياب أمس
@@ -289,17 +290,71 @@ def mark_absentees_view(request):
             is_absent=True
         ).count()
 
-        # بناء الرسالة المناسبة
-        text = get_absence_message(student, today, consecutive_days, total_absences)
+        # بناء الرسالة المناسبة للغياب (الموجودة سابقاً)
+        text_consecutive_absence = get_absence_message(student, today, consecutive_days, total_absences)
+        
+        # أرسل رسالة الغياب المتتالي أولاً
+        if text_consecutive_absence: # Only send if a message was generated
+            threading.Thread(
+                target=queue_whatsapp_message,
+                args=(student.father_phone, text_consecutive_absence),
+                daemon=True
+            ).start()
 
-        # أرسل الرسالة في Thread منفصل
-        threading.Thread(
-            target=queue_whatsapp_message,
-            args=(student.father_phone, text),
-            daemon=True
-        ).start()
+        # --- NEW: Notification for Consistently Low Attendance ---
+        # Only check if it's not the first absence this month to avoid immediate double alert
+        # total_absences includes the one just recorded
+        sent_low_attendance_warning = False
+        if total_absences > 1: # Student has been absent before this month
+            # Calculate attendance rate over the last LOW_ATTENDANCE_PERIOD_DAYS school days
+            start_date_period = today - timedelta(days=LOW_ATTENDANCE_PERIOD_DAYS * 2) # Approx window to find X school days
+            
+            # Find actual school days in this period (days with any attendance record)
+            # Querying all attendance records in a wide window and then processing in Python
+            # can be inefficient. Better to get distinct dates from DB.
+            
+            # Get the dates of the last X school days before 'today'
+            recent_school_days_dates = list(Attendance.objects.filter(
+                attendance_date__lt=today # Exclude today as we just marked them absent
+            ).order_by('-attendance_date').values_list('attendance_date', flat=True).distinct())[:LOW_ATTENDANCE_PERIOD_DAYS]
 
-    messages.success(request, "✅ تم تسجيل غياب اليوم وإرسال إشعارات مخصصة لأولياء الأمور.")
+            if len(recent_school_days_dates) == LOW_ATTENDANCE_PERIOD_DAYS: # Ensure we have enough data
+                # Filter these dates to be within a reasonable actual timeframe (e.g. last 30 calendar days)
+                # This is to avoid using very old "school days" if school was closed for a long time.
+                # For simplicity here, we use the X distinct school days found.
+                # The period starts from the oldest of these X school days.
+                period_start_date_for_calc = recent_school_days_dates[-1]
+
+                present_count_period = Attendance.objects.filter(
+                    student=student,
+                    attendance_date__gte=period_start_date_for_calc,
+                    attendance_date__lt=today, # Up to yesterday
+                    is_present=True
+                ).count()
+                
+                # Number of school days in this specific student's calculation period
+                # is LOW_ATTENDANCE_PERIOD_DAYS because we fetched that many distinct dates.
+                actual_school_days_in_student_period = len(recent_school_days_dates)
+
+                if actual_school_days_in_student_period > 0:
+                    recent_attendance_rate = (present_count_period / actual_school_days_in_student_period) * 100
+                    if recent_attendance_rate < LOW_ATTENDANCE_THRESHOLD_PERCENT:
+                        send_low_recent_attendance_warning(student.name, student.father_phone, recent_attendance_rate, actual_school_days_in_student_period)
+                        sent_low_attendance_warning = True # Flag that this was sent
+
+        # --- NEW: Notification for High Dropout Risk ---
+        # Get risk assessment.
+        # Avoid sending if a low attendance warning was just sent, as high risk might be due to that.
+        # This logic can be refined: e.g. send if risk is high for *other* reasons.
+        if not sent_low_attendance_warning: # Only proceed if low attendance warning wasn't sent
+            risk_level, risk_reasons = get_student_risk_assessment(student) # Assume this function is up-to-date
+            if risk_level == 'High':
+                # Check if the primary reason for high risk is *already* covered by consecutive absence or low attendance.
+                # For simplicity here, we just send the high risk alert if not sent_low_attendance_warning.
+                # A more advanced check: if 'low attendance' is the *only* reason for high risk, and warning sent, skip.
+                send_high_risk_alert(student.name, student.father_phone, risk_reasons)
+
+    messages.success(request, "✅ تم تسجيل غياب اليوم وإرسال الإشعارات المخصصة (إذا لزم الأمر).")
     return redirect('barcode_attendance')
 
 # def mark_absentees_view(request):
@@ -348,3 +403,145 @@ def mark_absentees_view(request):
 
 #     # إذا GET، ببساطة أعد توجيه لصفحة الحضور
 #     return redirect('barcode_attendance')
+
+
+def performance_dashboard_view(request):
+    today = django_timezone.localdate()
+    current_month = today.month
+    current_year = today.year
+
+    # Fetch all students
+    all_students = Students.objects.all()
+    total_students_count = all_students.count()
+
+    # Attendance Analysis
+    # Overall attendance rate for the current month
+    overall_attendance_qs = Attendance.objects.filter(
+        attendance_date__month=current_month,
+        attendance_date__year=current_year,
+        is_absent=False # Count only presence
+    )
+    
+    # To calculate overall rate: (Total present records / (Total students * School days so far))
+    # School days so far in the month (approximate, assuming school open every weekday)
+    # A more robust way would be to have a calendar of school days.
+    # For now, let's count distinct days where any attendance was recorded for any student this month.
+    distinct_school_days_count = Attendance.objects.filter(
+        attendance_date__month=current_month,
+        attendance_date__year=current_year
+    ).values('attendance_date').distinct().count()
+
+    if total_students_count > 0 and distinct_school_days_count > 0:
+        total_possible_student_days = total_students_count * distinct_school_days_count
+        present_count_overall = overall_attendance_qs.count()
+        overall_attendance_rate = (present_count_overall / total_possible_student_days) * 100 if total_possible_student_days > 0 else 0
+    else:
+        overall_attendance_rate = 0
+
+
+    student_attendance_data = []
+    low_attendance_students_list = []
+    
+    # Days in the current month where attendance *could* have been marked.
+    # Using distinct_school_days_count if available, otherwise today.day as a fallback.
+    # This means if no attendance was marked at all, individual rates will be 0.
+    effective_school_days_for_month = distinct_school_days_count if distinct_school_days_count > 0 else today.day
+
+    students_at_risk = [] # For students with Medium or High risk
+
+    for student in all_students:
+        # Attendance rate calculation
+        student_present_count = Attendance.objects.filter(
+            student=student,
+            attendance_date__month=current_month,
+            attendance_date__year=current_year,
+            is_present=True 
+        ).count()
+        
+        if effective_school_days_for_month > 0:
+            rate = (student_present_count / effective_school_days_for_month) * 100
+        else:
+            rate = 0
+        
+        # Risk assessment
+        risk_level, risk_reasons = get_student_risk_assessment(student)
+        
+        student_attendance_data.append({
+            'name': student.name, 
+            'rate': round(rate, 2),
+            'risk_level': risk_level,
+            'risk_reasons': risk_reasons
+        })
+        
+        if rate < 70: 
+            low_attendance_students_list.append(student)
+        
+        if risk_level == 'High' or risk_level == 'Medium':
+            students_at_risk.append({
+                'student': student,
+                'risk_level': risk_level,
+                'risk_reasons': risk_reasons
+            })
+
+
+    # Payment Analysis
+    payments_current_month = Payment.objects.filter(
+        month__month=current_month, # Assuming 'month' field in Payment is a DateField representing start of month
+        month__year=current_year
+    )
+    paid_students_current_month_ids = payments_current_month.values_list('student_id', flat=True).distinct()
+    
+    paid_count = len(paid_students_current_month_ids)
+    unpaid_count = total_students_count - paid_count
+    payment_summary = {'paid': paid_count, 'unpaid': unpaid_count}
+
+    student_payment_data = []
+    for student in all_students:
+        status = 'Paid' if student.id in paid_students_current_month_ids else 'Unpaid'
+        student_payment_data.append({'name': student.name, 'status': status})
+
+    # Free Trials Analysis
+    basics_info = Basics.objects.first() 
+    default_free_tries = basics_info.free_tries if basics_info else INITIAL_FREE_TRIES # Use constant if Basics not set
+
+    students_on_free_trial_count = 0
+    # Students are on free trial if they have free_tries > 0 AND have not paid for the current month.
+    for student in all_students:
+        # Check if student has free tries remaining AND is not in the list of students who paid this month
+        if student.free_tries > 0 and student.id not in paid_students_current_month_ids:
+            students_on_free_trial_count += 1
+            
+    # Conversion Rate: Percentage of students who have paid at least once.
+    # This is a general "ever paid" conversion rate.
+    students_paid_at_least_once_count = Students.objects.filter(payment__isnull=False).distinct().count()
+    
+    if total_students_count > 0:
+        paid_once_conversion_rate = (students_paid_at_least_once_count / total_students_count) * 100
+    else:
+        paid_once_conversion_rate = 0
+        
+    # More specific conversion: Students who used free trials (e.g., last_reset_month is set) and then paid.
+    # This requires `last_reset_month` to be reliably set when free trials are given/reset.
+    # For now, we use the simpler "paid at least once" metric.
+    # If `last_reset_month` is available and used consistently:
+    # students_who_had_trials = Students.objects.filter(last_reset_month__isnull=False)
+    # converted_after_trial = students_who_had_trials.filter(payment__payment_date__gte=F('last_reset_month')).distinct().count()
+    # conversion_rate_after_trial = (converted_after_trial / students_who_had_trials.count() * 100) if students_who_had_trials.count() > 0 else 0
+    # For this iteration, `paid_once_conversion_rate` will be used as 'free_trial_conversion_rate'.
+
+
+    context = {
+        'overall_attendance_rate': round(overall_attendance_rate, 2),
+        'low_attendance_students': low_attendance_students_list,
+        'payment_summary': payment_summary,
+        'students_on_free_trial': students_on_free_trial_count,
+        'free_trial_conversion_rate': round(paid_once_conversion_rate, 2), 
+        'student_attendance_data': student_attendance_data, # Now includes risk info
+        'student_payment_data': student_payment_data,
+        'students_at_risk': students_at_risk, # Added for template
+        'current_month_year': today.strftime("%B %Y"),
+        'total_students': total_students_count,
+        'default_free_tries': default_free_tries,
+        'distinct_school_days_count': distinct_school_days_count, # For transparency in template
+    }
+    return render(request, 'performance_dashboard.html', context)
