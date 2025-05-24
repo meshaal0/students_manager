@@ -63,13 +63,18 @@ class Attendance(models.Model):
     def __str__(self):
         return f"{self.student.name} – {self.attendance_date}"
     class Meta:
+        # JULES WAS HERE AT THE TOP OF ATTENDANCE META
         verbose_name = "حضور"
         verbose_name_plural = 'الحضور'
+        constraints = [
+            models.UniqueConstraint(
+                fields=['student', 'attendance_date'],
+                name='unique_student_attendance_per_day'
+            )
+        ]
         indexes = [
-            models.Index(fields=['student', 'attendance_date']),
             models.Index(fields=['attendance_date']),
             models.Index(fields=['student', 'is_absent', 'attendance_date']),
-            # models.Index(fields=['is_present']), # Removed: is_present field does not exist. is_absent is used.
         ]
 
 
@@ -103,10 +108,6 @@ class Payment(models.Model):
         ordering = ['-month']
         verbose_name = 'دفعة'
         verbose_name_plural = 'الدفعات'
-        indexes = [
-            models.Index(fields=['student', 'month']), # Already covered by UniqueConstraint but explicit index can be fine
-            models.Index(fields=['month']),
-        ]
 
     def __str__(self):
         # مثال: "أحمد – 2025-05"
