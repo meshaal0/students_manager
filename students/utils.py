@@ -449,3 +449,38 @@ def get_revenue_trends(start_date, end_date, period='month'):
             })
             
     return revenue_trends_data
+
+# students/utils.py
+from django.utils import timezone # قد تحتاجها لمتغيرات التاريخ الافتراضية
+
+def process_message_template(template_string, context_dict):
+    '''
+    يستبدل المتغيرات المعرفة بين أقواس معقوفة {} في نص القالب
+    بالقيم المقابلة لها من القاموس السياقي.
+
+    مثال:
+    template = "مرحباً {student_name}, تاريخ اليوم هو {date}."
+    context = {'student_name': 'علي', 'date': '2023-10-26'}
+    process_message_template(template, context) 
+    -> "مرحباً علي, تاريخ اليوم هو 2023-10-26."
+    '''
+    processed_string = template_string
+    for key, value in context_dict.items():
+        placeholder = "{" + str(key) + "}" # بناء المتغير النائب مثل {student_name}
+        processed_string = processed_string.replace(placeholder, str(value))
+    return processed_string
+
+def get_default_template_context(student=None):
+    '''
+    يُرجع قاموسًا بالمتغيرات الافتراضية التي يمكن استخدامها في قوالب الرسائل.
+    '''
+    context = {
+        'date': timezone.localdate().strftime('%Y-%m-%d'),
+        'time': timezone.localtime().strftime('%I:%M %p'),
+    }
+    if student:
+        context['student_name'] = student.name
+        context['barcode'] = student.barcode
+        context['father_phone'] = student.father_phone
+        # يمكنك إضافة المزيد من حقول الطالب هنا إذا لزم الأمر
+    return context

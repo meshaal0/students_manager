@@ -15,7 +15,8 @@ from datetime import date, datetime # Added datetime
 from .utils import (
     get_daily_attendance_summary, get_students_with_overdue_payments, # Kept existing ones
     get_attendance_trends, get_revenue_trends,
-    get_monthly_attendance_rate, get_student_payment_history
+    get_monthly_attendance_rate, get_student_payment_history,
+    process_message_template, get_default_template_context # استيراد الدوال الجديدة
 )
 from .models import Students # To populate student selection
 
@@ -50,101 +51,207 @@ def download_barcodes_pdf(request):
 
 
 def barcode_attendance_view(request):
-    context = {}
-    today = timezone.localdate()
+    # دالة عرض لمعالجة حضور الطلاب باستخدام الباركود.
+    # تعرض الصفحة الرئيسية للحضور وتتعامل مع طلبات POST لتسجيل الحضور.
+    context = {} # سياق القالب
+    student_for_custom_message = None # سيتم استخدام هذا لتمرير الطالب إلى السياق إذا لزم الأمر
+    today = timezone.localdate() # الحصول على تاريخ اليوم الحالي
     context['now'] = today
 
-    if request.method == 'POST':
-        action  = request.POST.get('action', 'scan')
-        barcode = request.POST.get('barcode', '').strip()
+    if request.method == 'POST': # إذا كان الطلب من نوع POST (تم إرسال بيانات)
+        action  = request.POST.get('action', 'scan') # الحصول على نوع الإجراء (مسح، استخدام فرصة، دفع، إرسال رسالة مخصصة)
+        
+        if action == 'send_custom_message':
+            custom_message_content = request.POST.get('custom_message_content', '').strip()
+            target_barcode = request.POST.get('target_barcode')
+            manual_target_barcode = request.POST.get('manual_target_barcode', '').strip()
+            student_to_message = None
+
+            if target_barcode:
+                try:
+                    student_to_message = Students.objects.get(barcode=target_barcode)
+                except Students.DoesNotExist:
+                    messages.error(request, f"❌ لم يتم العثور على طالب بالباركود المحدد (المخفي): {target_barcode}")
+            elif manual_target_barcode:
+                try:
+                    student_to_message = Students.objects.get(barcode=manual_target_barcode)
+                except Students.DoesNotExist:
+                    messages.error(request, f"❌ لم يتم العثور على طالب بالباركود اليدوي: {manual_target_barcode}")
+            else:
+                messages.error(request, "❌ لم يتم تحديد باركود الطالب لإرسال الرسالة المخصصة.")
+
+            if student_to_message and custom_message_content:
+                # إنشاء السياق للمتغيرات
+                template_context = get_default_template_context(student_to_message)
+                # يمكنك إضافة متغيرات أخرى خاصة بهذه الرسالة إذا أردت
+                # template_context['custom_var'] = 'قيمة مخصصة'
+
+                processed_message = process_message_template(custom_message_content, template_context)
+                
+                # تم إزالة الأسطر التالية لأن get_default_template_context و process_message_template يعالجانها:
+                # today_str = timezone.localdate().strftime('%Y-%m-%d')
+                # processed_message = processed_message.replace('{student_name}', student_to_message.name)
+                # processed_message = processed_message.replace('{barcode}', student_to_message.barcode)
+                # processed_message = processed_message.replace('{date}', today_str)
+                # يمكنك إضافة المزيد من المتغيرات مثل {father_phone} إذا أردت
+
+                queue_whatsapp_message(student_to_message.father_phone, processed_message)
+                messages.success(request, f"✅ تم إرسال الرسالة المخصصة بنجاح إلى ولي أمر الطالب {student_to_message.name}.")
+            elif not custom_message_content:
+                messages.error(request, "❌ لا يمكن إرسال رسالة فارغة.")
+            
+            return redirect('barcode_attendance')
+
+        # ==== معالجة الإجراءات الأخرى (scan, free, pay) ====
+        barcode = request.POST.get('barcode', '').strip() # الحصول على الباركود المدخل لإجراءات الحضور
 
         # جلب الطالب أو رسالة خطأ
+        # محاولة العثور على طالب بالباركود المدخل
         try:
             student = Students.objects.get(barcode=barcode)
         except Students.DoesNotExist:
             messages.error(request, "❌ هذا الباركود غير صالح. الرجاء المحاولة مرة أخرى.")
             return redirect('barcode_attendance')
+        
+        student_for_custom_message = student # اجعل الطالب الحالي هو الهدف الافتراضي للرسالة المخصصة
 
         # منع التكرار اليومي
+        # التحقق مما إذا كان الطالب قد سجل حضوره بالفعل اليوم
         if Attendance.objects.filter(student=student, attendance_date=today).exists():
             messages.warning(request, f"⚠️ حضور {student.name} اليوم مسجّل مسبقاً.")
-            return redirect('barcode_attendance')
+            # حتى لو مسجل مسبقًا، قد نرغب في إرسال رسالة مخصصة له
+            context['pending_student'] = student # لتعبئة النموذج بالبيانات الصحيحة
+            if student_for_custom_message:
+                 context['pending_student_for_message'] = student_for_custom_message
+            return render(request, 'attendance.html', context)
+
 
         # تحقق الدفع الحالي
+        # تحديد أول يوم في الشهر الحالي للتحقق من حالة الدفع
         month_start = date(today.year, today.month, 1)
+        # التحقق مما إذا كان الطالب قد دفع اشتراك الشهر الحالي
         paid = Payment.objects.filter(student=student, month=month_start).exists()
 
-        # ==== مسح scan ====
+        # ==== القسم 1: مسح الباركود العادي (Scan) ====
+        # هذا القسم يعالج حالة مسح الباركود العادية حيث يكون الطالب قد دفع الاشتراك.
         if action == 'scan':
-            if paid:
+            if paid: # إذا كان الطالب قد دفع
                 # مدفوع
-                Attendance.objects.create(student=student, attendance_date=today)
+                Attendance.objects.create(student=student, attendance_date=today) # إنشاء سجل حضور جديد
+                # احصل على سجل الحضور الذي تم إنشاؤه للتو لتسجيل وقت الوصول
+                attendance_record = Attendance.objects.get(student=student, attendance_date=today, is_absent=False)
+                # تسجيل وقت الوصول الفعلي للطالب (وقت مسح الباركود)
+                attendance_record.arrival_time = timezone.localtime().time()
+                attendance_record.save(update_fields=['arrival_time']) # حفظ التغيير في حقل arrival_time فقط
+
+                # التحقق من التأخير وإرسال رسالة إذا لزم الأمر
+                try:
+                    basics = Basics.objects.first() # جلب الإعدادات الأساسية (يفترض وجود سجل واحد)
+                    # إذا كان هناك آخر وقت مسموح به للحضور مسجل، ووقت وصول الطالب بعد هذا الوقت
+                    if basics and basics.last_time and attendance_record.arrival_time > basics.last_time:
+                        # إرسال رسالة تنبيه بالتأخير
+                        _send_late_arrival_whatsapp_message(student, attendance_record.arrival_time, basics.last_time)
+                except Basics.DoesNotExist:
+                    pass # تجاهل الخطأ إذا لم يتم العثور على سجل الإعدادات الأساسية (يمكن تسجيل خطأ هنا إذا لزم الأمر)
                 messages.success(request, f"✅ تم تسجيل حضور {student.name} بنجاح.")
-                _send_whatsapp_attendance(student, today)
+                _send_whatsapp_attendance(student, today) # إرسال رسالة تأكيد الحضور العادية
                 return redirect('barcode_attendance')
             else:
                 # غير مدفوع: عرض دفع وخيارات الفرص المتبقية
+                # إذا لم يكن الطالب قد دفع، يتم عرض خيارات استخدام فرصة مجانية أو الدفع
+                student_for_custom_message = student #  لتمريره للسياق
                 context.update({
-                    'pending_student': student,
-                    'barcode': barcode,
+                    'pending_student': student, # الطالب الذي ينتظر قرارًا
+                    'barcode': barcode, # الباركود الخاص به لتسهيل الإجراء التالي
                 })
-                if student.free_tries > 0:
+                if student.free_tries > 0: # إذا كان لدى الطالب فرص مجانية متبقية
                     messages.warning(
                         request,
                         f"❗ لديك {student.free_tries} {'فرصة' if student.free_tries==1 else 'فرص'} مجانية قبل الدفع."
                     )
-                else:
+                else: # إذا لم يكن لديه فرص مجانية
                     messages.warning(
                         request,
                         "⚠️ انتهت فرصك المجانية لهذا الشهر، الرجاء الدفع."
                     )
 
-        # ==== استخدام فرصة مجانية ====
+        # ==== القسم 2: استخدام فرصة مجانية (Use Free Try) ====
+        # هذا القسم يعالج حالة اختيار الطالب استخدام إحدى فرصه المجانية المتبقية.
         elif action == 'free':
-            if student.free_tries > 0:
+            if student.free_tries > 0: # التأكد مرة أخرى من وجود فرص مجانية
                 # خصم فرصة وتسجيل حضور
-                student.free_tries -= 1
-                student.save()
-                Attendance.objects.create(student=student, attendance_date=today)
+                student.free_tries -= 1 # خصم فرصة واحدة
+                student.save() # حفظ التغييرات في سجل الطالب
+                Attendance.objects.create(student=student, attendance_date=today) # إنشاء سجل حضور
+                # احصل على سجل الحضور الذي تم إنشاؤه للتو لتسجيل وقت الوصول
+                attendance_record = Attendance.objects.get(student=student, attendance_date=today, is_absent=False)
+                # تسجيل وقت الوصول الفعلي للطالب
+                attendance_record.arrival_time = timezone.localtime().time()
+                attendance_record.save(update_fields=['arrival_time'])
+
+                # التحقق من التأخير وإرسال رسالة إذا لزم الأمر (نفس منطق القسم الأول)
+                try:
+                    basics = Basics.objects.first()
+                    if basics and basics.last_time and attendance_record.arrival_time > basics.last_time:
+                        _send_late_arrival_whatsapp_message(student, attendance_record.arrival_time, basics.last_time)
+                except Basics.DoesNotExist:
+                    pass
                 messages.success(
                     request,
                     f"✅ حضور مجانيّ. تبقى لديك {student.free_tries} {'فرصة' if student.free_tries==1 else 'فرص'}."
                 )
 
                 text = (
-                    f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
-                    f"✅ سجلنا حضور اليوم كفرصة مجانية.\n"
-                    f"📌 تبقى {student.free_tries} {'فرصة' if student.free_tries==1 else 'فرص'} لهذا الشهر.\n\n"
-                    f"🎯 ننصح بسداد الاشتراك لضمان استمرار الحضور دون حدود.\n\n"
-                    f"– م. عبدالله عمر"
+                    f"👋 *مرحباً بولي أمر الطالب/ـة {student.name}،*\n\n"
+                    f"👍 تم تسجيل حضور ابنكم/ابنتكم اليوم كفرصة مجانية.\n"
+                    f"Remaining free tries: {student.free_tries} {'فرصة متبقية' if student.free_tries == 1 else 'فرص متبقية'} لهذا الشهر.\n\n" # Changed to English for "Remaining free tries" for better universal understanding if needed, but kept Arabic for "فرص"
+                    f"💡 لتفادي أي انقطاع، ننصح بتسوية الاشتراك الشهري في أقرب وقت مناسب.\n\n"
+                    f"مع خالص تحياتنا،\n*إدارة مركزنا التعليمي*"
                 )
+                # إرسال رسالة تأكيد استخدام الفرصة المجانية عبر WhatsApp في thread منفصل
                 threading.Thread(
                     target=queue_whatsapp_message,
                     args=(student.father_phone, text),
                     daemon=True
                 ).start()
-            else:
+            else: # إذا لم تكن هناك فرص مجانية متبقية
                 messages.error(request, "❌ لا توجد فرص مجانية متبقية، الرجاء الدفع.")
-            return redirect('barcode_attendance')
+            return redirect('barcode_attendance') # إعادة توجيه إلى صفحة الحضور
 
-        # ==== الدفع + تسجيل حضور ====
-        elif action == 'pay':
+        # ==== القسم 3: الدفع وتسجيل الحضور (Pay and Attend) ====
+        # هذا القسم يعالج حالة قيام الطالب بدفع الاشتراك وتسجيل الحضور فورًا.
+        elif action == 'pay': # لا تنسى أن barcode قد تم تعريفه سابقاً إذا لم يكن action هو send_custom_message
+            # إنشاء سجل دفع جديد أو جلب السجل الموجود إذا كان الطالب قد دفع بالفعل لهذا الشهر
             payment, created = Payment.objects.get_or_create(
                 student=student,
                 month=month_start
             )
-            # إعادة تعيين الفرص فور الدفع
-            student.free_tries = INITIAL_FREE_TRIES
-            student.last_reset_month = today.replace(day=1)
-            student.save()
+            # إعادة تعيين الفرص المجانية للطالب فور الدفع
+            student.free_tries = INITIAL_FREE_TRIES # استخدام القيمة المبدئية للفرص المجانية
+            student.last_reset_month = today.replace(day=1) # تحديث تاريخ آخر شهر تم فيه إعادة تعيين الفرص
+            student.save() # حفظ التغييرات في سجل الطالب
 
             # تسجيل حضور اليوم
-            Attendance.objects.create(student=student, attendance_date=today)
-            pay_amount = Basics.objects.get(id=1)
+            Attendance.objects.create(student=student, attendance_date=today) # إنشاء سجل حضور
+            # احصل على سجل الحضور الذي تم إنشاؤه للتو لتسجيل وقت الوصول
+            attendance_record = Attendance.objects.get(student=student, attendance_date=today, is_absent=False)
+            # تسجيل وقت الوصول الفعلي للطالب
+            attendance_record.arrival_time = timezone.localtime().time()
+            attendance_record.save(update_fields=['arrival_time'])
+
+            # التحقق من التأخير وإرسال رسالة إذا لزم الأمر (نفس منطق القسم الأول)
+            try:
+                basics = Basics.objects.first()
+                if basics and basics.last_time and attendance_record.arrival_time > basics.last_time:
+                    _send_late_arrival_whatsapp_message(student, attendance_record.arrival_time, basics.last_time)
+            except Basics.DoesNotExist:
+                pass
+            pay_amount = Basics.objects.get(id=1).month_price # جلب سعر الشهر من الإعدادات الأساسية
+            # رسالة تأكيد الدفع
             dp_msg = (
-                f"✅ تم استلام اشتراك شهر {payment.month:%B %Y}. بمبلغ {pay_amount} فقط لا غير"
+                f"✅ شكراً جزيلاً! تم استلام اشتراك شهر {payment.month:%B %Y} لابنكم/ابنتكم {student.name} بمبلغ {pay_amount} جنيه مصري."
                 if created else
-                f"ℹ️ دفعتك لشهر {payment.month:%B %Y} مسجلّة مسبقاً."
+                f"ℹ️ دفعتكم لشهر {payment.month:%B %Y} لابنكم/ابنتكم {student.name} مسجلة لدينا مسبقاً."
             )
             at_msg = f"✅ تم تسجيل حضور {student.name} اليوم {today:%Y-%m-%d}."
 
@@ -153,52 +260,97 @@ def barcode_attendance_view(request):
             messages.success(request, at_msg)
             return redirect('barcode_attendance')
 
-    return render(request, 'attendance.html', context)
+    # إذا كان هناك طالب معلق (pending_student)، مرره إلى السياق للاستخدام في نموذج الرسالة المخصصة
+    # هذا الشرط للتأكد من أن pending_student موجود في context قبل محاولة الوصول إليه
+    # pending_student يتم تعيينه أعلاه عندما يكون الطالب غير مدفوع أو عندما يكون الحضور مسجل مسبقًا
+    if 'pending_student' in context: 
+        student_for_custom_message = context['pending_student']
+    
+    if student_for_custom_message: 
+         context['pending_student_for_message'] = student_for_custom_message
+
+    return render(request, 'attendance.html', context) # عرض صفحة الحضور مع السياق المحدث
 
 
+# دالة مساعدة لإرسال رسالة WhatsApp عند تسجيل الحضور العادي
 def _send_whatsapp_attendance(student, today):
-    date_str = today.strftime('%Y-%m-%d')
-    time_str = timezone.localtime().strftime('%H:%M')
+    # student: كائن الطالب الذي تم تسجيل حضوره
+    # today: تاريخ اليوم
+    date_str = today.strftime('%Y-%m-%d') # تنسيق التاريخ
+    time_str = timezone.localtime().strftime('%H:%M') # تنسيق الوقت الحالي
     text = (
-        f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
-        f"📌 *تم تسجيل الحضور بنجاح.*\n"
-        f"🗓️ التاريخ: `{date_str}`\n"
-        f"⏰ الوقت: `{time_str}`\n\n"
-        f"📚 نتمنى له يوماً موفقاً!\n\n"
-        f"مع تحيات،\n*م. عبدالله عمر* 😎"
+        f"👋 *مرحباً بولي أمر الطالب/ـة {student.name}،*\n\n"
+        f"✅ تم تسجيل حضور ابنكم/ابنتكم اليوم بنجاح.\n"
+        f"🗓️ التاريخ: {date_str}\n"
+        f"⏰ الوقت: {time_str}\n\n"
+        f"📚 نتمنى له/لها يوماً دراسياً موفقاً ومثمراً!\n\n"
+        f"مع خالص تحياتنا،\n*إدارة مركزنا التعليمي*"
     )
+    # إرسال الرسالة في thread منفصل لتجنب تعطيل عملية الحضور الرئيسية
     threading.Thread(
-        target=queue_whatsapp_message,
-        args=(student.father_phone, text),
-        daemon=True
+        target=queue_whatsapp_message, # الدالة الهدف للإرسال (تضيف الرسالة إلى طابور)
+        args=(student.father_phone, text), # الوسائط المطلوبة للدالة (رقم الهاتف والنص)
+        daemon=True # يجعل الـ thread يعمل في الخلفية
     ).start()
 
+# دالة مساعدة لإرسال رسالة WhatsApp مجمعة (تأكيد الدفع + تأكيد الحضور)
 def _send_whatsapp_combined(student, dp_msg, at_msg):
+    # student: كائن الطالب
+    # dp_msg: رسالة تأكيد الدفع (تم إنشاؤها في barcode_attendance_view)
+    # at_msg: رسالة تأكيد الحضور (تم إنشاؤها في barcode_attendance_view)
     text = (
-        f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
+        f"👋 *مرحباً بولي أمر الطالب/ـة {student.name}،*\n\n"
         f"{dp_msg}\n"
         f"{at_msg}\n\n"
-        f"📚 شكراً لتعاونكم!\n\n"
-        f"مع تحيات،\n*م. عبدالله عمر* 😎"
+        f"🤝 نشكركم على حسن تعاونكم وثقتكم.\n\n"
+        f"مع خالص تحياتنا،\n*إدارة مركزنا التعليمي*"
     )
+    # إرسال الرسالة في thread منفصل
     threading.Thread(
         target=queue_whatsapp_message,
         args=(student.father_phone, text),
         daemon=True
     ).start()
 
+# دالة مساعدة لإرسال رسالة WhatsApp عند وصول الطالب متأخراً
+def _send_late_arrival_whatsapp_message(student, actual_arrival_time, allowed_latest_time):
+    # student: كائن الطالب المتأخر
+    # actual_arrival_time: وقت وصول الطالب الفعلي
+    # allowed_latest_time: آخر وقت مسموح به للحضور
+    time_format = "%I:%M %p" # تنسيق الوقت لعرضه بصيغة AM/PM (مثال: 03:30 PM)
+    actual_time_str = actual_arrival_time.strftime(time_format) # وقت الوصول الفعلي بصيغة نصية
+    allowed_time_str = allowed_latest_time.strftime(time_format) # آخر وقت مسموح به بصيغة نصية
 
+    text = (
+        f"👋 *مرحباً بولي أمر الطالب/ـة {student.name}،*\n\n"
+        f"⏱️ نود إعلامكم بأن ابنكم/ابنتكم قد وصل/وصلت متأخراً/متأخرة اليوم.\n"
+        f"⏰ وقت الوصول الفعلي: *{actual_time_str}*\n"
+        f"🕒 آخر وقت مسموح به للحضور: *{allowed_time_str}*\n\n"
+        f" حرصاً على انضباط المواعيد وتحقيق أقصى استفادة، نرجو التأكيد على أهمية الحضور في الوقت المحدد.\n\n"
+        f"مع خالص تحياتنا،\n*إدارة مركزنا التعليمي*"
+    )
+    # إرسال الرسالة في thread منفصل
+    threading.Thread(
+        target=queue_whatsapp_message,
+        args=(student.father_phone, text),
+        daemon=True
+    ).start()
+
+# دالة لتوليد رسالة الغياب المناسبة بناءً على حالة غياب الطالب
 def get_absence_message(student, today, consecutive_days, total_absences):
     """
     يُعيد رسالة مُخصصة بناءً على:
-    - consecutive_days: عدد الأيام المتتابعة للغياب حتى اليوم
-    - total_absences: إجمالي عدد أيام الغياب في الشهر الحالي
+    - student: كائن الطالب الغائب.
+    - today: تاريخ اليوم الحالي.
+    - consecutive_days: عدد الأيام المتتابعة للغياب حتى اليوم (بما في ذلك اليوم الحالي).
+    - total_absences: إجمالي عدد أيام غياب الطالب في الشهر الحالي (بما في ذلك اليوم الحالي).
     """
-    date_str = today.strftime("%Y-%m-%d")
-    base_header = f"📢 *تنبيه ولي أمر الطالب {student.name}*\n\n"
-    signature = "\n\nمع تحيات،\n*م. عبدالله عمر*"
+    date_str = today.strftime("%Y-%m-%d") # تنسيق تاريخ اليوم
+    base_header = f"📢 *إشعار بخصوص غياب الطالب/ـة {student.name}*\n\n" # بداية موحدة لجميع رسائل الغياب
+    signature = "\n\nمع خالص تحياتنا،\n*إدارة مركزنا التعليمي*" # توقيع موحد
 
-    # أول غياب للطالب في الشهر
+    # الحالة 1: أول غياب للطالب في الشهر
+    # إذا كان إجمالي الغيابات هذا الشهر هو 1، وأيام الغياب المتتالية هي 1 (أي هذا هو أول يوم غياب).
     if total_absences == 1 and consecutive_days == 1:
         return (
             base_header +
@@ -207,7 +359,8 @@ def get_absence_message(student, today, consecutive_days, total_absences):
             signature
         )
 
-    # غياب متتابع يومين
+    # الحالة 2: غياب متتابع لمدة يومين
+    # إذا كان الطالب غائباً لليوم الثاني على التوالي.
     if consecutive_days == 2:
         return (
             base_header +
@@ -216,17 +369,19 @@ def get_absence_message(student, today, consecutive_days, total_absences):
             signature
         )
 
-    # غياب متتابع 3 أيام أو أكثر
+    # الحالة 3: غياب متتابع لمدة 3 أيام أو أكثر
+    # إذا كان الطالب غائباً لثلاثة أيام متتالية أو أكثر.
     if consecutive_days >= 3:
         return (
             base_header +
             f"🚨 غياب متتابع: ابنك/ابنتك غائب منذ {consecutive_days} أيام حتى ({date_str}).\n"
-            "📌 نطلب منكم التواصل عاجلاً لتوضيح الوضع وتفادي التأثير السلبي على المستوى الدراسي.\n" +
-            "ان كان هناك اي مشاكل او شكوى الرجاء ابلاغنا ونعد باننا سنعمل على حلها والمساعدة ان شاء الله"+
+            "📌 نطلب منكم التكرم بالتواصل معنا في أقرب فرصة لمناقشة الأمر وتقديم الدعم اللازم لابنكم/ابنتكم.\n" +
+            "إن كانت هناك أي تحديات تواجهه/تواجهها، فنحن هنا للمساعدة والعمل سوياً لإيجاد الحلول المناسبة." +
             signature
         )
 
-    # غياب متقطع (ليس متتابعاً مع اليوم السابق)
+    # الحالة 4: غياب متقطع (ليس متتابعاً مع اليوم السابق ولكن هناك غيابات أخرى في الشهر)
+    # إذا كان الغياب الحالي هو ليوم واحد فقط (consecutive_days == 1) ولكن إجمالي الغيابات في الشهر أكبر من 1.
     if consecutive_days == 1 and total_absences > 1:
         return (
             base_header +
@@ -235,7 +390,8 @@ def get_absence_message(student, today, consecutive_days, total_absences):
             signature
         )
 
-    # حالات عامة أخرى (احتياط)
+    # الحالة 5: حالات عامة أخرى (احتياطية، يجب ألا يتم الوصول إليها إذا كانت الشروط أعلاه تغطي كل الحالات)
+    # رسالة غياب عامة إذا لم تتطابق أي من الحالات المخصصة أعلاه.
     return (
         base_header +
         f"❌ لم يتم تسجيل حضور ابنك/ابنتك اليوم ({date_str}).\n"
