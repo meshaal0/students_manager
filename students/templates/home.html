@@ -46,8 +46,12 @@
 <body>
     <div class="container">
         <h1>لوحة التحكم الرئيسية</h1>
+        <a href="http://127.0.0.1:8000/admin/" class="nav-link-item">لوحة التحكم</a>
         <a href="{% url 'barcode_attendance' %}" class="nav-link-item">تسجيل الحضور والغياب</a>
         <a href="{% url 'income_report' %}" class="nav-link-item">تقرير الدخل</a>
+        <a href="{% url 'daily_dashboard' %}" class="nav-link-item">التقرير اليومي </a>
+        <a href="{% url 'broadcast_message' %}" class="nav-link-item">الرسالة الجماعية</a>
+        <a href="{% url 'historical_insights' %}" class="nav-link-item">التحليلات الابداعية</a>
         <!-- Add other links here as needed -->
     </div>
 

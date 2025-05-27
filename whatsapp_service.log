@@ -5057,3 +5057,285 @@ Traceback (most recent call last):
 django.urls.exceptions.NoReverseMatch: Reverse for 'barcode_attendance' not found. 'barcode_attendance' is not a valid view function or pattern name.
 2025-05-27 12:57:04,444 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
 2025-05-27 12:57:06,489 INFO Watching for file changes with StatReloader
+2025-05-27 12:58:00,630 INFO Attempting to queue WhatsApp message to 01142344943 for student \u062a\u062c\u0631\u064a\u0628 (type: payment_confirmation_and_attendance)
+2025-05-27 12:58:14,028 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.40 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-27 12:58:36,953 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-27 12:58:40,574 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-27 12:58:43,361 WARNING Not Found: /\u0627\u062e\u0629\u062b/
+2025-05-27 12:58:50,152 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 12:58:50
+2025-05-27 12:58:52,067 WARNING Not Found: /home
+2025-05-27 12:58:55,911 WARNING Not Found: /home/
+2025-05-27 13:02:30,721 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 13:02:33,058 INFO Watching for file changes with StatReloader
+2025-05-27 13:02:34,608 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 13:02:36,840 INFO Watching for file changes with StatReloader
+2025-05-27 13:03:46,104 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 13:03:48,089 INFO Watching for file changes with StatReloader
+2025-05-27 13:04:07,321 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 13:04:09,346 INFO Watching for file changes with StatReloader
+2025-05-27 13:04:11,888 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 13:04:13,997 INFO Watching for file changes with StatReloader
+2025-05-27 13:04:15,636 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 13:04:17,689 INFO Watching for file changes with StatReloader
+2025-05-27 13:04:22,578 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 13:04:24,960 INFO Watching for file changes with StatReloader
+2025-05-27 14:00:06,110 INFO Watching for file changes with StatReloader
+2025-05-27 14:02:24,742 WARNING Not Found: /favicon.ico
+2025-05-27 14:36:43,222 INFO Watching for file changes with StatReloader
+2025-05-27 14:36:47,759 WARNING Not Found: /favicon.ico
+2025-05-27 14:38:01,513 ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 563, in home_view
+    return render(request, 'home.html')
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin' not found. 'admin' is not a valid view function or pattern name.
+2025-05-27 14:38:02,715 ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 563, in home_view
+    return render(request, 'home.html')
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin' not found. 'admin' is not a valid view function or pattern name.
+2025-05-27 14:38:03,352 ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 563, in home_view
+    return render(request, 'home.html')
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin' not found. 'admin' is not a valid view function or pattern name.
+2025-05-27 14:38:04,019 ERROR Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 563, in home_view
+    return render(request, 'home.html')
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin' not found. 'admin' is not a valid view function or pattern name.
+2025-05-27 14:43:20,102 ERROR Internal Server Error: /admin/students/basics/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\db\models\options.py", line 683, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'action_checkbox'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\utils.py", line 290, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\utils.py", line 330, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\db\models\options.py", line 685, in get_field
+    raise FieldDoesNotExist(
+        "%s has no field named '%s'" % (self.object_name, field_name)
+    )
+django.core.exceptions.FieldDoesNotExist: Basics has no field named 'action_checkbox'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+           ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\library.py", line 359, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 354, in result_list
+    "results": list(results(cl)),
+               ~~~~^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 330, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 321, in __init__
+    super().__init__(*items)
+    ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 219, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\utils.py", line 299, in lookup_field
+    value = attr(obj)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\contrib\admin\options.py", line 1031, in action_checkbox
+    _("Select this object for an action - {}"), str(obj)
+                                                ~~~^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\models.py", line 20, in __str__
+    return f"{self.last_time} – {self.month_price}"
+              ^^^^^^^^^^^^^^
+AttributeError: 'Basics' object has no attribute 'last_time'
+2025-05-27 14:43:54,787 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\models.py changed, reloading.
+2025-05-27 14:43:56,829 INFO Watching for file changes with StatReloader
