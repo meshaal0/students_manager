@@ -6,7 +6,7 @@ from datetime import date
 # Create your models here.
 
 class Basics(models.Model):
-    last_time = models.TimeField(verbose_name='آخر وقت')
+    ate_arrival_time = models.TimeField(verbose_name='وقت اعتبار التأخير', null=True, blank=True)
     month_price = models.IntegerField(verbose_name='سعر الشهر')
     free_tries = models.PositiveSmallIntegerField(
         verbose_name='عدد الفرص المجانية',
@@ -60,11 +60,18 @@ class Attendance(models.Model):
         editable=False,        # اختياري: يمنع تعديل التاريخ يدويًا من الـ admin
     )
     is_absent = models.BooleanField('غياب', default=False)
+    arrival_time = models.TimeField(verbose_name='وقت الوصول الفعلي', null=True, blank=True, help_text='يسجل وقت مسح الباركود للحضور') # وقت وصول الطالب الفعلي عند مسح الباركود
     def __str__(self):
         return f"{self.student.name} – {self.attendance_date}"
     class Meta:
         verbose_name = "حضور"
-        verbose_name_plural = 'الحضور'
+        verbose_name_plural = 'الحاضرون' # Changed for better clarity
+        constraints = [
+            models.UniqueConstraint(
+                fields=['student', 'attendance_date'],
+                name='unique_student_attendance_per_day'
+            )
+        ]
 
 
 def first_day_of_current_month():
@@ -101,7 +108,38 @@ class Payment(models.Model):
     def __str__(self):
         # مثال: "أحمد – 2025-05"
         return f"{self.student.name} – {self.month:%Y-%m}"
+class NotificationCategory(models.Model):
+    name = models.CharField(max_length=255, unique=True, verbose_name="اسم فئة الإشعار") # اسم الفئة، يجب أن يكون فريداً
+    def __str__(self):
+        return self.name # التمثيل النصي للنموذج هو اسم الفئة
 
+    class Meta:
+        verbose_name = "فئة إشعار" # اسم مفرد للنموذج في واجهة المشرف
+        verbose_name_plural = "فئات الإشعارات" # اسم الجمع للنموذج في واجهة المشرف
+
+# نموذج BroadcastMessage لإدارة الرسائل العامة (الإشعارات)
+# يستخدم لإرسال رسائل مجمعة للطلاب أو فئات معينة منهم
+class BroadcastMessage(models.Model):
+    category = models.ForeignKey( # حقل لربط الرسالة بفئة إشعار (اختياري)
+        NotificationCategory,
+        on_delete=models.SET_NULL, # إذا حُذفت الفئة، يبقى هذا الحقل فارغاً (null) بدلاً من حذف الرسالة
+        null=True, # يسمح بأن يكون الحقل فارغاً في قاعدة البيانات
+        blank=True, # يسمح بأن يكون الحقل فارغاً في النماذج (forms)
+        verbose_name="الفئة" # الاسم المعروض في واجهة المشرف
+    )
+    title = models.CharField(max_length=255, verbose_name="العنوان") # عنوان الرسالة
+    content = models.TextField(verbose_name="المحتوى") # محتوى الرسالة النصي
+    send_to_all = models.BooleanField(default=True, verbose_name="إرسال للجميع") # علامة لتحديد ما إذا كانت الرسالة سترسل لجميع الطلاب
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="وقت الإنشاء") # تاريخ ووقت إنشاء الرسالة (يُضبط تلقائياً عند الإنشاء)
+    sent_at = models.DateTimeField(null=True, blank=True, verbose_name="وقت الإرسال") # تاريخ ووقت إرسال الرسالة (يُضبط عند الإرسال الفعلي)
+
+    def __str__(self):
+        return self.title # التمثيل النصي للنموذج هو عنوان الرسالة
+
+    class Meta:
+        verbose_name = "رسالة عامة" # اسم مفرد للنموذج في واجهة المشرف
+        verbose_name_plural = "الرسائل العامة" # اسم الجمع للنموذج في واجهة المشرف
+        ordering = ['-created_at'] # ترتيب الرسائل في واجهة المشرف بحيث تظهر الأحدث أولاً
     # class Meta:
     #     constraints = [
     #         models.UniqueConstraint(

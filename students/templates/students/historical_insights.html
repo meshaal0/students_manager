@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title|default:"التحليلات التاريخية" }}</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 10px;}
+        .filters-form { background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-end; }
+        .filters-form label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .filters-form input[type="date"], .filters-form select, .filters-form input[type="number"] { padding: 8px; border-radius: 4px; border: 1px solid #ddd; }
+        .filters-form button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        .filters-form button:hover { background-color: #0056b3; }
+        .section { margin-bottom: 30px; padding: 15px; background-color: #fff; border: 1px solid #eee; border-radius: 5px;}
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { text-align: right; padding: 10px; border: 1px solid #ddd; }
+        th { background-color: #e9ecef; }
+        .empty-state { color: #777; font-style: italic; padding: 10px; }
+        .error-message { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ page_title }}</h1>
+
+        <form method="GET" action="" class="filters-form">
+            <div>
+                <label for="report_type">نوع التقرير:</label>
+                <select name="report_type" id="report_type" onchange="this.form.submit()">
+                    <option value="">-- اختر نوع التقرير --</option>
+                    <option value="attendance_trends" {% if selected_report_type == 'attendance_trends' %}selected{% endif %}>اتجاهات الحضور العامة</option>
+                    <option value="revenue_trends" {% if selected_report_type == 'revenue_trends' %}selected{% endif %}>اتجاهات الإيرادات</option>
+                    <option value="student_attendance_rate" {% if selected_report_type == 'student_attendance_rate' %}selected{% endif %}>معدل حضور طالب</option>
+                    <option value="student_payment_history" {% if selected_report_type == 'student_payment_history' %}selected{% endif %}>سجل دفعات طالب</option>
+                </select>
+            </div>
+            
+            {% if selected_report_type == 'attendance_trends' or selected_report_type == 'revenue_trends' %}
+            <div>
+                <label for="start_date">من تاريخ:</label>
+                <input type="date" name="start_date" id="start_date" value="{{ start_date_val }}">
+            </div>
+            <div>
+                <label for="end_date">إلى تاريخ:</label>
+                <input type="date" name="end_date" id="end_date" value="{{ end_date_val }}">
+            </div>
+            {% endif %}
+
+            {% if selected_report_type == 'student_attendance_rate' or selected_report_type == 'student_payment_history' %}
+            <div>
+                <label for="student_id">الطالب:</label>
+                <select name="student_id" id="student_id">
+                    <option value="">-- اختر طالب --</option>
+                    {% for student in students %}
+                        <option value="{{ student.id }}" {% if student.id == selected_student_id %}selected{% endif %}>{{ student.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% endif %}
+
+            {% if selected_report_type == 'student_attendance_rate' %}
+            <div>
+                <label for="year">السنة:</label>
+                <input type="number" name="year" id="year" value="{{ selected_year|default:current_year }}" min="2020" max="2099">
+            </div>
+            <div>
+                <label for="month">الشهر:</label>
+                <input type="number" name="month" id="month" value="{{ selected_month|default:1 }}" min="1" max="12">
+            </div>
+            {% endif %}
+            
+            <div><button type="submit">عرض التقرير</button></div>
+        </form>
+
+        {% if date_error %}<p class="error-message">{{ date_error }}</p>{% endif %}
+        {% if student_error %}<p class="error-message">{{ student_error }}</p>{% endif %}
+        {% if form_error %}<p class="error-message">{{ form_error }}</p>{% endif %}
+
+        {% if report_type == 'attendance_trends' and attendance_trends %}
+            <div class="section">
+                <h2>اتجاهات الحضور اليومية ({{ start_date_val }} إلى {{ end_date_val }})</h2>
+                <table><thead><tr><th>التاريخ</th><th>عدد الحاضرين</th></tr></thead><tbody>
+                {% for trend in attendance_trends %}{% if trend.present_count > 0 %}<tr><td>{{ trend.period_start|date:"Y-m-d" }}</td><td>{{ trend.present_count }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
+                </tbody></table>
+                
+                <h3>اتجاهات الحضور الأسبوعية</h3>
+                <table><thead><tr><th>بداية الأسبوع</th><th>عدد الحاضرين</th></tr></thead><tbody>
+                {% for trend in attendance_trends_weekly %}{% if trend.present_count > 0 %}<tr><td>{{ trend.period_start|date:"Y-m-d" }}</td><td>{{ trend.present_count }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
+                </tbody></table>
+
+                <h3>اتجاهات الحضور الشهرية</h3>
+                <table><thead><tr><th>الشهر</th><th>عدد الحاضرين</th></tr></thead><tbody>
+                {% for trend in attendance_trends_monthly %}{% if trend.present_count > 0 %}<tr><td>{{ trend.period_start|date:"Y-m" }}</td><td>{{ trend.present_count }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
+                </tbody></table>
+            </div>
+        {% endif %}
+
+        {% if report_type == 'revenue_trends' and revenue_trends_yearly %}
+            <div class="section">
+                <h2>اتجاهات الإيرادات ({{ start_date_val }} إلى {{ end_date_val }})</h2>
+                <h3>الإيرادات الشهرية (تقديرية)</h3>
+                <table><thead><tr><th>الشهر</th><th>إجمالي الإيرادات</th></tr></thead><tbody>
+                {% for trend in revenue_trends_monthly %}{% if trend.total_revenue > 0 %}<tr><td>{{ trend.period_start|date:"Y-m" }}</td><td>{{ trend.total_revenue }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
+                </tbody></table>
+                <h3>الإيرادات السنوية (تقديرية)</h3>
+                <table><thead><tr><th>السنة</th><th>إجمالي الإيرادات</th></tr></thead><tbody>
+                {% for trend in revenue_trends_yearly %}{% if trend.total_revenue > 0 %}<tr><td>{{ trend.period_start|date:"Y" }}</td><td>{{ trend.total_revenue }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
+                </tbody></table>
+            </div>
+        {% endif %}
+
+        {% if report_type == 'student_attendance_rate' and selected_student and monthly_attendance_rate is not None %}
+            <div class="section">
+                <h2>معدل حضور الطالب: {{ selected_student.name }} لشهر {{ rate_month }}/{{ rate_year }}</h2>
+                <p><strong>المعدل:</strong> {{ monthly_attendance_rate|floatformat:2 }}%</p>
+            </div>
+        {% endif %}
+
+        {% if report_type == 'student_payment_history' and selected_student and payment_history %}
+            <div class="section">
+                <h2>سجل دفعات الطالب: {{ selected_student.name }}</h2>
+                <table><thead><tr><th>شهر الدفع</th><th>تاريخ الدفع</th></tr></thead><tbody>
+                {% for payment in payment_history %}<tr><td>{{ payment.month|date:"Y-m" }}</td><td>{{ payment.paid_on|date:"Y-m-d H:i" }}</td></tr>{% empty %}<tr><td colspan="2" class="empty-state">لا توجد دفعات مسجلة.</td></tr>{% endfor %}
+                </tbody></table>
+            </div>
+        {% elif report_type == 'student_payment_history' and selected_student %}
+             <div class="section"><p class="empty-state">لا توجد دفعات مسجلة لهذا الطالب.</p></div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

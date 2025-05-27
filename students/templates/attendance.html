@@ -284,6 +284,27 @@
       تسجيل غياب غير الحاضرين اليوم
       </button>
     </form>
+    <hr style="margin-top: 2rem; margin-bottom: 2rem;"> <!-- فاصل -->
+    
+    <div class="custom-message-section">
+      <h3><i class="fas fa-paper-plane"></i> إرسال رسالة سريعة مخصصة</h3>
+      <form method="POST" action="{% url 'barcode_attendance' %}" style="margin-top: 1rem;">
+          {% csrf_token %}
+          <textarea name="custom_message_content" rows="4" style="width: 100%; padding: 0.75rem; border: 1px solid #ced4da; border-radius: 0.25rem; font-family: 'Tajawal', sans-serif; font-size: 1rem;" placeholder="اكتب رسالتك هنا... يمكنك استخدام {student_name} لاسم الطالب، {barcode} للباركود، و {date} للتاريخ الحالي." required></textarea><br><br>
+          
+          {% if pending_student %}
+              <input type="hidden" name="target_barcode" value="{{ pending_student.barcode }}">
+              <p style="font-size: 0.9rem; color: #555; margin-bottom: 1rem;">الرسالة ستُرسل إلى ولي أمر الطالب: <strong>{{ pending_student.name }}</strong> (باركود: {{ pending_student.barcode }})</p>
+          {% else %}
+              <p style="margin-bottom: 0.5rem;"><label for="manual_target_barcode">أو أدخل باركود الطالب يدويًا (إذا لم يكن هناك طالب محدد أعلاه):</label></p>
+              <input type="text" name="manual_target_barcode" id="manual_target_barcode" class="barcode-input" style="margin-bottom: 1rem; padding: 0.75rem; font-size: 1rem;" placeholder="أدخل الباركود هنا (5 أرقام)">
+          {% endif %}
+          
+          <button type="submit" name="action" value="send_custom_message" class="submit-btn" style="background: var(--success);">
+            <i class="fas fa-paper-plane"></i> إرسال الرسالة
+          </button>
+      </form>
+    </div>
   </div>
 
 
