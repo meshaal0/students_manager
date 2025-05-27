@@ -6,7 +6,7 @@ from datetime import date
 # Create your models here.
 
 class Basics(models.Model):
-    ate_arrival_time = models.TimeField(verbose_name='وقت اعتبار التأخير', null=True, blank=True)
+    late_arrival_time = models.TimeField(verbose_name='وقت اعتبار التأخير', null=True, blank=True)
     month_price = models.IntegerField(verbose_name='سعر الشهر')
     free_tries = models.PositiveSmallIntegerField(
         verbose_name='عدد الفرص المجانية',
@@ -17,7 +17,7 @@ class Basics(models.Model):
         verbose_name='شعار',
         upload_to='logo/',)
     def __str__(self):
-        return f"{self.ate_arrival_time} – {self.month_price}"
+        return f"{self.late_arrival_time} – {self.month_price}"
     class Meta:
         verbose_name = "أساسيات"
         verbose_name_plural = 'الأساسيات'

@@ -5339,3 +5339,37 @@ Traceback (most recent call last):
 AttributeError: 'Basics' object has no attribute 'last_time'
 2025-05-27 14:43:54,787 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\models.py changed, reloading.
 2025-05-27 14:43:56,829 INFO Watching for file changes with StatReloader
+2025-05-27 14:48:18,730 INFO Watching for file changes with StatReloader
+2025-05-27 15:14:29,610 INFO Watching for file changes with StatReloader
+2025-05-27 15:18:02,332 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:07,766 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:08,239 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:08,698 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:09,254 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:09,727 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:10,407 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:10,904 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:11,412 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:12,133 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:14,244 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:19,972 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:20,033 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:21,850 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:25,836 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:25,879 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:26,663 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:27,624 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:27,669 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:28,604 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:30,408 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 15:40:30,468 WARNING Not Found: /.well-known/appspecific/com.chrome.devtools.json
+2025-05-27 20:17:25,214 INFO Watching for file changes with StatReloader
+2025-05-27 20:17:25,634 WARNING Not Found: /favicon.ico
+2025-05-27 20:36:03,196 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\utils\whatsapp_Sel.py changed, reloading.
+2025-05-27 20:36:10,837 INFO Watching for file changes with StatReloader
+2025-05-27 20:36:33,284 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\utils\whatsapp_queue.py changed, reloading.
+2025-05-27 20:36:41,469 INFO Watching for file changes with StatReloader
+2025-05-27 20:37:45,468 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 20:37:47,752 INFO Watching for file changes with StatReloader
+2025-05-27 20:42:45,635 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 20:42:47,812 INFO Watching for file changes with StatReloader

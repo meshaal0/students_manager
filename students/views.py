@@ -17,6 +17,10 @@ from .util import (
     get_attendance_trends, get_revenue_trends,
     get_monthly_attendance_rate, get_student_payment_history
 )
+from .utils.failed_numbers_manager import (
+    get_failed_numbers_summary, export_failed_numbers_to_csv,
+    fix_student_phone_number, clear_all_failed_records
+)
 
 INITIAL_FREE_TRIES = 3
 
@@ -469,7 +473,15 @@ def historical_insights_view(request):
                 # Determine year and month for the report, defaulting to current year/month.
                 year = int(year_str) if year_str else timezone.localdate().year
                 month = int(month_str) if month_str else timezone.localdate().month
-                context['monthly_attendance_rate'] = get_monthly_attendance_rate(selected_student, year, month)
+                monthly_rate = get_monthly_attendance_rate(selected_student, year, month)
+                if monthly_rate is None:
+                    context['form_error'] = "الشهر أو السنة المحددة غير صالحة."
+                    # Ensure rate variables are not set or are cleared if error occurs
+                    if 'monthly_attendance_rate' in context: del context['monthly_attendance_rate']
+                    if 'rate_year' in context: del context['rate_year']
+                    if 'rate_month' in context: del context['rate_month']
+                else:
+                    context['monthly_attendance_rate'] = monthly_rate
                 context['rate_year'] = year
                 context['rate_month'] = month
             

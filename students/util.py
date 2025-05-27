@@ -257,7 +257,7 @@ def get_monthly_attendance_rate(student, year, month):
         end_date_month = date(year, month, num_days_in_month)
     except calendar.IllegalMonthError: # Handle invalid month numbers
         # Or raise a more specific error, or return a specific value like None
-        return 0.0 
+        return None
 
 
     # Retrieve all attendance records for the student within the specified month
