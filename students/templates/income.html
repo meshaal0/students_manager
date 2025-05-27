@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تقرير الدخل</title>
+  <!-- الخطوط -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- ايقونات -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2A5C82;
+      --secondary: #5BA4E6;
+      --success: #28A745;
+      --danger: #DC3545;
+      --light: #F8F9FA;
+      --dark: #1E1E1E;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      min-height: 100vh;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .container {
+      max-width: 900px; /* Increased width for table */
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-weight: 700;
+      font-size: 2.2rem;
+      position: relative;
+      padding-bottom: 1rem;
+      text-align: center; /* Center heading */
+    }
+
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+    }
+
+    .table-container {
+      margin-top: 2rem;
+      overflow-x: auto; /* For responsive tables */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: right; /* Right align text for Arabic */
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    th {
+      background-color: var(--primary);
+      color: white;
+      font-weight: 500;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+
+    tbody tr:hover {
+      background-color: #e9ecef;
+    }
+
+    .total-income {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--success);
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: #e6f7ff;
+      border-radius: 10px;
+      border: 2px solid var(--secondary);
+    }
+    
+    .no-payments {
+        text-align: center;
+        font-size: 1.2rem;
+        color: var(--danger);
+        margin-top: 2rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-link:hover {
+      background-color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      table {
+        font-size: 1rem;
+      }
+      th, td {
+        padding: 0.8rem;
+      }
+      .total-income {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="{% url 'barcode_attendance' %}" class="back-link"><i class="fas fa-arrow-right"></i> العودة إلى تسجيل الحضور</a>
+    <h1>
+      <i class="fas fa-chart-line"></i>
+      تقرير الدخل لشهر {{ month_year }}
+    </h1>
+
+    {% if payments %}
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>اسم الطالب</th>
+            <th>المبلغ المدفوع</th>
+            <th>تاريخ الدفع</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for payment in payments %}
+          <tr>
+            <td>{{ payment.student.name }}</td>
+            <td>{{ month_price }} جنيه</td>
+            <td>{{ payment.paid_on|date:"Y-m-d H:i" }}</td> {# Changed payment_date to paid_on and added time #}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="total-income">
+      إجمالي الدخل للشهر: {{ total_income }} جنيه
+    </div>
+    {% else %}
+    <p class="no-payments">لا توجد مدفوعات مسجلة لهذا الشهر.</p>
+    {% endif %}
+
+  </div>
+</body>
+</html>

@@ -4664,3 +4664,396 @@ Stacktrace:
 2025-05-27 12:16:17,531 INFO Watching for file changes with StatReloader
 2025-05-27 12:16:20,541 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
 2025-05-27 12:16:23,154 INFO Watching for file changes with StatReloader
+2025-05-27 12:17:13,132 WARNING Not Found: /favicon.ico
+2025-05-27 12:51:57,404 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 12:52:00,652 INFO Watching for file changes with StatReloader
+2025-05-27 12:52:14,154 INFO Watching for file changes with StatReloader
+2025-05-27 12:53:48,733 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:53:50,941 INFO Watching for file changes with StatReloader
+2025-05-27 12:53:53,589 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:53:55,632 INFO Watching for file changes with StatReloader
+2025-05-27 12:53:59,516 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:54:02,628 INFO Watching for file changes with StatReloader
+2025-05-27 12:54:07,552 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:54:09,552 INFO Watching for file changes with StatReloader
+2025-05-27 12:54:13,228 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:54:15,134 INFO Watching for file changes with StatReloader
+2025-05-27 12:54:23,784 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:54:25,986 INFO Watching for file changes with StatReloader
+2025-05-27 12:55:27,438 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'students/templates/income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: students/templates/income.html
+2025-05-27 12:55:44,200 INFO Watching for file changes with StatReloader
+2025-05-27 12:55:45,016 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'students/templates/income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: students/templates/income.html
+2025-05-27 12:55:45,641 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'students/templates/income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: students/templates/income.html
+2025-05-27 12:55:46,020 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'students/templates/income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: students/templates/income.html
+2025-05-27 12:55:46,355 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'students/templates/income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: students/templates/income.html
+2025-05-27 12:55:46,668 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'students/templates/income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: students/templates/income.html
+2025-05-27 12:56:12,667 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-27 12:56:14,687 INFO Watching for file changes with StatReloader
+2025-05-27 12:56:15,172 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'attendance' not found. 'attendance' is not a valid view function or pattern name.
+2025-05-27 12:56:15,976 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'attendance' not found. 'attendance' is not a valid view function or pattern name.
+2025-05-27 12:56:16,775 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'attendance' not found. 'attendance' is not a valid view function or pattern name.
+2025-05-27 12:56:17,544 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'attendance' not found. 'attendance' is not a valid view function or pattern name.
+2025-05-27 12:56:19,215 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'attendance' not found. 'attendance' is not a valid view function or pattern name.
+2025-05-27 12:56:39,977 ERROR Internal Server Error: /income/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 420, in income_report_view
+    return render(request, 'income.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'attendance' not found. 'attendance' is not a valid view function or pattern name.
+2025-05-27 12:56:40,096 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:56:42,524 INFO Watching for file changes with StatReloader
+2025-05-27 12:56:49,132 ERROR Internal Server Error: /attendance/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 172, in barcode_attendance_view
+    return render(request, 'attendance.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'barcode_attendance' not found. 'barcode_attendance' is not a valid view function or pattern name.
+2025-05-27 12:56:50,548 ERROR Internal Server Error: /attendance/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 172, in barcode_attendance_view
+    return render(request, 'attendance.html', context)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'barcode_attendance' not found. 'barcode_attendance' is not a valid view function or pattern name.
+2025-05-27 12:57:04,444 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\urls.py changed, reloading.
+2025-05-27 12:57:06,489 INFO Watching for file changes with StatReloader
