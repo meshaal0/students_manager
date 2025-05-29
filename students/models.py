@@ -35,6 +35,7 @@ class Students(models.Model):
         null=True, blank=True,
         help_text='يُحدَّث فقط عند الدفع'
     )
+    has_whatsapp = models.BooleanField(default=True,verbose_name='لديه واتس اب')
 
     def save(self, *args, **kwargs):
         if not self.barcode:

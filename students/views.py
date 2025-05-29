@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from .models import Students,Attendance,Payment,Basics
 from .utils.barcode_utils import generate_barcode_image
-from .utils.whatsapp_queue import queue_whatsapp_message
+from .utils.whatsapp_queue import queue_whatsapp_message,log_failed_delivery
 import os
 from django.conf import settings
 from django.contrib import messages
@@ -17,10 +17,20 @@ from .util import (
     get_attendance_trends, get_revenue_trends,
     get_monthly_attendance_rate, get_student_payment_history
 )
-from .utils.failed_numbers_manager import (
-    get_failed_numbers_summary, export_failed_numbers_to_csv,
-    fix_student_phone_number, clear_all_failed_records
-)
+import logging
+
+# Setup for WhatsApp delivery issue logging
+whatsapp_issue_logger = logging.getLogger('whatsapp_issues')
+whatsapp_issue_logger.setLevel(logging.INFO)
+# Prevent propagation to root logger if not desired
+# whatsapp_issue_logger.propagate = False 
+
+# Check if handlers are already added to avoid duplication in dev server reloads
+if not whatsapp_issue_logger.handlers:
+    issue_file_handler = logging.FileHandler('whatsapp_delivery_issues.log', encoding='utf-8')
+    issue_formatter = logging.Formatter('%(asctime)s - %(levelname)s - Student ID: %(student_id)s (Name: %(student_name)s) - Message Type: %(message_type)s - Reason: %(reason)s')
+    issue_file_handler.setFormatter(issue_formatter)
+    whatsapp_issue_logger.addHandler(issue_file_handler)
 
 INITIAL_FREE_TRIES = 3
 
@@ -42,38 +52,65 @@ def download_barcodes_pdf(request):
     return FileResponse(pdf, as_attachment=True, filename='barcodes.pdf')
 
 
+# Helper to send or log failure
+
+
+# Helper to queue or log failures without altering message content
+def send_or_log(student, text, message_type):
+    phone = student.father_phone or ''
+    ctx = {
+        'student_id': student.id,
+        'student_name': student.name,
+        'message_type': message_type,
+        'reason': ''
+    }
+    queue_whatsapp_message(phone, text, **ctx)
+    if not phone or not student.has_whatsapp:
+        reason = 'Missing phone or WhatsApp disabled'
+        log_failed_delivery(phone, message_type, reason, 'View-level skip')
+
+# def send_or_log(student, text, message_type):
+#     phone = student.father_phone or ''
+#     ctx = {
+#         'student_id': student.id,
+#         'student_name': student.name,
+#         'message_type': message_type,
+#         'reason': ''
+#     }
+#     if phone and student.has_whatsapp:
+#         queue_whatsapp_message(phone, text, **ctx)
+#     else:
+#         reason = 'Missing phone or WhatsApp disabled'
+#         log_failed_delivery(phone, message_type, reason, 'View-level skip')
+#         ctx['reason'] = reason
+#         queue_whatsapp_message(phone, text, **ctx)
+
 def barcode_attendance_view(request):
-    context = {}
     today = timezone.localdate()
-    context['now'] = today
+    context = {'now': today}
 
     if request.method == 'POST':
         action  = request.POST.get('action', 'scan')
         barcode = request.POST.get('barcode', '').strip()
 
-        # جلب الطالب أو رسالة خطأ
         try:
             student = Students.objects.get(barcode=barcode)
         except Students.DoesNotExist:
             messages.error(request, "❌ هذا الباركود غير صالح. الرجاء المحاولة مرة أخرى.")
             return redirect('barcode_attendance')
 
-        # منع التكرار اليومي
         if Attendance.objects.filter(student=student, attendance_date=today).exists():
             messages.warning(request, f"⚠️ حضور {student.name} اليوم مسجّل مسبقاً.")
             return redirect('barcode_attendance')
 
-        # تحقق الدفع الحالي
         month_start = date(today.year, today.month, 1)
         paid = Payment.objects.filter(student=student, month=month_start).exists()
 
-        # ==== مسح scan ====
         if action == 'scan':
-             # --- Lateness Check ---
             try:
-                basics = Basics.objects.first() # Or Basics.objects.get(id=1)
+                basics = Basics.objects.first()
                 late_arrival_time = basics.late_arrival_time
-            except Basics.DoesNotExist:
+            except:
                 late_arrival_time = None
 
             if late_arrival_time:
@@ -81,82 +118,66 @@ def barcode_attendance_view(request):
                 if current_time > late_arrival_time:
                     lateness_message = (
                         f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
-                        f"تم تسجيل حضور ابنكم/ابنتكم اليوم الساعة {current_time.strftime('%H:%M')}.\n"
-                        "نأمل الالتزام بالحضور في الوقت المحدد مستقبلاً لتجنب التأخير.\n\n"
+                        f"تم تسجيل حضور ابنكم/ابنتكم اليوم الساعة {current_time.strftime('%H:%M')}\.\n"
+                        "نأمل الالتزام بالحضور...\n\n"
                         "مع تحيات،\n*م. عبدالله عمر* 😎"
                     )
-                    threading.Thread(
-                        target=queue_whatsapp_message,
-                        args=(student.father_phone, lateness_message),
-                        daemon=True
-                    ).start()
-            # --- End Lateness Check ---
+                    phone = student.father_phone or ''
+                    reason = '' if student.father_phone and student.has_whatsapp else 'No WhatsApp or Missing phone'
+                    send_or_log(phone, lateness_message, student.id, student.name, 'Lateness Alert', reason)
 
             if paid:
-                # مدفوع
                 Attendance.objects.create(student=student, attendance_date=today)
                 messages.success(request, f"✅ تم تسجيل حضور {student.name} بنجاح.")
-                _send_whatsapp_attendance(student, today)
+                attendance_text = (
+                    f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
+                    f"📌 *تم تسجيل الحضور بنجاح.*\n"
+                    f"🗓️ التاريخ: `{today.strftime('%Y-%m-%d')}`\n"
+                    f"⏰ الوقت: `{timezone.localtime().strftime('%H:%M')}`\n\n"
+                    "📚 نتمنى له يوماً موفقاً!\n\n"
+                    "مع تحيات،\n*م. عبدالله عمر* 😎"
+                )
+                phone = student.father_phone or ''
+                reason = '' if student.father_phone and student.has_whatsapp else 'No WhatsApp or Missing phone'
+                send_or_log(phone, attendance_text, student.id, student.name, 'Attendance', reason)
                 return redirect('barcode_attendance')
             else:
-                # غير مدفوع: عرض دفع وخيارات الفرص المتبقية
-                context.update({
-                    'pending_student': student,
-                    'barcode': barcode,
-                })
+                context.update({'pending_student': student, 'barcode': barcode})
                 if student.free_tries > 0:
-                    messages.warning(
-                        request,
-                        f"❗ لديك {student.free_tries} {'فرصة' if student.free_tries==1 else 'فرص'} مجانية قبل الدفع."
-                    )
+                    messages.warning(request, f"❗ لديك {student.free_tries} فرصة مجانية قبل الدفع.")
                 else:
-                    messages.warning(
-                        request,
-                        "⚠️ انتهت فرصك المجانية لهذا الشهر، الرجاء الدفع."
-                    )
+                    messages.warning(request, "⚠️ انتهت فرصك المجانية لهذا الشهر، الرجاء الدفع.")
 
-        # ==== استخدام فرصة مجانية ====
         elif action == 'free':
             if student.free_tries > 0:
-                # خصم فرصة وتسجيل حضور
                 student.free_tries -= 1
                 student.save()
                 Attendance.objects.create(student=student, attendance_date=today)
-                messages.success(
-                    request,
-                    f"✅ حضور مجانيّ. تبقى لديك {student.free_tries} {'فرصة' if student.free_tries==1 else 'فرص'}."
-                )
+                messages.success(request, f"✅ حضور مجانيّ. تبقى لديك {student.free_tries} {'فرصة' if student.free_tries==1 else 'فرص'}.")
 
-                text = (
+                free_text = (
                     f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
                     f"✅ سجلنا حضور اليوم كفرصة مجانية.\n"
                     f"📌 تبقى {student.free_tries} {'فرصة' if student.free_tries==1 else 'فرص'} لهذا الشهر.\n\n"
-                    f"🎯 ننصح بسداد الاشتراك لضمان استمرار الحضور دون حدود.\n\n"
-                    f"– م. عبدالله عمر"
+                    "🎯 ننصح بسداد الاشتراك لضمان استمرار الحضور دون حدود.\n\n"
+                    "– م. عبدالله عمر"
                 )
-                threading.Thread(
-                    target=queue_whatsapp_message,
-                    args=(student.father_phone, text),
-                    daemon=True
-                ).start()
+                phone = student.father_phone or ''
+                reason = '' if student.father_phone and student.has_whatsapp else 'No WhatsApp or Missing phone'
+                send_or_log(phone, free_text, student.id, student.name, 'FreeTry', reason)
             else:
                 messages.error(request, "❌ لا توجد فرص مجانية متبقية، الرجاء الدفع.")
             return redirect('barcode_attendance')
 
-        # ==== الدفع + تسجيل حضور ====
         elif action == 'pay':
-            payment, created = Payment.objects.get_or_create(
-                student=student,
-                month=month_start
-            )
-            # إعادة تعيين الفرص فور الدفع
+            payment, created = Payment.objects.get_or_create(student=student, month=month_start)
             student.free_tries = INITIAL_FREE_TRIES
             student.last_reset_month = today.replace(day=1)
             student.save()
 
-            # تسجيل حضور اليوم
             Attendance.objects.create(student=student, attendance_date=today)
-            pay_amount = Basics.objects.get(id=1)
+            basics = Basics.objects.first()
+            pay_amount = basics.month_price if basics else 0
             dp_msg = (
                 f"✅ تم استلام اشتراك شهر {payment.month:%B %Y}. بمبلغ {pay_amount} فقط لا غير"
                 if created else
@@ -164,13 +185,21 @@ def barcode_attendance_view(request):
             )
             at_msg = f"✅ تم تسجيل حضور {student.name} اليوم {today:%Y-%m-%d}."
 
-            _send_whatsapp_combined(student, dp_msg, at_msg)
+            combined_text = (
+                f"👋 *مرحباً ولي أمر الطالب {student.name}،*\n\n"
+                f"{dp_msg}\n"
+                f"{at_msg}\n\n"
+                "📚 شكراً لتعاونكم!\n\n"
+                "مع تحيات،\n*م. عبدالله عمر* 😎"
+            )
+            phone = student.father_phone or ''
+            reason = '' if student.father_phone and student.has_whatsapp else 'No WhatsApp or Missing phone'
+            send_or_log(phone, combined_text, student.id, student.name, 'PaymentAttendance', reason)
             messages.success(request, dp_msg)
             messages.success(request, at_msg)
             return redirect('barcode_attendance')
 
     return render(request, 'attendance.html', context)
-
 
 def _send_whatsapp_attendance(student, today):
     date_str = today.strftime('%Y-%m-%d')
@@ -183,11 +212,40 @@ def _send_whatsapp_attendance(student, today):
         f"📚 نتمنى له يوماً موفقاً!\n\n"
         f"مع تحيات،\n*م. عبدالله عمر* 😎"
     )
-    threading.Thread(
-        target=queue_whatsapp_message,
-        args=(student.father_phone, text),
-        daemon=True
-    ).start()
+    if student.father_phone and student.has_whatsapp:
+        queue_whatsapp_message(
+            student.father_phone,
+            text,
+            student_id=student.id,
+            student_name=student.name,
+            message_type='Lateness Alert',
+            reason=''
+        )
+    else:
+        # الكود الذي يسجّل أسباب عدم الإرسال
+        queue_whatsapp_message(
+            student.father_phone or 'None',
+            text,
+            student_id=student.id,
+            student_name=student.name,
+            message_type='Lateness Alert',
+            reason='No WhatsApp or Missing phone'
+        )
+    ctx = {
+    'student_id': student.id,
+    'student_name': student.name,
+    'message_type': 'Attendance',
+    'reason': ''
+        }
+    if student.father_phone and student.has_whatsapp:
+        queue_whatsapp_message(student.father_phone, text, **ctx)
+    else:
+        reason = 'No WhatsApp or Missing phone'
+        # سجّل الفشل مباشرةً في الـ CSV
+        log_failed_delivery(student.father_phone or '', 'Attendance', reason, 'View-level skip')
+        # ما زلنا نمرّر ليتضح في اللوج العادي
+        ctx['reason'] = reason
+        queue_whatsapp_message(student.father_phone or '', text, **ctx)
 
 def _send_whatsapp_combined(student, dp_msg, at_msg):
     text = (
@@ -197,11 +255,40 @@ def _send_whatsapp_combined(student, dp_msg, at_msg):
         f"📚 شكراً لتعاونكم!\n\n"
         f"مع تحيات،\n*م. عبدالله عمر* 😎"
     )
-    threading.Thread(
-        target=queue_whatsapp_message,
-        args=(student.father_phone, text),
-        daemon=True
-    ).start()
+    if student.father_phone and student.has_whatsapp:
+        queue_whatsapp_message(
+        student.father_phone,
+        text,
+        student_id=student.id,
+        student_name=student.name,
+        message_type='Lateness Alert',
+        reason=''
+        )
+    else:
+        # الكود الذي يسجّل أسباب عدم الإرسال
+        queue_whatsapp_message(
+            student.father_phone or 'None',
+            text,
+            student_id=student.id,
+            student_name=student.name,
+            message_type='Lateness Alert',
+            reason='No WhatsApp or Missing phone'
+        )
+    ctx = {
+    'student_id': student.id,
+    'student_name': student.name,
+    'message_type': 'Attendance',
+    'reason': ''
+        }
+    if student.father_phone and student.has_whatsapp:
+        queue_whatsapp_message(student.father_phone, text, **ctx)
+    else:
+        reason = 'No WhatsApp or Missing phone'
+        # سجّل الفشل مباشرةً في الـ CSV
+        log_failed_delivery(student.father_phone or '', 'Attendance', reason, 'View-level skip')
+        # ما زلنا نمرّر ليتضح في اللوج العادي
+        ctx['reason'] = reason
+        queue_whatsapp_message(student.father_phone or '', text, **ctx)
 
 
 def get_absence_message(student, today, consecutive_days, total_absences):
@@ -320,33 +407,31 @@ def mark_absentees_view(request):
         text = get_absence_message(student, today, consecutive_days, total_absences)
 
         # أرسل الرسالة في Thread منفصل
-        threading.Thread(
-            target=queue_whatsapp_message,
-            args=(student.father_phone, text),
-            daemon=True
-        ).start()
+        if student.father_phone and student.has_whatsapp:
+            queue_whatsapp_message(
+            student.father_phone,
+            text,
+            student_id=student.id,
+            student_name=student.name,
+            message_type='Lateness Alert',
+            reason=''
+        )
+    else:
+        # الكود الذي يسجّل أسباب عدم الإرسال
+        queue_whatsapp_message(
+            student.father_phone or 'None',
+            text,
+            student_id=student.id,
+            student_name=student.name,
+            message_type='Lateness Alert',
+            reason='No WhatsApp or Missing phone'
+        )
 
     messages.success(request, "✅ تم تسجيل غياب اليوم وإرسال إشعارات مخصصة لأولياء الأمور.")
     return redirect('barcode_attendance')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# #################################################################################
 
 
 def daily_dashboard_view(request):
@@ -473,6 +558,7 @@ def historical_insights_view(request):
                 # Determine year and month for the report, defaulting to current year/month.
                 year = int(year_str) if year_str else timezone.localdate().year
                 month = int(month_str) if month_str else timezone.localdate().month
+                
                 monthly_rate = get_monthly_attendance_rate(selected_student, year, month)
                 if monthly_rate is None:
                     context['form_error'] = "الشهر أو السنة المحددة غير صالحة."
@@ -482,8 +568,8 @@ def historical_insights_view(request):
                     if 'rate_month' in context: del context['rate_month']
                 else:
                     context['monthly_attendance_rate'] = monthly_rate
-                context['rate_year'] = year
-                context['rate_month'] = month
+                    context['rate_year'] = year
+                    context['rate_month'] = month
             
             elif report_type == 'student_payment_history':
                 context['payment_history'] = get_student_payment_history(selected_student)
@@ -497,6 +583,7 @@ def historical_insights_view(request):
 
     return render(request, 'students/historical_insights.html', context)
 
+
 def broadcast_message_view(request):
     if request.method == 'POST':
         message_content = request.POST.get('message', '').strip()
@@ -509,32 +596,81 @@ def broadcast_message_view(request):
             messages.warning(request, "⚠️ لا يوجد طلاب مسجلين لإرسال الرسالة إليهم.")
             return redirect('broadcast_message')
 
-        # Define standard header and signature
         broadcast_header = "📢 *رسالة عامة من الإدارة:*\n\n"
         broadcast_signature = "\n\nمع تحيات،\n*م. عبدالله عمر وفريق العمل* 👨‍🏫"
-        
+
         send_count = 0
         for student in all_students:
-            if student.father_phone:
-                # Personalize the message content
+            phone = student.father_phone or ''
+            reason = '' if phone and student.has_whatsapp else 'No WhatsApp or Missing phone'
+            if phone:
                 personalized_content = message_content.replace('{student_name}', student.name)
-                # Combine with header and signature
-                full_message_for_student = broadcast_header + personalized_content + broadcast_signature
-                
-                threading.Thread(
-                    target=queue_whatsapp_message,
-                    args=(student.father_phone, full_message_for_student),
-                    daemon=True
-                ).start()
+                full_message = broadcast_header + personalized_content + broadcast_signature
+                # Use send_or_log to queue and log failures
+                send_or_log(
+                    phone,
+                    full_message,
+                    student.id,
+                    student.name,
+                    'Broadcast Message',
+                    reason
+                )
                 send_count += 1
-        
+            else:
+                # Log missing phone case
+                log_failed_delivery(phone, 'Broadcast Message', reason, '')
+
         if send_count > 0:
             messages.success(request, f"✅ تم إرسال الرسالة إلى {send_count} ولي أمر بنجاح.")
         else:
             messages.warning(request, "⚠️ لم يتم إرسال الرسالة لأي ولي أمر (قد لا يكون هناك أرقام هواتف مسجلة).")
         return redirect('broadcast_message')
-    
+
     return render(request, 'broadcast_message.html')
+
+
+# def broadcast_message_view(request):
+#     if request.method == 'POST':
+#         message_content = request.POST.get('message', '').strip()
+#         if not message_content:
+#             messages.error(request, "❌ لا يمكن إرسال رسالة فارغة.")
+#             return redirect('broadcast_message')
+
+#         all_students = Students.objects.all()
+#         if not all_students:
+#             messages.warning(request, "⚠️ لا يوجد طلاب مسجلين لإرسال الرسالة إليهم.")
+#             return redirect('broadcast_message')
+
+#         # Define standard header and signature
+#         broadcast_header = "📢 *رسالة عامة من الإدارة:*\n\n"
+#         broadcast_signature = "\n\nمع تحيات،\n*م. عبدالله عمر وفريق العمل* 👨‍🏫"
+        
+#         send_count = 0
+#         for student in all_students:
+#             if student.father_phone:
+#                 # Personalize the message content
+#                 personalized_content = message_content.replace('{student_name}', student.name)
+#                 # Combine with header and signature
+#                 full_message_for_student = broadcast_header + personalized_content + broadcast_signature
+                
+#                 threading.Thread(
+#                     target=queue_whatsapp_message,
+#                     args=(student.father_phone, full_message_for_student),
+#                     daemon=True
+#                 ).start()
+#                 send_count += 1
+#             else:
+#                 reason = 'Missing father_phone' if not student.father_phone else 'has_whatsapp is False'
+#                 log_extra = {'student_id': student.id, 'student_name': student.name, 'message_type': 'Broadcast Message', 'reason': reason}
+#                 whatsapp_issue_logger.info("WhatsApp not sent.", extra=log_extra)
+        
+#         if send_count > 0:
+#             messages.success(request, f"✅ تم إرسال الرسالة إلى {send_count} ولي أمر بنجاح.")
+#         else:
+#             messages.warning(request, "⚠️ لم يتم إرسال الرسالة لأي ولي أمر (قد لا يكون هناك أرقام هواتف مسجلة).")
+#         return redirect('broadcast_message')
+    
+#     return render(request, 'broadcast_message.html')
 
 def income_report_view(request):
     """

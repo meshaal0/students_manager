@@ -5373,3 +5373,988 @@ AttributeError: 'Basics' object has no attribute 'last_time'
 2025-05-27 20:37:47,752 INFO Watching for file changes with StatReloader
 2025-05-27 20:42:45,635 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
 2025-05-27 20:42:47,812 INFO Watching for file changes with StatReloader
+2025-05-27 20:48:39,193 INFO Watching for file changes with StatReloader
+2025-05-27 20:49:42,422 ERROR Internal Server Error: /attendance/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 98, in barcode_attendance_view
+    if student.father_phone and student.has_whatsapp:
+                                ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Students' object has no attribute 'has_whatsapp'
+2025-05-27 20:51:11,957 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\models.py changed, reloading.
+2025-05-27 20:51:23,682 INFO Watching for file changes with StatReloader
+2025-05-27 20:51:25,796 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\models.py changed, reloading.
+2025-05-27 20:51:32,128 INFO Watching for file changes with StatReloader
+2025-05-27 20:51:34,431 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\models.py changed, reloading.
+2025-05-27 20:51:41,085 INFO Watching for file changes with StatReloader
+2025-05-27 20:51:43,151 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\models.py changed, reloading.
+2025-05-27 20:51:48,741 INFO Watching for file changes with StatReloader
+2025-05-27 20:52:08,245 INFO Watching for file changes with StatReloader
+2025-05-27 20:52:23,935 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.40 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-27 20:52:42,836 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-27 20:52:46,922 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-27 20:52:55,732 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344948 \u0641\u064a 20:52:55
+2025-05-27 20:53:08,684 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344948 \u0641\u064a 20:53:08
+2025-05-27 20:54:41,484 WARNING Initial WhatsApp send attempt failed for phone +201142344941. Reason: Initial send failed, possibly invalid number/no WhatsApp. Details: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 20:54:41,543 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 20:55:13,800 ERROR Retry WhatsApp send attempt failed for phone +201142344941. Reason: Retry send failed, possibly invalid number/no WhatsApp. Details: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 20:55:13,838 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 20:55:46,056 WARNING Initial WhatsApp send attempt failed for phone +201142344941. Reason: Initial send failed, possibly invalid number/no WhatsApp. Details: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 20:55:46,082 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 20:56:18,051 ERROR Retry WhatsApp send attempt failed for phone +201142344941. Reason: Retry send failed, possibly invalid number/no WhatsApp. Details: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 20:56:18,083 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 21:22:19,619 INFO Watching for file changes with StatReloader
+2025-05-27 21:23:30,974 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.40 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-27 21:23:35,510 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-27 21:23:42,782 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-27 21:24:13,889 WARNING Initial WhatsApp send attempt failed.
+2025-05-27 21:24:13,890 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 21:24:45,063 ERROR Retry WhatsApp send attempt failed.
+2025-05-27 21:24:45,063 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 21:25:17,339 WARNING Initial WhatsApp send attempt failed.
+2025-05-27 21:25:17,339 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 21:25:48,763 ERROR Retry WhatsApp send attempt failed.
+2025-05-27 21:25:48,763 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C7EF4C6]
+	(No symbol) [0x00007FF62C7EF77C]
+	(No symbol) [0x00007FF62C842577]
+	(No symbol) [0x00007FF62C8173BF]
+	(No symbol) [0x00007FF62C83F39C]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 21:25:56,697 WARNING Initial WhatsApp send attempt failed.
+2025-05-27 21:25:56,697 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344948: Message: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=137.0.7151.41)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798DCC]
+	(No symbol) [0x00007FF62C78617B]
+	(No symbol) [0x00007FF62C78503E]
+	(No symbol) [0x00007FF62C7A9DB4]
+	(No symbol) [0x00007FF62C81EE75]
+	(No symbol) [0x00007FF62C83ECC2]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 21:25:57,089 ERROR Retry WhatsApp send attempt failed.
+2025-05-27 21:25:57,089 ERROR \u274c we couldn`t resend the message +201142344948: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=137.0.7151.41)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798F9A]
+	(No symbol) [0x00007FF62C784E35]
+	(No symbol) [0x00007FF62C7A9DB4]
+	(No symbol) [0x00007FF62C81EE75]
+	(No symbol) [0x00007FF62C83ECC2]
+	(No symbol) [0x00007FF62C817153]
+	(No symbol) [0x00007FF62C7E0421]
+	(No symbol) [0x00007FF62C7E11B3]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	GetHandleVerifier [0x00007FF62C9D5274+109332]
+	GetHandleVerifier [0x00007FF62C9D5422+109762]
+	GetHandleVerifier [0x00007FF62C9BBA39+4825]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 21:25:58,093 WARNING Initial WhatsApp send attempt failed.
+2025-05-27 21:25:58,094 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344948: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798DCC]
+	(No symbol) [0x00007FF62C7DF54F]
+	(No symbol) [0x00007FF62C817242]
+	(No symbol) [0x00007FF62C811C63]
+	(No symbol) [0x00007FF62C810D29]
+	(No symbol) [0x00007FF62C765A55]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	(No symbol) [0x00007FF62C764AC8]
+	GetHandleVerifier [0x00007FF62CDB6FA8+4180040]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 21:25:58,097 ERROR Retry WhatsApp send attempt failed.
+2025-05-27 21:25:58,098 ERROR \u274c we couldn`t resend the message +201142344948: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798DCC]
+	(No symbol) [0x00007FF62C7DF54F]
+	(No symbol) [0x00007FF62C817242]
+	(No symbol) [0x00007FF62C811C63]
+	(No symbol) [0x00007FF62C810D29]
+	(No symbol) [0x00007FF62C765A55]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	(No symbol) [0x00007FF62C764AC8]
+	GetHandleVerifier [0x00007FF62CDB6FA8+4180040]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 21:25:59,102 WARNING Initial WhatsApp send attempt failed.
+2025-05-27 21:25:59,102 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798DCC]
+	(No symbol) [0x00007FF62C7DF54F]
+	(No symbol) [0x00007FF62C817242]
+	(No symbol) [0x00007FF62C811C63]
+	(No symbol) [0x00007FF62C810D29]
+	(No symbol) [0x00007FF62C765A55]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	(No symbol) [0x00007FF62C764AC8]
+	GetHandleVerifier [0x00007FF62CDB6FA8+4180040]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 21:25:59,105 ERROR Retry WhatsApp send attempt failed.
+2025-05-27 21:25:59,105 ERROR \u274c we couldn`t resend the message +201142344943: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798DCC]
+	(No symbol) [0x00007FF62C7DF54F]
+	(No symbol) [0x00007FF62C817242]
+	(No symbol) [0x00007FF62C811C63]
+	(No symbol) [0x00007FF62C810D29]
+	(No symbol) [0x00007FF62C765A55]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	(No symbol) [0x00007FF62C764AC8]
+	GetHandleVerifier [0x00007FF62CDB6FA8+4180040]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-27 21:26:00,111 WARNING Initial WhatsApp send attempt failed.
+2025-05-27 21:26:00,111 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344943: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798DCC]
+	(No symbol) [0x00007FF62C7DF54F]
+	(No symbol) [0x00007FF62C817242]
+	(No symbol) [0x00007FF62C811C63]
+	(No symbol) [0x00007FF62C810D29]
+	(No symbol) [0x00007FF62C765A55]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	(No symbol) [0x00007FF62C764AC8]
+	GetHandleVerifier [0x00007FF62CDB6FA8+4180040]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-27 21:26:00,114 ERROR Retry WhatsApp send attempt failed.
+2025-05-27 21:26:00,115 ERROR \u274c we couldn`t resend the message +201142344943: Message: invalid session id
+Stacktrace:
+	GetHandleVerifier [0x00007FF62C9CCF25+75717]
+	GetHandleVerifier [0x00007FF62C9CCF80+75808]
+	(No symbol) [0x00007FF62C798DCC]
+	(No symbol) [0x00007FF62C7DF54F]
+	(No symbol) [0x00007FF62C817242]
+	(No symbol) [0x00007FF62C811C63]
+	(No symbol) [0x00007FF62C810D29]
+	(No symbol) [0x00007FF62C765A55]
+	GetHandleVerifier [0x00007FF62CCCD6FD+3223453]
+	GetHandleVerifier [0x00007FF62CCC7CA2+3200322]
+	GetHandleVerifier [0x00007FF62CCE5AD3+3322739]
+	GetHandleVerifier [0x00007FF62C9E69FA+180890]
+	GetHandleVerifier [0x00007FF62C9EE0FF+211359]
+	(No symbol) [0x00007FF62C764AC8]
+	GetHandleVerifier [0x00007FF62CDB6FA8+4180040]
+	BaseThreadInitThunk [0x00007FFA849B7374+20]
+	RtlUserThreadStart [0x00007FFA8605CC91+33]
+
+2025-05-28 06:42:00,573 INFO Watching for file changes with StatReloader
+2025-05-28 06:44:36,790 INFO Watching for file changes with StatReloader
+2025-05-28 06:45:04,049 WARNING Not Found: /favicon.ico
+2025-05-28 06:47:07,715 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.55 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-28 06:47:52,241 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-28 06:48:34,025 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-28 06:49:05,203 WARNING Initial WhatsApp send attempt failed.
+2025-05-28 06:49:05,204 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-28 06:49:41,018 ERROR Retry WhatsApp send attempt failed.
+2025-05-28 06:49:41,018 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+
+2025-05-28 06:49:41,018 INFO WhatsApp not sent.
+2025-05-28 06:50:09,669 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344948 \u0641\u064a 06:50:09
+2025-05-28 06:53:00,461 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:53:03,371 INFO Watching for file changes with StatReloader
+2025-05-28 06:53:10,506 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:53:13,012 INFO Watching for file changes with StatReloader
+2025-05-28 06:53:44,033 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:53:46,560 INFO Watching for file changes with StatReloader
+2025-05-28 06:54:06,972 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:54:09,725 INFO Watching for file changes with StatReloader
+2025-05-28 06:54:12,932 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:54:15,591 INFO Watching for file changes with StatReloader
+2025-05-28 06:55:02,550 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.55 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-28 06:55:06,211 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E125D55]
+	(No symbol) [0x00007FF69E121ADD]
+	(No symbol) [0x00007FF69E1752D8]
+	(No symbol) [0x00007FF69E1748B0]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+
+2025-05-28 06:55:06,211 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-28 06:55:06,211 INFO WhatsApp not sent.
+2025-05-28 06:56:31,470 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:56:34,253 INFO Watching for file changes with StatReloader
+2025-05-28 06:57:08,779 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:57:11,371 INFO Watching for file changes with StatReloader
+2025-05-28 06:57:16,306 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:57:18,306 INFO Watching for file changes with StatReloader
+2025-05-28 06:57:20,314 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:57:22,571 INFO Watching for file changes with StatReloader
+2025-05-28 06:57:25,888 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:57:28,024 INFO Watching for file changes with StatReloader
+2025-05-28 06:57:42,875 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:57:45,256 INFO Watching for file changes with StatReloader
+2025-05-28 06:57:49,308 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:57:51,588 INFO Watching for file changes with StatReloader
+2025-05-28 06:58:01,156 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:58:03,677 INFO Watching for file changes with StatReloader
+2025-05-28 06:58:15,801 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:58:18,417 INFO Watching for file changes with StatReloader
+2025-05-28 06:58:27,480 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:58:29,776 INFO Watching for file changes with StatReloader
+2025-05-28 06:58:31,807 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:58:33,995 INFO Watching for file changes with StatReloader
+2025-05-28 06:58:48,162 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:58:50,541 INFO Watching for file changes with StatReloader
+2025-05-28 06:58:54,441 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 06:58:56,649 INFO Watching for file changes with StatReloader
+2025-05-28 06:59:25,768 ERROR Internal Server Error: /attendance/
+Traceback (most recent call last):
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Abdo\Desktop\students-manager\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 122, in barcode_attendance_view
+    _send_whatsapp_attendance(student, today)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py", line 224, in _send_whatsapp_attendance
+    queue_whatsapp_message(
+    ~~~~~~~~~~~~~~~~~~~~~~^
+        student.father_phone,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        reason=''
+        ^^^^^^^^^
+    )
+    ^
+TypeError: queue_whatsapp_message() missing 1 required positional argument: 'text'
+2025-05-28 07:00:08,182 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:00:10,777 INFO Watching for file changes with StatReloader
+2025-05-28 07:00:12,902 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:00:15,395 INFO Watching for file changes with StatReloader
+2025-05-28 07:00:19,531 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:00:22,153 INFO Watching for file changes with StatReloader
+2025-05-28 07:00:24,131 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:00:26,236 INFO Watching for file changes with StatReloader
+2025-05-28 07:00:33,651 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:00:36,155 INFO Watching for file changes with StatReloader
+2025-05-28 07:00:47,914 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:00:50,310 INFO Watching for file changes with StatReloader
+2025-05-28 07:21:56,855 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\utils\whatsapp_queue.py changed, reloading.
+2025-05-28 07:21:59,504 INFO Watching for file changes with StatReloader
+2025-05-28 07:23:03,277 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:23:07,648 INFO Watching for file changes with StatReloader
+2025-05-28 07:23:44,825 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:23:47,225 INFO Watching for file changes with StatReloader
+2025-05-28 07:23:58,094 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:24:00,471 INFO Watching for file changes with StatReloader
+2025-05-28 07:24:02,603 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:24:05,282 INFO Watching for file changes with StatReloader
+2025-05-28 07:24:15,050 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:24:17,763 INFO Watching for file changes with StatReloader
+2025-05-28 07:24:22,071 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:24:24,220 INFO Watching for file changes with StatReloader
+2025-05-28 07:24:33,992 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:24:36,831 INFO Watching for file changes with StatReloader
+2025-05-28 07:24:39,160 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:24:41,622 INFO Watching for file changes with StatReloader
+2025-05-28 07:24:43,827 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:24:46,039 INFO Watching for file changes with StatReloader
+2025-05-28 07:24:55,437 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.55 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-28 07:24:59,425 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-28 07:25:04,746 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-28 07:25:12,138 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344948 \u0641\u064a 07:25:12
+2025-05-28 07:26:09,164 WARNING Initial WhatsApp send attempt failed.
+2025-05-28 07:26:09,164 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-28 07:26:43,495 ERROR Retry WhatsApp send attempt failed.
+2025-05-28 07:26:43,496 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+
+2025-05-28 07:26:43,496 INFO WhatsApp not sent.
+2025-05-28 07:29:45,989 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:29:48,313 INFO Watching for file changes with StatReloader
+2025-05-28 07:30:34,169 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:30:36,689 INFO Watching for file changes with StatReloader
+2025-05-28 07:30:39,515 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:30:41,765 INFO Watching for file changes with StatReloader
+2025-05-28 07:30:49,050 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:30:51,337 INFO Watching for file changes with StatReloader
+2025-05-28 07:30:55,220 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:30:58,152 INFO Watching for file changes with StatReloader
+2025-05-28 07:31:02,998 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:31:05,369 INFO Watching for file changes with StatReloader
+2025-05-28 07:31:16,945 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:31:19,264 INFO Watching for file changes with StatReloader
+2025-05-28 07:32:06,322 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:32:08,556 INFO Watching for file changes with StatReloader
+2025-05-28 07:32:13,720 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:32:15,922 INFO Watching for file changes with StatReloader
+2025-05-28 07:32:20,770 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:32:23,011 INFO Watching for file changes with StatReloader
+2025-05-28 07:32:25,957 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:32:27,964 INFO Watching for file changes with StatReloader
+2025-05-28 07:32:32,131 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:32:34,705 INFO Watching for file changes with StatReloader
+2025-05-28 07:32:41,848 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:32:43,962 INFO Watching for file changes with StatReloader
+2025-05-28 07:32:56,531 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:32:58,919 INFO Watching for file changes with StatReloader
+2025-05-28 07:33:00,795 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:33:03,521 INFO Watching for file changes with StatReloader
+2025-05-28 07:33:48,201 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:33:50,929 INFO Watching for file changes with StatReloader
+2025-05-28 07:34:19,060 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:34:21,639 INFO Watching for file changes with StatReloader
+2025-05-28 07:34:25,334 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:34:27,570 INFO Watching for file changes with StatReloader
+2025-05-28 07:35:10,201 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.55 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-28 07:35:14,753 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-28 07:35:21,019 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-28 07:35:52,514 WARNING Initial WhatsApp send attempt failed.
+2025-05-28 07:35:52,515 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-28 07:36:23,628 ERROR Retry WhatsApp send attempt failed.
+2025-05-28 07:36:23,628 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+
+2025-05-28 07:36:23,628 INFO WhatsApp not sent.
+2025-05-28 07:36:56,203 WARNING Initial WhatsApp send attempt failed.
+2025-05-28 07:36:56,204 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-28 07:37:27,666 ERROR Retry WhatsApp send attempt failed.
+2025-05-28 07:37:27,667 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+
+2025-05-28 07:37:27,667 INFO WhatsApp not sent.
+2025-05-28 07:37:38,189 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344948 \u0641\u064a 07:37:38
+2025-05-28 07:37:49,279 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344948 \u0641\u064a 07:37:49
+2025-05-28 07:44:11,130 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:44:13,892 INFO Watching for file changes with StatReloader
+2025-05-28 07:44:22,479 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:44:24,719 INFO Watching for file changes with StatReloader
+2025-05-28 07:45:37,433 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:45:39,732 INFO Watching for file changes with StatReloader
+2025-05-28 07:48:12,746 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.55 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-28 07:48:16,911 ERROR \u0641\u0634\u0644 \u0625\u0646\u0634\u0627\u0621 \u062c\u0644\u0633\u0629 WhatsApp Web: Message: session not created: Chrome failed to start: crashed.
+  (session not created: DevToolsActivePort file doesn't exist)
+  (The process started from chrome location C:\Program Files\Google\Chrome\Application\chrome.exe is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E125D55]
+	(No symbol) [0x00007FF69E121ADD]
+	(No symbol) [0x00007FF69E1752D8]
+	(No symbol) [0x00007FF69E1748B0]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+
+2025-05-28 07:48:16,911 ERROR \U0001f6a8 \u0644\u0627 \u062a\u0648\u062c\u062f \u062c\u0644\u0633\u0629 \u062c\u0627\u0647\u0632\u0629 \u0644\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-28 07:48:16,912 INFO WhatsApp not sent.
+2025-05-28 07:48:53,000 INFO Watching for file changes with StatReloader
+2025-05-28 07:49:02,413 WARNING The chromedriver version (136.0.7103.92) detected in PATH at C:\webdrivers\chromedriver.exe might not be compatible with the detected chrome version (137.0.7151.41); currently, chromedriver 137.0.7151.55 is recommended for chrome 137.*, so it is advised to delete the driver in PATH and retry
+2025-05-28 07:49:07,912 INFO \u231b \u0627\u0646\u062a\u0638\u0631 \u0645\u0633\u062d QR \u0641\u064a WhatsApp Web …
+2025-05-28 07:49:14,587 INFO \u2705 \u062c\u0627\u0647\u0632 \u0644\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0631\u0633\u0627\u0626\u0644.
+2025-05-28 07:49:45,165 WARNING Initial WhatsApp send attempt failed.
+2025-05-28 07:49:45,165 WARNING \u26a0\ufe0f \u062a\u0639\u0637\u0644 \u0627\u0644\u0625\u0631\u0633\u0627\u0644 \u0625\u0644\u0649 +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+ — \u0627\u0644\u0645\u062d\u0627\u0648\u0644\u0629 \u0628\u0625\u0639\u0627\u062f\u0629 \u062a\u0634\u063a\u064a\u0644 \u0627\u0644\u062c\u0644\u0633\u0629
+2025-05-28 07:50:16,756 ERROR Retry WhatsApp send attempt failed.
+2025-05-28 07:50:16,757 ERROR \u274c we couldn`t resend the message +201142344941: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF69E31CF25+75717]
+	GetHandleVerifier [0x00007FF69E31CF80+75808]
+	(No symbol) [0x00007FF69E0E8F9A]
+	(No symbol) [0x00007FF69E13F4C6]
+	(No symbol) [0x00007FF69E13F77C]
+	(No symbol) [0x00007FF69E192577]
+	(No symbol) [0x00007FF69E1673BF]
+	(No symbol) [0x00007FF69E18F39C]
+	(No symbol) [0x00007FF69E167153]
+	(No symbol) [0x00007FF69E130421]
+	(No symbol) [0x00007FF69E1311B3]
+	GetHandleVerifier [0x00007FF69E61D6FD+3223453]
+	GetHandleVerifier [0x00007FF69E617CA2+3200322]
+	GetHandleVerifier [0x00007FF69E635AD3+3322739]
+	GetHandleVerifier [0x00007FF69E3369FA+180890]
+	GetHandleVerifier [0x00007FF69E33E0FF+211359]
+	GetHandleVerifier [0x00007FF69E325274+109332]
+	GetHandleVerifier [0x00007FF69E325422+109762]
+	GetHandleVerifier [0x00007FF69E30BA39+4825]
+	BaseThreadInitThunk [0x00007FF9FEB17374+20]
+	RtlUserThreadStart [0x00007FFA0071CC91+33]
+
+2025-05-28 07:50:16,757 INFO WhatsApp not sent.
+2025-05-28 07:51:18,700 INFO \U0001f4e9 \u0623\u0631\u0633\u0644\u0646\u0627 \u0631\u0633\u0627\u0644\u0629 \u0625\u0644\u0649 +201142344943 \u0641\u064a 07:51:18
+2025-05-28 07:58:21,221 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:58:24,066 INFO Watching for file changes with StatReloader
+2025-05-28 07:58:37,731 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 07:58:39,887 INFO Watching for file changes with StatReloader
+2025-05-28 08:04:53,659 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:04:56,082 INFO Watching for file changes with StatReloader
+2025-05-28 08:05:02,041 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:05:04,027 INFO Watching for file changes with StatReloader
+2025-05-28 08:07:38,081 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:07:40,436 INFO Watching for file changes with StatReloader
+2025-05-28 08:08:04,255 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:08:06,538 INFO Watching for file changes with StatReloader
+2025-05-28 08:08:08,430 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:08:11,369 INFO Watching for file changes with StatReloader
+2025-05-28 08:08:14,007 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:08:16,276 INFO Watching for file changes with StatReloader
+2025-05-28 08:08:24,717 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:08:27,095 INFO Watching for file changes with StatReloader
+2025-05-28 08:10:00,138 INFO C:\Users\Abdo\Desktop\students-manager\v2student_manager\students\views.py changed, reloading.
+2025-05-28 08:10:03,008 INFO Watching for file changes with StatReloader
+2025-05-28 12:32:17,638 INFO Watching for file changes with StatReloader
+2025-05-28 12:32:19,995 WARNING Not Found: /favicon.ico
+2025-05-29 16:30:36,720 INFO Watching for file changes with StatReloader
