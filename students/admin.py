@@ -18,9 +18,11 @@ class StudentsAdmin(ImportExportModelAdmin):
         'name',
         'father_phone',
         'barcode',
+        'branch',  # Added branch to list_display
         'print_barcode_link',
         'print_card',
     )
+    list_filter = ('branch',)  # Added branch to list_filter
     formats = (base_formats.XLSX,)
 
     def print_barcode_link(self, obj):
@@ -42,8 +44,37 @@ class StudentsAdmin(ImportExportModelAdmin):
 
 # تسجيل بقية الموديلات كما كانت
 admin.site.register(Attendance)
-admin.site.register(Payment)
-admin.site.register(Basics)
+# admin.site.register(Payment) # Will be registered with PaymentAdmin
+# admin.site.register(Basics) # Will be registered with BasicsAdmin
+
+@admin.register(Payment)
+class PaymentAdmin(admin.ModelAdmin):
+    list_display = ('student', 'month', 'paid_on', 'payment_type', 'term_duration_months')
+    list_filter = ('payment_type', 'month')
+    search_fields = ('student__name', 'student__barcode')
+    fieldsets = (
+        (None, {
+            'fields': ('student', 'month', 'payment_type', 'term_duration_months')
+        }),
+        ('معلومات الدفع (للقراءة فقط)', {
+            'fields': ('paid_on',),
+            'classes': ('collapse',),
+        }),
+    )
+    readonly_fields = ('paid_on',)
+
+@admin.register(Basics)
+class BasicsAdmin(admin.ModelAdmin):
+    list_display = ('month_price', 'term_price', 'default_term_duration_months', 'late_arrival_time', 'free_tries')
+    fieldsets = (
+        ('التسعير والمدد', {
+            'fields': ('month_price', 'term_price', 'default_term_duration_months')
+        }),
+        ('إعدادات إضافية', {
+            'fields': ('late_arrival_time', 'free_tries', 'logo')
+        }),
+    )
+
 @admin.register(NotificationCategory)
 class NotificationCategoryAdmin(admin.ModelAdmin):
     search_fields = ['name'] # يتيح البحث عن فئات الإشعارات باستخدام حقل الاسم

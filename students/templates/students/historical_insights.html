@@ -36,6 +36,16 @@
                     <option value="student_payment_history" {% if selected_report_type == 'student_payment_history' %}selected{% endif %}>سجل دفعات طالب</option>
                 </select>
             </div>
+
+            <div>
+                <label for="branch">الفرع:</label>
+                <select name="branch" id="branch" onchange="this.form.submit()">
+                    <option value="">-- كل الفروع --</option>
+                    {% for key, display_name in branch_choices %}
+                        <option value="{{ key }}" {% if key == selected_branch %}selected{% endif %}>{{ display_name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
             
             {% if selected_report_type == 'attendance_trends' or selected_report_type == 'revenue_trends' %}
             <div>
@@ -80,17 +90,17 @@
 
         {% if report_type == 'attendance_trends' and attendance_trends %}
             <div class="section">
-                <h2>اتجاهات الحضور اليومية ({{ start_date_val }} إلى {{ end_date_val }})</h2>
+                <h2>اتجاهات الحضور اليومية {% if selected_branch %}(فرع: {{ selected_branch }}){% endif %} ({{ start_date_val }} إلى {{ end_date_val }})</h2>
                 <table><thead><tr><th>التاريخ</th><th>عدد الحاضرين</th></tr></thead><tbody>
                 {% for trend in attendance_trends %}{% if trend.present_count > 0 %}<tr><td>{{ trend.period_start|date:"Y-m-d" }}</td><td>{{ trend.present_count }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
                 </tbody></table>
                 
-                <h3>اتجاهات الحضور الأسبوعية</h3>
+                <h3>اتجاهات الحضور الأسبوعية {% if selected_branch %}(فرع: {{ selected_branch }}){% endif %}</h3>
                 <table><thead><tr><th>بداية الأسبوع</th><th>عدد الحاضرين</th></tr></thead><tbody>
                 {% for trend in attendance_trends_weekly %}{% if trend.present_count > 0 %}<tr><td>{{ trend.period_start|date:"Y-m-d" }}</td><td>{{ trend.present_count }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
                 </tbody></table>
 
-                <h3>اتجاهات الحضور الشهرية</h3>
+                <h3>اتجاهات الحضور الشهرية {% if selected_branch %}(فرع: {{ selected_branch }}){% endif %}</h3>
                 <table><thead><tr><th>الشهر</th><th>عدد الحاضرين</th></tr></thead><tbody>
                 {% for trend in attendance_trends_monthly %}{% if trend.present_count > 0 %}<tr><td>{{ trend.period_start|date:"Y-m" }}</td><td>{{ trend.present_count }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
                 </tbody></table>
@@ -99,12 +109,12 @@
 
         {% if report_type == 'revenue_trends' and revenue_trends_yearly %}
             <div class="section">
-                <h2>اتجاهات الإيرادات ({{ start_date_val }} إلى {{ end_date_val }})</h2>
-                <h3>الإيرادات الشهرية (تقديرية)</h3>
+                <h2>اتجاهات الإيرادات {% if selected_branch %}(فرع: {{ selected_branch }}){% endif %} ({{ start_date_val }} إلى {{ end_date_val }})</h2>
+                <h3>الإيرادات الشهرية (تقديرية) {% if selected_branch %}(فرع: {{ selected_branch }}){% endif %}</h3>
                 <table><thead><tr><th>الشهر</th><th>إجمالي الإيرادات</th></tr></thead><tbody>
                 {% for trend in revenue_trends_monthly %}{% if trend.total_revenue > 0 %}<tr><td>{{ trend.period_start|date:"Y-m" }}</td><td>{{ trend.total_revenue }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
                 </tbody></table>
-                <h3>الإيرادات السنوية (تقديرية)</h3>
+                <h3>الإيرادات السنوية (تقديرية) {% if selected_branch %}(فرع: {{ selected_branch }}){% endif %}</h3>
                 <table><thead><tr><th>السنة</th><th>إجمالي الإيرادات</th></tr></thead><tbody>
                 {% for trend in revenue_trends_yearly %}{% if trend.total_revenue > 0 %}<tr><td>{{ trend.period_start|date:"Y" }}</td><td>{{ trend.total_revenue }}</td></tr>{% endif %}{% empty %}<tr><td colspan="2" class="empty-state">لا توجد بيانات.</td></tr>{% endfor %}
                 </tbody></table>

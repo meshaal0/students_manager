@@ -4,14 +4,54 @@ from datetime import date, timedelta # timedelta added
 from django.db.models import Count, Sum, Avg, F, ExpressionWrapper, fields # Added
 from django.db.models.functions import TruncMonth, TruncWeek, TruncDay # Added
 import calendar # Added
+from dateutil.relativedelta import relativedelta # Added for term payments
 
-def get_daily_attendance_summary(target_date=None):
+def has_active_payment(student, check_date):
     """
-    Calculates the attendance summary for a given date.
+    Checks if a student has an active payment (monthly or term) covering the check_date.
+    """
+    if not isinstance(student, Students):
+        raise ValueError("Input `student` must be a Students model instance.")
+    if not isinstance(check_date, date):
+        raise ValueError("Input `check_date` must be a date instance.")
+
+    current_month_start = date(check_date.year, check_date.month, 1)
+
+    # 1. Check for an active monthly payment for the current month
+    if Payment.objects.filter(
+        student=student,
+        payment_type='monthly',
+        month=current_month_start
+    ).exists():
+        return True
+
+    # 2. Check for an active term payment covering the check_date
+    term_payments = Payment.objects.filter(student=student, payment_type='term')
+    for term_payment in term_payments:
+        if term_payment.term_duration_months is None or term_payment.term_duration_months <= 0:
+            continue # Skip invalid term payments
+
+        term_start_date = term_payment.month # This is the first day of the start month
+        # Calculate the end date of the term.
+        # The term covers all days up to, but not including, the first day of the month *after* the term ends.
+        # For example, a 3-month term starting Jan 1st (2023-01-01) ends March 31st.
+        # The next payment would be due April 1st. So, term_end_date should be April 1st (2023-04-01).
+        term_end_date = term_start_date + relativedelta(months=term_payment.term_duration_months)
+
+        # Check if the check_date is within the term period [term_start_date, term_end_date)
+        if term_start_date <= check_date < term_end_date:
+            return True
+
+    return False
+
+def get_daily_attendance_summary(target_date=None, branch_id=None):
+    """
+    Calculates the attendance summary for a given date, optionally filtered by branch.
 
     Args:
         target_date (datetime.date, optional): The date for which to calculate the summary.
                                              Defaults to the current local date if None.
+        branch_id (str, optional): The ID of the branch to filter by.
 
     Returns:
         dict: A dictionary containing:
@@ -24,41 +64,38 @@ def get_daily_attendance_summary(target_date=None):
             - 'unmarked_students' (list[Students]): List of Student objects with no record for the day.
     """
     if target_date is None:
-        target_date = timezone.localdate()  # Default to today if no date is specified
+        target_date = timezone.localdate()
 
-    # Query for students marked as present (is_absent=False) on the target_date
-    present_attendance_records = Attendance.objects.filter(
-        attendance_date=target_date,
-        is_absent=False
-    )
+    # Base queryset for Attendance, filtered by date
+    attendance_base_qs = Attendance.objects.filter(attendance_date=target_date)
+
+    # Base queryset for Students
+    students_qs = Students.objects.all()
+    if branch_id:
+        students_qs = students_qs.filter(branch=branch_id)
+        attendance_base_qs = attendance_base_qs.filter(student__branch=branch_id)
+
+    # Present students
+    present_attendance_records = attendance_base_qs.filter(is_absent=False)
     present_students = [record.student for record in present_attendance_records]
     
-    # Query for students marked as absent (is_absent=True) on the target_date
-    absent_attendance_records = Attendance.objects.filter(
-        attendance_date=target_date,
-        is_absent=True
-    )
+    # Absent students
+    absent_attendance_records = attendance_base_qs.filter(is_absent=True)
     absent_students = [record.student for record in absent_attendance_records]
 
-    # Identify all students who have any attendance record (present or absent) on the target_date
-    students_with_record_today_ids = Attendance.objects.filter(
-        attendance_date=target_date
-    ).values_list('student_id', flat=True)
+    # IDs of students with any attendance record today (respecting branch filter if applied)
+    students_with_record_today_ids = attendance_base_qs.values_list('student_id', flat=True)
     
-    # Retrieve all students in the system.
-    # Consider adding an 'is_active' flag to the Students model for more precise filtering in large systems.
-    all_students = Students.objects.all()
-
-    # Determine unmarked students: those who are in `all_students` but not in `students_with_record_today_ids`
+    # Unmarked students (from the potentially branch-filtered list of all students)
     unmarked_students = [
-        student for student in all_students 
+        student for student in students_qs
         if student.id not in students_with_record_today_ids
     ]
 
     return {
         'date': target_date,
-        'present_count': present_attendance_records.count(),
-        'absent_count': absent_attendance_records.count(),
+        'present_count': len(present_students), # Count from the list of students to ensure branch consistency
+        'absent_count': len(absent_students),   # Count from the list of students
         'present_students': present_students,
         'absent_students': absent_students,
         'unmarked_students_count': len(unmarked_students),
@@ -127,38 +164,27 @@ def get_students_with_overdue_payments():
     """
     Identifies students who are considered to have overdue payments for the current calendar month.
 
-    A student is primarily considered to have an overdue payment if they do NOT have
-    a `Payment` record for the current calendar month (first day of the current month).
-    The `last_reset_month` field on the `Students` model provides historical context
-    but is not the primary driver for this function's "overdue" status for the *current* month.
-    This function aims to find students who owe payment for the current accounting period.
+    A student is primarily considered to have an overdue payment if they do not have an
+    active payment (monthly or term-based) covering the current date.
+    Optionally filters by branch.
+
+    Args:
+        branch_id (str, optional): The ID of the branch to filter by.
 
     Returns:
-        QuerySet[Students]: A queryset of Student objects who have not paid for the current month.
+        list[Students]: A list of Student objects who do not have an active payment for today.
     """
-    current_month_start = date(timezone.localdate().year, timezone.localdate().month, 1)
+    today = timezone.localdate()
+    students_query = Students.objects.all()
+    if branch_id:
+        students_query = students_query.filter(branch=branch_id)
     
-    # Get IDs of students who HAVE made a payment for the current month
-    paid_this_month_student_ids = Payment.objects.filter(
-        month=current_month_start
-    ).values_list('student_id', flat=True)
+    overdue_students_list = []
+    for student in students_query: # Iterate over potentially filtered students
+        if not has_active_payment(student, today):
+            overdue_students_list.append(student)
 
-    # Students are considered overdue if their ID is NOT in the list of those who paid this month.
-    # This directly answers "who has not yet paid for the current month?"
-    overdue_students = Students.objects.exclude(
-        id__in=paid_this_month_student_ids
-    )
-    
-    # Note on `last_reset_month`:
-    # The `Students.last_reset_month` field is updated when `process_student_payment` runs.
-    # While `last_reset_month < current_month_start` is a strong indicator a student might be overdue,
-    # the absence of a `Payment` record for `current_month_start` is the definitive criterion here
-    # for determining if they owe for *this specific month*.
-    # This function does not need to explicitly check `last_reset_month` because if a payment
-    # was processed correctly, `last_reset_month` would be updated, AND a `Payment` record would exist,
-    # thereby excluding them from `overdue_students`.
-
-    return overdue_students
+    return overdue_students_list
 
 
 def process_student_payment(student, payment_month=None):
@@ -284,13 +310,16 @@ def get_monthly_attendance_rate(student, year, month):
 def get_attendance_trends(start_date, end_date, period='day'):
     """
     Calculates overall attendance trends (count of present students)
-    grouped by a specified period (day, week, or month) within a given date range.
+    grouped by a specified period (day, week, or month) within a given date range,
+    optionally filtered by branch.
 
     Args:
         start_date (datetime.date): The beginning of the date range (inclusive).
         end_date (datetime.date): The end of the date range (inclusive).
         period (str, optional): The period to group by. Can be 'day', 'week', or 'month'.
                                 Defaults to 'day'.
+        branch_id (str, optional): The ID of the branch to filter by.
+
 
     Returns:
         list[dict]: A list of dictionaries, where each dictionary represents a period
@@ -300,14 +329,17 @@ def get_attendance_trends(start_date, end_date, period='day'):
                     The list is ordered by `period_start`.
 
     Raises:
-        ValueError: If `period` is not one of 'day', 'week', or 'month'.
+        ValueError: If `period` is not one of 'day', 'week', 'month'.
     """
-    # Filter for attendance records of present students within the date range
+    # Base queryset for Attendance
     queryset = Attendance.objects.filter(
         attendance_date__gte=start_date,
         attendance_date__lte=end_date,
         is_absent=False  # Consider only students marked as present
     )
+
+    if branch_id:
+        queryset = queryset.filter(student__branch=branch_id)
 
     # Determine the truncation function based on the specified period
     if period == 'day':
@@ -354,13 +386,13 @@ def get_student_payment_history(student):
     return student.payments.all().order_by('-month')
 
 
-def get_revenue_trends(start_date, end_date, period='month'):
+def get_revenue_trends(start_date, end_date, period='month', branch_id=None):
     """
     Calculates total estimated revenue from payments, grouped by a specified period (month or year)
-    within a given date range.
+    within a given date range, optionally filtered by branch.
 
     Important Assumption:
-    This function currently estimates revenue based on the *current* `month_price`
+    This function currently estimates revenue based on the *current* prices (`month_price`, `term_price`)
     stored in the `Basics` model. This is a simplification. For accurate historical
     revenue tracking, the actual price paid should be stored with each `Payment` record,
     and this function should sum those actual amounts.
@@ -370,6 +402,7 @@ def get_revenue_trends(start_date, end_date, period='month'):
         end_date (datetime.date): The end of the date range for payments (inclusive, based on Payment.month).
         period (str, optional): The period to group revenue by. Can be 'month' or 'year'.
                                 Defaults to 'month'.
+        branch_id (str, optional): The ID of the branch to filter by.
 
     Returns:
         list[dict]: A list of dictionaries, where each dictionary represents a period
@@ -377,25 +410,20 @@ def get_revenue_trends(start_date, end_date, period='month'):
                     - 'period_start' (datetime.date): The start date of the period
                                                      (first day of month or first day of year).
                     - 'total_revenue' (Decimal/float): The estimated total revenue for that period.
-                    Returns an empty list if `Basics` settings or `month_price` is not found.
+                    Returns an empty list if `Basics` settings are not found.
     """
-    # Retrieve the current standard month price from Basics.
-    # This is a simplification; ideally, price_paid would be on Payment model.
     try:
         basics = Basics.objects.first()
-        if not basics or basics.month_price is None:
-            # If no price is set, revenue calculation is not possible.
+        if not basics: # Check if basics object itself is None
             return [] 
-        current_month_price = basics.month_price # Assuming month_price is a Decimal or float
+        # current_month_price will be determined based on payment_type later
     except Basics.DoesNotExist:
-        # If Basics settings don't exist, cannot calculate revenue.
         return []
 
-    # Filter payments within the specified date range (based on the 'month' field of Payment model)
-    queryset = Payment.objects.filter(
-        month__gte=start_date, 
-        month__lte=end_date
-    )
+    # Base queryset for Payments
+    queryset = Payment.objects.filter(month__gte=start_date, month__lte=end_date)
+    if branch_id:
+        queryset = queryset.filter(student__branch=branch_id)
 
     # Determine truncation strategy based on the period
     if period == 'month':
@@ -412,40 +440,63 @@ def get_revenue_trends(start_date, end_date, period='month'):
 
 
     # Annotate queryset to group by the period and count payments
-    # This count will then be multiplied by `current_month_price`.
-    payment_counts_by_period = queryset.annotate(
-        period_group=trunc_function  # Group by the truncated date (month or start of month for year)
-    ).values(
-        'period_group'  # Select the grouping period
-    ).annotate(
-        num_payments=Count('id')  # Count payments in each group
-    ).order_by(
-        'period_group'  # Order chronologically
-    )
+    # This logic needs to sum actual payment amounts based on type (monthly/term)
+    # instead of just counting payments and multiplying by a single price.
     
-    # Process the grouped data to calculate revenue
     revenue_trends_data = []
-    if period == 'year':
-        yearly_aggregated_revenue = {} # {<year_int>: <total_revenue_for_year>}
-        for entry in payment_counts_by_period:
-            year_of_payment = entry['period_group'].year
-            revenue_for_entry = entry['num_payments'] * current_month_price
+
+    # Annotate with period_group first
+    payments_by_period = queryset.annotate(
+        period_group=trunc_function
+    ).values(
+        'period_group', 'payment_type' # Also get payment_type to determine price
+    ).annotate(
+        num_payments=Count('id')
+    ).order_by('period_group')
+
+    # Aggregate revenue, considering payment_type
+    aggregated_revenue = {} # Key: period_group, Value: total_revenue
+
+    for entry in payments_by_period:
+        period_group = entry['period_group']
+        payment_type = entry['payment_type']
+        num_payments = entry['num_payments']
+
+        price = 0
+        if payment_type == 'monthly' and basics.month_price is not None:
+            price = basics.month_price
+        elif payment_type == 'term' and basics.term_price is not None:
+            # For term, the price is for the whole term.
+            # If a term payment falls into this period_group (month/year), we count its full price.
+            # This assumes 'month' on Payment is the start of the term.
+            price = basics.term_price
+            # This might overcount if a term spans multiple 'period_group's and we only group by start month.
+            # A more accurate approach would be to prorate or allocate revenue if term price should be spread.
+            # For now, if payment.month (term start) is in this period_group, count full term_price.
             
-            if year_of_payment not in yearly_aggregated_revenue:
-                yearly_aggregated_revenue[year_of_payment] = 0
-            yearly_aggregated_revenue[year_of_payment] += revenue_for_entry
+        revenue_for_entry = num_payments * price
+
+        current_total = aggregated_revenue.get(period_group, 0)
+        aggregated_revenue[period_group] = current_total + revenue_for_entry
+
+    # Format for output
+    if period == 'year':
+        yearly_aggregated_revenue = {}
+        for period_group, total_revenue in aggregated_revenue.items():
+            year_of_payment = period_group.year
+            current_year_total = yearly_aggregated_revenue.get(year_of_payment, 0)
+            yearly_aggregated_revenue[year_of_payment] = current_year_total + total_revenue
         
-        # Convert aggregated yearly data to the list format
         for year_val, total_revenue in sorted(yearly_aggregated_revenue.items()):
             revenue_trends_data.append({
-                'period_start': date(year_val, 1, 1), # Represent year by its first day
+                'period_start': date(year_val, 1, 1),
                 'total_revenue': total_revenue
             })
     else: # For 'month' period
-        for entry in payment_counts_by_period:
+        for period_group, total_revenue in sorted(aggregated_revenue.items()):
             revenue_trends_data.append({
-                'period_start': entry['period_group'], # This is already the first of the month
-                'total_revenue': entry['num_payments'] * current_month_price
+                'period_start': period_group,
+                'total_revenue': total_revenue
             })
             
     return revenue_trends_data

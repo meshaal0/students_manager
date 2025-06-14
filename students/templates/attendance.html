@@ -256,6 +256,21 @@
         {% csrf_token %}
         <input type="hidden" name="action" value="pay">
         <input type="hidden" name="barcode" value="{{ barcode }}">
+
+        <div style="margin-bottom: 1rem;">
+          <p><strong>اختر نوع الاشتراك:</strong></p>
+          <div>
+            <input type="radio" id="payment_monthly" name="payment_option" value="monthly" checked>
+            <label for="payment_monthly">شهري (السعر: {{ month_price }})</label>
+          </div>
+          {% if term_price and default_term_duration %}
+          <div>
+            <input type="radio" id="payment_termly" name="payment_option" value="termly">
+            <label for="payment_termly">فصلي (السعر: {{ term_price }} لمدة {{ default_term_duration }} أشهر)</label>
+          </div>
+          {% endif %}
+        </div>
+
         <button type="submit" class="submit-btn" style="background: #ffc107">
           <i class="fas fa-coins"></i> الدفع الآن
         </button>

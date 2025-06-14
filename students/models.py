@@ -8,6 +8,11 @@ from datetime import date
 class Basics(models.Model):
     late_arrival_time = models.TimeField(verbose_name='وقت اعتبار التأخير', null=True, blank=True)
     month_price = models.IntegerField(verbose_name='سعر الشهر')
+    term_price = models.IntegerField(verbose_name='سعر الفصل', null=True, blank=True)
+    default_term_duration_months = models.PositiveSmallIntegerField(
+        verbose_name='المدة الافتراضية للفصل (بالأشهر)',
+        null=True, blank=True, default=3
+    )
     free_tries = models.PositiveSmallIntegerField(
         verbose_name='عدد الفرص المجانية',
         default=3,
@@ -36,6 +41,18 @@ class Students(models.Model):
         help_text='يُحدَّث فقط عند الدفع'
     )
     has_whatsapp = models.BooleanField(default=True,verbose_name='لديه واتس اب')
+
+    BRANCH_CHOICES = [
+        ('branch_a', 'الفرع أ'),
+        ('branch_b', 'الفرع ب'),
+        ('unknown', 'غير معروف'),
+    ]
+    branch = models.CharField(
+        max_length=50,
+        choices=BRANCH_CHOICES,
+        default='unknown',
+        verbose_name='الفرع'
+    )
 
     def save(self, *args, **kwargs):
         if not self.barcode:
@@ -92,6 +109,22 @@ class Payment(models.Model):
     )
     paid_on = models.DateTimeField(
         auto_now_add=True,verbose_name='تاريخ ووقت الدفع'
+    )
+
+    PAYMENT_TYPE_CHOICES = [
+        ('monthly', 'شهري'),
+        ('term', 'فصلي'),
+    ]
+    payment_type = models.CharField(
+        max_length=10,
+        choices=PAYMENT_TYPE_CHOICES,
+        default='monthly',
+        verbose_name='نوع الدفع'
+    )
+    term_duration_months = models.PositiveSmallIntegerField(
+        null=True, blank=True,
+        verbose_name='مدة الفصل (بالأشهر)',
+        help_text='يستخدم فقط إذا كان نوع الدفع فصلي'
     )
 
     class Meta:
