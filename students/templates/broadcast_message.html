@@ -29,6 +29,13 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        h2 {
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
         textarea {
             width: 100%;
             padding: 15px;
@@ -74,6 +81,60 @@
             color: #721c24;
             border: 1px solid #f5c6cb;
         }
+        .student-selection-container {
+            margin-bottom: 20px;
+        }
+        .student-list-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .student-list-controls label {
+            font-size: 0.9em;
+            cursor: pointer;
+        }
+        .student-list-controls input[type="checkbox"] {
+            margin-left: 5px;
+        }
+        #student-counts {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        #student-counts p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #333;
+        }
+        #student-counts span {
+            font-weight: bold;
+        }
+        #student-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            max-height: 200px; /* scrollable list */
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        #student-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid #f9f9f9;
+        }
+        #student-list li:last-child {
+            border-bottom: none;
+        }
+        #student-list label {
+            margin-right: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -90,12 +151,137 @@
 
         <form method="post">
             {% csrf_token %}
-            <textarea name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+            {% if all_students %}
+            <div class="student-selection-container">
+                <h2>اختر الطلاب:</h2>
+                <div class="student-list-controls">
+                    <div>
+                        <input type="checkbox" id="select-all">
+                        <label for="select-all">تحديد الكل</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="deselect-all">
+                        <label for="deselect-all">إلغاء تحديد الكل</label>
+                    </div>
+                </div>
+                <div id="student-counts">
+                    <p>عدد الطلاب المحددين: <span id="selected-count">0</span></p>
+                    <p>عدد الطلاب غير المحددين: <span id="unselected-count">0</span></p>
+                </div>
+                <ul id="student-list">
+                    {% for student in all_students %}
+                    <li>
+                        <input type="checkbox" name="selected_students" value="{{ student.id }}" id="student_{{ student.id }}" class="student-checkbox"
+                               {% if student.id in selected_student_ids %}checked{% endif %}>
+                        <label for="student_{{ student.id }}">{{ student.name }}</label>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% else %}
+                <p>لا يوجد طلاب لعرضهم.</p>
+            {% endif %}
+
+            <textarea name="message" placeholder="اكتب رسالتك هنا..." required>{{ message_content | default:'' }}</textarea>
             <p style="text-align: right; margin-top: -10px; margin-bottom: 20px;">
                 <small>ملاحظة: يمكنك استخدام <code>{student_name}</code> في نص الرسالة، وسيتم استبداله تلقائيًا باسم كل طالب عند الإرسال.</small>
             </p>
             <button type="submit">إرسال الرسالة</button>
         </form>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectAllCheckbox = document.getElementById('select-all');
+            const deselectAllCheckbox = document.getElementById('deselect-all');
+            // Use class "student-checkbox" as added in the loop for student inputs
+            const studentCheckboxes = document.querySelectorAll('.student-checkbox'); 
+            const selectedCountEl = document.getElementById('selected-count');
+            const unselectedCountEl = document.getElementById('unselected-count');
+
+            function updateCounts() {
+                if (!selectedCountEl || !unselectedCountEl) return; // Safety check
+
+                const totalStudents = studentCheckboxes.length;
+                let checkedCount = 0;
+                studentCheckboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        checkedCount++;
+                    }
+                });
+                const unselectedCount = totalStudents - checkedCount;
+                selectedCountEl.textContent = checkedCount;
+                unselectedCountEl.textContent = unselectedCount;
+            }
+
+            if (selectAllCheckbox) {
+                selectAllCheckbox.addEventListener('change', function() {
+                    studentCheckboxes.forEach(function(checkbox) {
+                        checkbox.checked = selectAllCheckbox.checked;
+                    });
+                    if (selectAllCheckbox.checked) {
+                        if (deselectAllCheckbox) deselectAllCheckbox.checked = false;
+                    }
+                    updateCounts();
+                });
+            }
+
+            if (deselectAllCheckbox) {
+                deselectAllCheckbox.addEventListener('change', function() {
+                    studentCheckboxes.forEach(function(checkbox) {
+                        // If deselectAll is checked, all student checkboxes should be unchecked
+                        checkbox.checked = !deselectAllCheckbox.checked; 
+                    });
+                    if (deselectAllCheckbox.checked) {
+                        if (selectAllCheckbox) selectAllCheckbox.checked = false;
+                    }
+                    updateCounts();
+                });
+            }
+
+            studentCheckboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    // If any checkbox is unchecked, uncheck "Select All"
+                    if (!checkbox.checked && selectAllCheckbox) {
+                        selectAllCheckbox.checked = false;
+                    }
+                    // If any checkbox is checked, uncheck "Deselect All"
+                    if (checkbox.checked && deselectAllCheckbox) {
+                        deselectAllCheckbox.checked = false;
+                    }
+                    
+                    // Check if all are checked to update "Select All"
+                    let allChecked = true;
+                    studentCheckboxes.forEach(function(cb) {
+                        if (!cb.checked) {
+                            allChecked = false;
+                        }
+                    });
+                    if (allChecked && selectAllCheckbox) {
+                        selectAllCheckbox.checked = true;
+                        if (deselectAllCheckbox) deselectAllCheckbox.checked = false;
+                    }
+                    
+                    // Check if all are unchecked to update "Deselect All" (optional)
+                    let noneChecked = true;
+                    studentCheckboxes.forEach(function(cb) {
+                        if (cb.checked) {
+                            noneChecked = false;
+                        }
+                    });
+                    if (noneChecked && deselectAllCheckbox) {
+                       // deselectAllCheckbox.checked = true; // This might be redundant if deselect all was clicked
+                       // if (selectAllCheckbox) selectAllCheckbox.checked = false;
+                    }
+
+                    updateCounts();
+                });
+            });
+
+            // Initial count update on page load
+            updateCounts();
+        });
+    </script>
 </body>
 </html>

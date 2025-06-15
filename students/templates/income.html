@@ -157,7 +157,7 @@
     <a href="{% url 'barcode_attendance' %}" class="back-link"><i class="fas fa-arrow-right"></i> العودة إلى تسجيل الحضور</a>
     <h1>
       <i class="fas fa-chart-line"></i>
-      تقرير الدخل لشهر {{ month_year }}
+      تقرير الدخل لشهر 
     </h1>
 
     {% if payments %}
@@ -171,10 +171,20 @@
           </tr>
         </thead>
         <tbody>
-          {% for payment in payments %}
+          {% for payment in month_payments %}
           <tr>
             <td>{{ payment.student.name }}</td>
             <td>{{ month_price }} جنيه</td>
+            <td>{{ payment.paid_on|date:"Y-m-d H:i" }}</td> {# Changed payment_date to paid_on and added time #}
+          </tr>
+          {% endfor %}
+
+        </tbody>
+        <tbody>
+          {% for payment in term_payments %}
+          <tr>
+            <td>{{ payment.student.name }}</td>
+            <td>{{ term_price }} جنيه</td>
             <td>{{ payment.paid_on|date:"Y-m-d H:i" }}</td> {# Changed payment_date to paid_on and added time #}
           </tr>
           {% endfor %}

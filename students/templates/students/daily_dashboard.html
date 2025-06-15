@@ -39,21 +39,22 @@
             </div>
 
             <h3>الطلاب الحاضرون:</h3>
-            {% if attendance_summary.present_students %}
+             {% if attendance_summary.present_students %}
                 <ul class="student-list">
                     {% for student in attendance_summary.present_students %}
                         <li>{{ student.name }}</li>
+                        <li>{{ student.name }} ({{ student.get_branch_display }})</li>
                     {% endfor %}
                 </ul>
             {% else %}
                 <p class="empty-state">لا يوجد طلاب حاضرون.</p>
             {% endif %}
-
             <h3>الطلاب المتغيبون (بعذر):</h3>
             {% if attendance_summary.absent_students %}
                 <ul class="student-list">
                     {% for student in attendance_summary.absent_students %}
                         <li>{{ student.name }}</li>
+                        <li>{{ student.name }} ({{ student.get_branch_display }})</li>
                     {% endfor %}
                 </ul>
             {% else %}
@@ -65,6 +66,7 @@
                 <ul class="student-list">
                     {% for student in attendance_summary.unmarked_students %}
                         <li>{{ student.name }}</li>
+                        <li>{{ student.name }} ({{ student.get_branch_display }})</li>
                     {% endfor %}
                 </ul>
             {% else %}
