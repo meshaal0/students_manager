@@ -16,13 +16,13 @@ class StudentsAdmin(ImportExportModelAdmin):
     list_display = (
         'name',
         'father_phone',
-        'branch',
+        'current_branch',
         'barcode',
         'print_barcode_link',
         'print_card',
     )
     formats = (base_formats.XLSX,)
-    list_filter = ('branch',)  # Added branch to list_filter
+    list_filter = ('current_branch',)  # Added branch to list_filter
 
     def print_barcode_link(self, obj):
         try:
@@ -42,7 +42,11 @@ class StudentsAdmin(ImportExportModelAdmin):
 
 
 # تسجيل بقية الموديلات كما كانت
-admin.site.register(Attendance)
+# admin.site.register(Attendance)
+@admin.register(Attendance)
+class PaymentAdmin(admin.ModelAdmin):
+    list_display = ('student','is_absent')
+    list_filter = ('is_absent',)
 @admin.register(Payment)
 class PaymentAdmin(admin.ModelAdmin):
     list_display = ('student', 'month', 'paid_on', 'payment_type', 'term_duration_months')
@@ -61,8 +65,11 @@ class PaymentAdmin(admin.ModelAdmin):
 
 @admin.register(Basics)
 class BasicsAdmin(admin.ModelAdmin):
-    list_display = ('month_price', 'term_price', 'default_term_duration_months', 'late_arrival_time', 'free_tries')
+    list_display = ('month_price', 'term_price', 'default_term_duration_months', 'late_arrival_time', 'free_tries','current_branch')
     fieldsets = (
+        ('مهم',{
+            'fields': ('current_branch', )
+            }),
         ('التسعير والمدد', {
             'fields': ('month_price', 'term_price', 'default_term_duration_months')
         }),

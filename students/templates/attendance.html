@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -8,7 +10,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
   <!-- ايقونات -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  
+    <!-- <link href="{% static 'css/fontawesome.css' %}" rel="stylesheet"> -->
+
   <style>
     :root {
       --primary: #2A5C82;
@@ -233,6 +236,25 @@
         تأكيد الحضور
       </button>
     </form>
+    {% if mismatch_student %}
+      <div class="pending-section">
+        <h3>🚨 الطالب {{ mismatch_student.name }} مسجل في فرع "{{ student_branch_display }}" وليس الفرع الجاري "{{ current_branch }}"</h3>
+        <p>هل تريد تغيير فرع الطالب إلى "{{ current_branch }}"؟</p>
+        <form method="post" style="display: inline;">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="change_branch">
+          <input type="hidden" name="barcode" value="{{ barcode }}">
+          <button type="submit" class="submit-btn" style="background: #ffc107">
+            <i class="fas fa-exchange-alt"></i> تغيير فرع الطالب إلى "{{ current_branch }}"
+          </button>
+        </form>
+        <form method="get" action="{% url 'barcode_attendance' %}" style="display: inline; margin-left:1rem;">
+          <button type="submit" class="submit-btn" style="background: #6c757d">
+            <i class="fas fa-times-circle"></i> إلغاء
+          </button>
+        </form>
+      </div>
+    {% endif %}
 
     {% if pending_student %}
   <div class="pending-section">

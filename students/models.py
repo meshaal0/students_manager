@@ -2,12 +2,22 @@ from django.db import models
 import random
 from django.utils import timezone
 from datetime import date
-
+BRANCH_CHOICES = [
+        ('branch_a', 'الاساسي'),
+        ('branch_b', 'البحري'),
+        ('unknown', 'غير معروف'),
+]
 # Create your models here.
 
 class Basics(models.Model):
     late_arrival_time = models.TimeField(verbose_name='وقت اعتبار التأخير', null=True, blank=True)
     month_price = models.IntegerField(verbose_name='سعر الشهر')
+    current_branch = models.CharField(
+        max_length=50,
+        choices=BRANCH_CHOICES,
+        default='unknown',
+        verbose_name='الفرع'
+    )
     term_price = models.IntegerField(verbose_name='سعر الترم', null=True, blank=True)
     default_term_duration_months = models.PositiveSmallIntegerField(
         verbose_name='المدة الافتراضية للفصل (بالأشهر)',
@@ -41,17 +51,17 @@ class Students(models.Model):
         help_text='يُحدَّث فقط عند الدفع'
     )
     has_whatsapp = models.BooleanField(default=True,verbose_name='لديه واتس اب')
-    BRANCH_CHOICES = [
-        ('branch_a', 'الاساسي'),
-        ('branch_b', 'البحري'),
-        ('unknown', 'غير معروف'),
-    ]
-    branch = models.CharField(
+    
+    current_branch = models.CharField(
         max_length=50,
         choices=BRANCH_CHOICES,
         default='unknown',
         verbose_name='الفرع'
     )
+    def get_branch_display(self):
+        if self.current_branch == 'unknown':
+            return 'غير معروف'
+        return dict(BRANCH_CHOICES).get(self.current_branch, self.current_branch)
     def save(self, *args, **kwargs):
         if not self.barcode:
             # توليد رقم باركود عشوائي مكون من 5 أرقام

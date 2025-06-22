@@ -79,3 +79,331 @@ timestamp,phone,message_type,reason,details
 2025-06-15 16:22:06,01142344943,Lateness Alert,,
 2025-06-15 16:22:10,01142344943,Attendance,,
 2025-06-15 16:31:42,01142344943,Attendance,,
+2025-06-16 08:04:59,01127054854,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:08:22,01126189557,FreeTry,,
+2025-06-16 08:09:30,01143882457,FreeTry,,
+2025-06-16 08:10:38,01141991077,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:16:39,01151598837,FreeTry,,
+2025-06-16 08:26:06,0,PaymentAttendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:30:15,01120702595,FreeTry,,
+2025-06-16 08:34:05,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:34:52,011,FreeTry,,
+2025-06-16 08:37:49,01116938236,FreeTry,,
+2025-06-16 08:38:57,01116938236,FreeTry,,
+2025-06-16 08:44:15,01141432510,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:47:56,01020690622,FreeTry,,
+2025-06-16 08:49:46,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:51:46,01143552445,FreeTry,,
+2025-06-16 08:51:52,01156542134,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:52:51,01153937858,FreeTry,,
+2025-06-16 08:53:55,01123242825,FreeTry,,
+2025-06-16 08:55:31,01124323771,FreeTry,,
+2025-06-16 08:56:21,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:56:35,01124175306,FreeTry,,
+2025-06-16 08:57:39,01142421389,FreeTry,,
+2025-06-16 08:58:31,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 08:58:44,01142421389,FreeTry,,
+2025-06-16 08:59:47,01154705766,FreeTry,,
+2025-06-16 09:00:51,01503663561,FreeTry,,
+2025-06-16 09:01:56,01145458908,FreeTry,,
+2025-06-16 09:03:28,01144351280,FreeTry,,
+2025-06-16 09:09:51,01050831891,FreeTry,,
+2025-06-16 09:15:05,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:17:59,01003229504,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:18:34,01154460081,FreeTry,,
+2025-06-16 09:19:01,01120799288,FreeTry,,
+2025-06-16 09:19:29,01143161875,FreeTry,,
+2025-06-16 09:19:52,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:21:09,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:21:37,01146196200,FreeTry,,
+2025-06-16 09:22:14,01148973347,FreeTry,,
+2025-06-16 09:23:03,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:23:36,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:26:16,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:38:13,01117159396,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:45:13,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:45:45,01114,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:47:20,01145431723,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 09:50:57,00966550134971,FreeTry,,
+2025-06-16 10:04:37,0,FreeTry,,
+2025-06-16 10:05:11,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:05:43,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:06:31,01112016305,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:09:48,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:15:48,01101970819,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:27:49,01145495210,FreeTry,,
+2025-06-16 10:28:31,0,FreeTry,,
+2025-06-16 10:31:00,01151846553,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,01115393638,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,01157242463,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,01008725776,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,01116836208,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:00,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-16 10:31:18,01159024886,Absence Alert,,
+2025-06-16 10:32:13,01120702595,Absence Alert,,
+2025-06-16 10:33:00,01142866980,Absence Alert,,
+2025-06-16 10:33:21,0112883052,Absence Alert,,
+2025-06-16 10:33:51,01151049866,Absence Alert,,
+2025-06-16 10:34:09,01103936698,Absence Alert,,
+2025-06-16 10:34:24,01141913650,Absence Alert,,
+2025-06-16 10:35:22,01097152101,Absence Alert,,
+2025-06-16 10:35:23,01120050871,Absence Alert,,
+2025-06-16 10:35:24,01100768337,Absence Alert,,
+2025-06-16 10:35:25,01100939246,Absence Alert,,
+2025-06-16 10:35:26,01026362647,Absence Alert,,
+2025-06-16 10:35:27,01114794206,Absence Alert,,
+2025-06-16 10:35:28,01142864417,Absence Alert,,
+2025-06-16 10:35:29,⁦+20 11 4428558,Absence Alert,,
+2025-06-16 10:35:30,⁦+20 11 4428558,Absence Alert,,
+2025-06-16 10:35:31,01113697202,Absence Alert,,
+2025-06-16 10:35:32,01121830877,Absence Alert,,
+2025-06-16 10:35:33,01096485859,Absence Alert,,
+2025-06-17 08:43:01,01154460081,FreeTry,,
+2025-06-17 08:44:41,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:46:27,01003229504,PaymentAttendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:48:16,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:48:58,0,FreeTry,,
+2025-06-17 08:51:24,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:51:55,01116836208,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:52:15,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:52:31,0,FreeTry,,
+2025-06-17 08:52:49,01157242463,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:53:47,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:54:18,0,FreeTry,,
+2025-06-17 08:54:35,01117159396,PaymentAttendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:55:41,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:55:57,01101970819,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:56:04,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 08:56:50,01112016305,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:01:23,01145431723,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:02:49,01008725776,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:04:55,01114,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:07:42,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:08:21,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:15:03,01147315833,FreeTry,,
+2025-06-17 09:24:00,01141432510,PaymentAttendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:24:15,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:26:11,01114874885,FreeTry,,
+2025-06-17 09:27:05,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:27:17,01143552445,FreeTry,,
+2025-06-17 09:28:03,01115393638,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:28:21,⁦+20 11 4428558,FreeTry,,
+2025-06-17 09:29:24,01120050871,FreeTry,,
+2025-06-17 09:30:28,01117864837,FreeTry,,
+2025-06-17 09:31:32,01142421389,FreeTry,,
+2025-06-17 09:33:01,01145347396,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:34:15,01126189557,FreeTry,,
+2025-06-17 09:35:06,0,PaymentAttendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:35:19,01123242825,FreeTry,,
+2025-06-17 09:35:52,01157242463,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:36:23,01152466131,FreeTry,,
+2025-06-17 09:37:28,01116938236,FreeTry,,
+2025-06-17 09:37:29,0,FreeTry,,
+2025-06-17 09:37:39,01156542134,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:37:49,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:38:33,01115396872,PaymentAttendance,,
+2025-06-17 09:39:37,01124502787,FreeTry,,
+2025-06-17 09:39:38,011,FreeTry,,
+2025-06-17 09:39:39,011,FreeTry,,
+2025-06-17 09:40:42,01127506774,FreeTry,,
+2025-06-17 09:41:09,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:41:18,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:41:46,01113697202,FreeTry,,
+2025-06-17 09:42:50,01026362647,PaymentAttendance,,
+2025-06-17 09:43:54,0112883052,FreeTry,,
+2025-06-17 09:44:58,01112119544,FreeTry,,
+2025-06-17 09:46:02,01116938236,PaymentAttendance,,
+2025-06-17 09:46:38,0,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:47:06,01114794206,PaymentAttendance,,
+2025-06-17 09:47:06,01141991077,PaymentAttendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:48:09,01002798650,FreeTry,,
+2025-06-17 09:49:15,01142576858,FreeTry,,
+2025-06-17 09:50:19,01127506774,FreeTry,,
+2025-06-17 09:50:31,01145347396,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:50:56,01127054854,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-17 09:51:23,01125967696,Attendance,,
+2025-06-17 09:52:27,01142866980,FreeTry,,
+2025-06-17 09:54:09,0,PaymentAttendance,,
+2025-06-17 10:02:02,01121839185,FreeTry,,
+2025-06-17 10:36:06,01503663561,PaymentAttendance,,
+2025-06-17 10:06:26,01112468547,PaymentAttendance,,
+2025-06-18 08:32:29,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-18 08:41:27,01503663561,Attendance,,
+2025-06-18 08:45:36,01142421389,FreeTry,,
+2025-06-18 08:45:51,01129495170,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-18 08:53:29,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-18 08:58:17,01112119544,FreeTry,,
+2025-06-18 08:58:28,01152615101,FreeTry,,
+2025-06-18 10:47:11,01142344943,FreeTry,,
+2025-06-18 10:47:40,01142344943,FreeTry,,
+2025-06-19 04:11:34,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:13:16,01156542134,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:13:22,01123818641,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:15:56,01145347396,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:16:31,01141868918,FreeTry,,
+2025-06-19 04:18:53,01115393638,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:19:10,01157809059,FreeTry,,
+2025-06-19 04:20:47,01126189557,FreeTry,,
+2025-06-19 04:21:19,01141432510,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:22:22,01157242463,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:22:26,0112883052,FreeTry,,
+2025-06-19 04:25:19,01142421389,FreeTry,,
+2025-06-19 04:27:52,0,FreeTry,,
+2025-06-19 04:30:58,01122553130,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:41:16,01143882457,FreeTry,,
+2025-06-19 04:41:37,01127054854,PaymentAttendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:46:36,01141991077,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:48:40,0,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:49:27,01145347396,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:49:45,01116938236,PaymentAttendance,,
+2025-06-19 04:51:00,⁦+20 11 4428558,FreeTry,,
+2025-06-19 04:51:01,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 04:51:24,011,FreeTry,,
+2025-06-19 04:53:32,01151598837,FreeTry,,
+2025-06-19 04:54:46,01116938236,Attendance,,
+2025-06-19 05:26:32,01151846553,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 05:26:32,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 05:26:32,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 05:26:32,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 05:26:32,0,Absence Alert,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-19 05:28:01,01120702595,Absence Alert,,
+2025-06-19 05:29:15,⁦0 11 4428558,Absence Alert,,
+2025-06-19 05:30:18,01113697202,Absence Alert,,
+2025-06-19 05:31:52,01096485859,Absence Alert,,
+2025-06-19 05:33:05,01156065327,Absence Alert,,
+2025-06-19 05:34:08,01122871587,Absence Alert,,
+2025-06-19 05:34:53,011,Absence Alert,,
+2025-06-19 05:35:56,00966557942496,Absence Alert,,
+2025-06-19 05:37:05,01124502787,Absence Alert,,
+2025-06-19 05:37:06,0,Absence Alert,,
+2025-06-19 05:37:18,0,Absence Alert,,
+2025-06-21 07:48:31,01121662413,FreeTry,,
+2025-06-21 07:51:10,01126860056,FreeTry,,
+2025-06-21 07:54:03,01114874885,FreeTry,,
+2025-06-21 07:54:42,01116950256,FreeTry,,
+2025-06-21 07:55:01,01114,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 07:55:26,01143161875,FreeTry,,
+2025-06-21 07:55:41,00966550134971,FreeTry,,
+2025-06-21 07:55:54,01142118171,FreeTry,,
+2025-06-21 07:56:30,01144321079,PaymentAttendance,,
+2025-06-21 07:58:12,01145431723,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 07:59:11,01115139226,FreeTry,,
+2025-06-21 08:00:45,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:00:55,01155637558,FreeTry,,
+2025-06-21 08:05:19,01112016305,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:06:02,01153373253,FreeTry,,
+2025-06-21 08:06:19,01143709239,FreeTry,,
+2025-06-21 08:06:44,001123818641,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:07:47,01116836208,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:08:04,01099833652,FreeTry,,
+2025-06-21 08:08:12,01124175306,FreeTry,,
+2025-06-21 08:08:29,01129495170,PaymentAttendance,,
+2025-06-21 08:08:37,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:08:52,01144390159,FreeTry,,
+2025-06-21 08:09:18,01121692220,Attendance,,
+2025-06-21 08:10:28,01146196200,Attendance,,
+2025-06-21 08:10:43,01116950256,FreeTry,,
+2025-06-21 08:11:41,01003229504,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:13:12,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:15:15,01117159396,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-21 08:18:23,01017122864,FreeTry,,
+2025-06-21 08:18:47,01102741242,FreeTry,,
+2025-06-21 08:26:32,01128968523,FreeTry,,
+2025-06-21 08:26:55,001118652960,FreeTry,,
+2025-06-21 08:28:09,01143032602,FreeTry,,
+2025-06-22 01:22:22,01121662413,FreeTry,,
+2025-06-22 01:22:48,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:23:07,01100784324,FreeTry,,
+2025-06-22 01:24:21,01146196200,Attendance,,
+2025-06-22 01:24:28,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:26:31,01154460081,FreeTry,,
+2025-06-22 01:27:32,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:28:05,01144288014,PaymentAttendance,,
+2025-06-22 01:28:18,01155637558,FreeTry,,
+2025-06-22 01:33:15,01117918714,PaymentAttendance,,
+2025-06-22 01:34:41,01117918714,FreeTry,,
+2025-06-22 01:36:04,01149515143,FreeTry,,
+2025-06-22 01:39:01,01120799288,FreeTry,,
+2025-06-22 01:39:15,01116080591,FreeTry,,
+2025-06-22 01:39:47,01143161875,FreeTry,,
+2025-06-22 01:39:52,01003229504,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:40:27,01147315833,FreeTry,,
+2025-06-22 01:40:34,01117159396,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:40:58,01116950256,FreeTry,,
+2025-06-22 01:46:06,01068927273,PaymentAttendance,,
+2025-06-22 01:47:42,01121671951,PaymentAttendance,,
+2025-06-22 01:51:30,01143709239,FreeTry,,
+2025-06-22 01:51:52,01121671951,PaymentAttendance,,
+2025-06-22 01:52:10,01008725776,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:52:48,001123818641,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:53:10,01116836208,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:53:44,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:55:01,01101970819,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:56:35,01128968523,PaymentAttendance,,
+2025-06-22 01:56:47,01112016305,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 01:57:10,01129495170,Attendance,,
+2025-06-22 01:59:20,01124175306,FreeTry,,
+2025-06-22 02:01:07,01144390159,FreeTry,,
+2025-06-22 02:02:55,01116950256,FreeTry,,
+2025-06-22 02:03:39,01126860056,PaymentAttendance,,
+2025-06-22 02:04:42,01143032602,FreeTry,,
+2025-06-22 02:05:18,01121692220,Attendance,,
+2025-06-22 02:05:50,01144321079,Attendance,,
+2025-06-22 02:06:09,01102741242,FreeTry,,
+2025-06-22 02:06:29,01017122864,FreeTry,,
+2025-06-22 02:07:02,01114874885,FreeTry,,
+2025-06-22 02:08:13,01153373253,FreeTry,,
+2025-06-22 02:08:38,01121839185,FreeTry,,
+2025-06-22 02:09:07,01143161875,FreeTry,,
+2025-06-22 02:09:40,01115139226,FreeTry,,
+2025-06-22 02:09:55,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 02:10:18,01141292448,PaymentAttendance,,
+2025-06-22 02:11:00,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 02:13:14,00966550134971,FreeTry,,
+2025-06-22 02:13:30,01142118171,FreeTry,,
+2025-06-22 02:17:12,01145431723,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 02:18:51,01118652960,FreeTry,,
+2025-06-22 02:24:33,01050831891,PaymentAttendance,,
+2025-06-22 02:26:13,01020690622,Attendance,,
+2025-06-22 02:26:24,01157242463,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 09:56:22,01145347396,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 09:58:34,01156542134,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 10:03:08,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 10:07:47,01123818641,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 10:07:59,01126189557,FreeTry,,
+2025-06-22 10:11:24,011,FreeTry,,
+2025-06-22 10:21:14,01141432510,Attendance,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 10:23:42,01142421389,PaymentAttendance,,
+2025-06-22 10:33:35,01122553130,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 10:37:13,01157242463,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 10:38:33,01124502787,FreeTry,,
+2025-06-22 11:01:29,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 11:02:09,01145279498,Attendance,,
+2025-06-22 11:02:15,01026362647,Attendance,,
+2025-06-22 11:02:23,01116938236,Attendance,,
+2025-06-22 11:02:50,⁦+20 11 4428558,FreeTry,,
+2025-06-22 11:03:09,01145347396,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 11:03:23,01116938236,Attendance,,
+2025-06-22 11:03:35,01112119544,PaymentAttendance,,
+2025-06-22 11:04:42,01096485859,FreeTry,,
+2025-06-22 11:08:25,0,FreeTry,,
+2025-06-22 11:09:03,0,FreeTry,WhatsApp disabled for student,View-level skip (send_or_log)
+2025-06-22 11:11:24,01142866980,PaymentAttendance,,
+2025-06-22 11:11:45,01159024886,Attendance,,
+2025-06-22 11:12:28,01114794206,Attendance,,
+2025-06-22 11:25:11,01143882457,FreeTry,,

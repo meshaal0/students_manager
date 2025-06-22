@@ -892,6 +892,8 @@ def send_or_log(student_obj, text_message, message_type_str):
 
 
 
+logger = logging.getLogger(__name__)
+
 def barcode_attendance_view(request):
     today = timezone.localdate()
     current_time = timezone.localtime().time()
@@ -899,7 +901,6 @@ def barcode_attendance_view(request):
     basics = Basics.objects.first()
     if request.method == 'POST':
         if not basics:
-            # لا توجد إعدادات النظام
             messages.error(request, "خطأ: إعدادات النظام الأساسية غير موجودة. تواصل مع مسؤول النظام.")
             return redirect('barcode_attendance')
 
@@ -908,20 +909,66 @@ def barcode_attendance_view(request):
         if not barcode:
             messages.error(request, "❌ الرجاء إدخال الباركود.")
             return redirect('barcode_attendance')
+
+        # حالة تغيير الفرع
+        if action == 'change_branch':
+            try:
+                student = Students.objects.get(barcode=barcode)
+            except Students.DoesNotExist:
+                messages.error(request, "❌ الباركود غير صالح عند محاولة تغيير الفرع.")
+                return redirect('barcode_attendance')
+
+            # تسجيل القيم في اللوج للتصحيح إذا لزم
+            logger.debug(f"[change_branch] barcode={barcode}, student.branch={student.current_branch}, basics.branch={basics.current_branch}")
+
+            # تأكد أن الفرع الجاري معرف وغير unknown
+            if not basics.current_branch or basics.current_branch == 'unknown':
+                messages.error(request, "خطأ: الفرع الجاري غير محدد أو غير صالح في الإعدادات.")
+                return redirect('barcode_attendance')
+
+            # مثال: السماح بالتغيير دائماً، حتى لو الطالب مسجل بفرع آخر
+            old_branch = student.current_branch
+            student.current_branch = basics.current_branch
+            student.save(update_fields=['current_branch'])
+            messages.success(
+                request,
+                f"✅ تم تغيير فرع الطالب {student.name} من '{old_branch}' إلى '{basics.current_branch}' بنجاح. يمكنك الآن إعادة المسح لتسجيل الحضور."
+            )
+            return redirect('barcode_attendance')
+
+        # بقية الحالات: scan, free, pay
         try:
             student = Students.objects.get(barcode=barcode)
         except Students.DoesNotExist:
             messages.error(request, "❌ هذا الباركود غير صالح. الرجاء المحاولة مرة أخرى.")
             return redirect('barcode_attendance')
 
-        # إذا مسجل حضور اليوم مسبقاً
+        # إذا الفرع مختلف: عرض زر تغيير الفرع
+        if student.current_branch not in [basics.current_branch, 'unknown']:
+            context.update({
+                'mismatch_student': student,
+                'barcode': barcode,
+                'student_branch_display': student.get_branch_display(),
+                'current_branch': basics.current_branch,
+            })
+            messages.warning(
+                request,
+                f"🚨 الطالب {student.name} مسجل في فرع '{student.get_branch_display()}' وهو مختلف عن الفرع الجاري '{basics.current_branch}'."
+            )
+            return render(request, 'attendance.html', context)
+
+        # إذا unknown: حدّث الفرع تلقائياً
+        if student.current_branch == 'unknown':
+            student.current_branch = basics.current_branch
+            student.save(update_fields=['current_branch'])
+
+        # تحقق من تسجيل الحضور مسبقاً اليوم
         if Attendance.objects.filter(student=student, attendance_date=today).exists():
-            # نضع اسم الطالب بين نجمتين لظهور bold في الواجهة إن رغبنا: *اسم*
             messages.warning(request, f"⚠️ حضور *{student.name}* اليوم مسجل مسبقاً.")
             return redirect('barcode_attendance')
 
+        # تحقق من حالة الدفع
         paid = has_active_payment(student, today)
-        # تحديد هل المتأخر بعد الوقت المحدد؟
         late_time = getattr(basics, 'late_arrival_time', None)
         is_late = bool(late_time and current_time > late_time)
 
@@ -941,12 +988,13 @@ def barcode_attendance_view(request):
                 header = f"👋 أهلاً ولي أمر *{student.name}*،\n\n"
                 body = ""
                 if is_late:
+                    pass
                     # قسم التأخير
-                    body += (
-                        f"سجلنا وصول {pronoun} الساعة *{current_time.strftime('%H:%M')}* اليوم، ولاحظنا تأخرًا عن الموعد المعتاد.\n"
-                        "نقدّر تعاونكم في الحضور أبكر كي يبدأ اليوم الدراسي بنشاط.\n"
-                        "إذا كان هناك ظرف خاص يمنع الوصول في الموعد، يُرجى إفادتنا مسبقًا لنساعد في التنسيق.\n\n"
-                    )
+                    # body += (
+                    #     f"سجلنا وصول {pronoun} الساعة *{current_time.strftime('%H:%M')}* اليوم، ولاحظنا تأخرًا عن الموعد المعتاد.\n"
+                    #     "نقدّر تعاونكم في الحضور أبكر كي يبدأ اليوم الدراسي بنشاط.\n"
+                    #     "إذا كان هناك ظرف خاص يمنع الوصول في الموعد، يُرجى إفادتنا مسبقًا لنساعد في التنسيق.\n\n"
+                    # )
                 # قسم التأكيد العام
                 body += (
                     "📌 تم تسجيل حضور " + pronoun + " بنجاح اليوم.\n"
@@ -956,7 +1004,7 @@ def barcode_attendance_view(request):
                     "إذا كان لديكم أي ملاحظات أو استفسارات، تواصلوا معنا.\n"
                 )
                 # التوقيع
-                footer = "\n\nمع تحيات *فريق الإدارة والتعليم* 👍"
+                footer = "\n\nمع تحيات * م.عبدالله عمر* 👍"
                 message_text = header + body + footer
                 send_or_log(student, message_text, 'Attendance')
                 messages.success(request, f"✅ تم تسجيل حضور *{student.name}* بنجاح.")
@@ -993,17 +1041,21 @@ def barcode_attendance_view(request):
                 header = f"👋 أهلاً ولي أمر *{student.name}*،\n\n"
                 body = ""
                 if is_late:
-                    body += (
-                        f"سجلنا وصول {pronoun} الساعة *{current_time.strftime('%H:%M')}* اليوم، ولاحظنا تأخرًا عن الموعد المعتاد.\n"
-                        "نقدّر تعاونكم في الحضور أبكر كي يبدأ اليوم الدراسي بنشاط.\n"
-                        "إذا كان هناك ظرف خاص يمنع الوصول في الموعد، يُرجى إفادتنا مسبقًا لنساعد في التنسيق.\n\n"
-                    )
+                    pass
+                    # body += (
+                    #     f"سجلنا وصول {pronoun} الساعة *{current_time.strftime('%H:%M')}* اليوم، ولاحظنا تأخرًا عن الموعد المعتاد.\n"
+                    #     "نقدّر تعاونكم في الحضور أبكر كي يبدأ اليوم الدراسي بنشاط.\n"
+                    #     "إذا كان هناك ظرف خاص يمنع الوصول في الموعد، يُرجى إفادتنا مسبقًا لنساعد في التنسيق.\n\n"
+                    # )
                 body += (
                     f"📌 تم تسجيل حضور اليوم كفرصة مجانية، وتبقى لديك *{student.free_tries}* "
+                    f"🗓️ التاريخ: *{today.strftime('%Y-%m-%d')}*\n"
+                    f"⏰ الوقت: *{current_time.strftime('%H:%M')}*\n\n"
+                    "نتمنى له/لها يومًا دراسيًا ناجحًا ومثمرًا! 📚\n"
                     f"{'فرصة' if student.free_tries == 1 else 'فرص'} لهذا الشهر.\n\n"
-                    "ننصح بتجديد الاشتراك لضمان حضور منتظم دون قيود.\n"
+                    "ننصح بدفع مصاريف الحضانة لضمان حضور منتظم دون قيود.\n"
                 )
-                footer = "\n\nمع تحيات *فريق الإدارة والتعليم* 🚀"
+                footer = "\n\nمع تحيات *  م.عبدالله عمؤ* 🚀"
                 message_text = header + body + footer
                 send_or_log(student, message_text, 'FreeTry')
                 messages.success(request, f"✅ حضور مجاني: تبقى لديك {student.free_tries} {'فرصة' if student.free_tries == 1 else 'فرص'}.")
@@ -1064,11 +1116,12 @@ def barcode_attendance_view(request):
                 header = f"👋 أهلاً ولي أمر *{student.name}*،\n\n"
                 body = ""
                 if is_late:
-                    body += (
-                        f"سجلنا وصول {pronoun} الساعة *{current_time.strftime('%H:%M')}* اليوم، ولاحظنا تأخرًا عن الموعد المعتاد.\n"
-                        "نقدّر تعاونكم في الحضور أبكر كي يبدأ اليوم الدراسي بنشاط.\n"
-                        "إذا كان هناك ظرف خاص يمنع الوصول في الموعد، يُرجى إفادتنا مسبقًا لنساعد في التنسيق.\n\n"
-                    )
+                    pass
+                    # body += (
+                    #     f"سجلنا وصول {pronoun} الساعة *{current_time.strftime('%H:%M')}* اليوم، ولاحظنا تأخرًا عن الموعد المعتاد.\n"
+                    #     "نقدّر تعاونكم في الحضور أبكر كي يبدأ اليوم الدراسي بنشاط.\n"
+                    #     "إذا كان هناك ظرف خاص يمنع الوصول في الموعد، يُرجى إفادتنا مسبقًا لنساعد في التنسيق.\n\n"
+                    # )
                 body += dp_msg + "\n\n"
                 body += (
                     f"✅ تم تسجيل حضور {pronoun} اليوم.\n"
@@ -1076,7 +1129,7 @@ def barcode_attendance_view(request):
                     f"⏰ الوقت: *{current_time.strftime('%H:%M')}*\n\n"
                     "شكرًا لتعاونكم وثقتكم بنا! إذا كان لديكم أي استفسار بخصوص الاشتراك، تواصلوا معنا.\n"
                 )
-                footer = "\n\nمع تحيات *فريق الإدارة والتعليم* 👍"
+                footer = "\n\nمع تحيات * م.عبدالله عمر* 👍"
                 message_text = header + body + footer
                 send_or_log(student, message_text, 'PaymentAttendance')
                 messages.success(request, dp_msg)
@@ -1092,9 +1145,14 @@ def barcode_attendance_view(request):
 def mark_absentees_view(request):
     if request.method != 'POST':
         return redirect('barcode_attendance')
+    basics = Basics.objects.first()
+    if not basics or basics.current_branch == 'unknown':
+        messages.error(request, "الفرع الحالي غير معروف! يرجى تعيينه في الإعدادات أولاً")
+        return redirect('barcode_attendance')
+    
     today = timezone.localdate()
     month_start = today.replace(day=1)
-    all_students = Students.objects.all()
+    all_students = Students.objects.filter(current_branch=basics.current_branch)
     attended_ids = Attendance.objects.filter(attendance_date=today, is_absent=False).values_list('student_id', flat=True)
     absentees = all_students.exclude(id__in=attended_ids)
     for student in absentees:
@@ -1151,12 +1209,11 @@ def mark_absentees_view(request):
         # تذكير الدفع إذا غير مفعل
         if not paid:
             body += "\n⚠️ لاحظنا أن الاشتراك غير مفعل، لضمان استمرار حضور " + pronoun + " بانتظام، يرجى تجديد الاشتراك في أقرب وقت.\n"
-        footer = "\n\nنتمنى دوام التوفيق لـ" + pronoun + "،\nمع تحيات *فريق الإدارة والتعليم* 💼"
+        footer = "\n\nنتمنى دوام التوفيق لـ" + pronoun + "،\nمع تحيات *  م.عبدالله عمر* 💼"
         message_text = header + body + footer
         send_or_log(student, message_text, 'Absence Alert')
     messages.success(request, "✅ تم تسجيل غياب اليوم وإرسال إشعارات مخصصة لأولياء الأمور.")
     return redirect('barcode_attendance')
-
 # #################################################################################
 
 

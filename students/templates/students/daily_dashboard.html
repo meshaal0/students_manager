@@ -42,8 +42,7 @@
              {% if attendance_summary.present_students %}
                 <ul class="student-list">
                     {% for student in attendance_summary.present_students %}
-                        <li>{{ student.name }}</li>
-                        <li>{{ student.name }} ({{ student.get_branch_display }})</li>
+                        <li>{{ student.name }} </li>
                     {% endfor %}
                 </ul>
             {% else %}
@@ -53,8 +52,7 @@
             {% if attendance_summary.absent_students %}
                 <ul class="student-list">
                     {% for student in attendance_summary.absent_students %}
-                        <li>{{ student.name }}</li>
-                        <li>{{ student.name }} ({{ student.get_branch_display }})</li>
+                        <li>{{ student.name }} </li>
                     {% endfor %}
                 </ul>
             {% else %}
@@ -66,7 +64,6 @@
                 <ul class="student-list">
                     {% for student in attendance_summary.unmarked_students %}
                         <li>{{ student.name }}</li>
-                        <li>{{ student.name }} ({{ student.get_branch_display }})</li>
                     {% endfor %}
                 </ul>
             {% else %}
